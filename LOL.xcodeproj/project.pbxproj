@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		33CD73951E2D5A7A009E63F2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD73941E2D5A7A009E63F2 /* GameKit.framework */; };
 		C7B47B6E1E26FD2A00D441BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */; };
-		C7B47B701E26FD2A00D441BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B6F1E26FD2A00D441BC /* ViewController.swift */; };
 		C7B47B731E26FD2A00D441BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B711E26FD2A00D441BC /* Main.storyboard */; };
 		C7B47B751E26FD2A00D441BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B741E26FD2A00D441BC /* Assets.xcassets */; };
 		C7B47B781E26FD2A00D441BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B761E26FD2A00D441BC /* LaunchScreen.storyboard */; };
@@ -170,7 +169,6 @@
 		9EFFF5067A65688FEED9E298 /* Pods-LOL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.release.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.release.xcconfig"; sourceTree = "<group>"; };
 		C7B47B6A1E26FD2A00D441BC /* LOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7B47B6F1E26FD2A00D441BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7B47B721E26FD2A00D441BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7B47B741E26FD2A00D441BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7B47B771E26FD2A00D441BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -377,7 +375,6 @@
 			children = (
 				33CD73961E2D5A7F009E63F2 /* LOL.entitlements */,
 				C7B47BA11E28082E00D441BC /* KSToken */,
-				C7B47B6F1E26FD2A00D441BC /* ViewController.swift */,
 				C7B47BA21E28086A00D441BC /* Utility */,
 				C7B47C1C1E2809FC00D441BC /* Models */,
 				C7B47BD11E2809DF00D441BC /* Networking */,
@@ -829,7 +826,6 @@
 				C7B47B9E1E2807F800D441BC /* KSTokenField.swift in Sources */,
 				C7B47BCB1E28086A00D441BC /* TRStoryBoardManager.swift in Sources */,
 				C7B47C341E2809FC00D441BC /* TRConfigInfo.swift in Sources */,
-				C7B47B701E26FD2A00D441BC /* ViewController.swift in Sources */,
 				C7B47BBF1E28086A00D441BC /* TRApplicationManager.swift in Sources */,
 				C7B47C171E2809DF00D441BC /* TRResendBungieVerification.swift in Sources */,
 				C7B47BC71E28086A00D441BC /* TRNavInteractionAnimator.swift in Sources */,
