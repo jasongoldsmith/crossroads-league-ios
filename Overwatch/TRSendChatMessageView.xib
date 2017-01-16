@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRSendChatMessageView" customModule="Crossroads" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td9-Fa-ao4">
+                    <rect key="frame" x="35" y="275" width="36" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackgroundBubble" translatesAutoresizingMaskIntoConstraints="NO" id="wnl-6I-3LU">
+                    <rect key="frame" x="101" y="303" width="443" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="irA-C8-bEk"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-6L-xGz">
+                    <rect key="frame" x="549" y="302" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="2q0-JU-U3s"/>
+                        <constraint firstAttribute="height" constant="34" id="Tlu-hl-rEX"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="imgSendBtn"/>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FnG-OI-9xW">
+                    <rect key="frame" x="138" y="302" width="287" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="287" id="F2p-mb-qWy"/>
+                        <constraint firstAttribute="height" constant="34" id="aGX-zh-5Ff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcc-KC-nnW">
+                    <rect key="frame" x="482" y="273" width="57" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="57" id="21E-SB-ht9"/>
+                        <constraint firstAttribute="height" constant="21" id="yNO-C1-KWE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-ls-YgD">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FnG-OI-9xW" firstAttribute="top" secondItem="Lcc-KC-nnW" secondAttribute="bottom" constant="8" id="6Du-Ll-flf"/>
+                <constraint firstAttribute="bottom" secondItem="UQX-ls-YgD" secondAttribute="bottom" id="BhL-NY-1Dh"/>
+                <constraint firstAttribute="trailing" secondItem="Lcc-KC-nnW" secondAttribute="trailing" constant="61" id="E2N-ND-rkm"/>
+                <constraint firstItem="UQX-ls-YgD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ehj-Ed-Rbm"/>
+                <constraint firstItem="FnG-OI-9xW" firstAttribute="top" secondItem="td9-Fa-ao4" secondAttribute="bottom" constant="10" id="Hhl-02-QcF"/>
+                <constraint firstItem="wnl-6I-3LU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="101" id="UOR-MO-5dN"/>
+                <constraint firstItem="wnl-6I-3LU" firstAttribute="bottom" secondItem="qXl-6L-xGz" secondAttribute="bottom" constant="-1" id="VYD-cl-LBI"/>
+                <constraint firstItem="UQX-ls-YgD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WQa-FC-5JQ"/>
+                <constraint firstItem="FnG-OI-9xW" firstAttribute="bottom" secondItem="wnl-6I-3LU" secondAttribute="bottom" constant="1" id="ed2-TX-meP"/>
+                <constraint firstAttribute="bottom" secondItem="FnG-OI-9xW" secondAttribute="bottom" constant="264" id="ji1-5u-w5a"/>
+                <constraint firstItem="FnG-OI-9xW" firstAttribute="centerX" secondItem="wnl-6I-3LU" secondAttribute="centerX" constant="-41" id="kaK-y9-M6S"/>
+                <constraint firstItem="td9-Fa-ao4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="ltn-vx-JYd"/>
+                <constraint firstAttribute="trailing" secondItem="UQX-ls-YgD" secondAttribute="trailing" id="noU-UX-Fmq"/>
+                <constraint firstAttribute="trailing" secondItem="qXl-6L-xGz" secondAttribute="trailing" constant="17" id="x60-D7-HeT"/>
+                <constraint firstItem="qXl-6L-xGz" firstAttribute="leading" secondItem="wnl-6I-3LU" secondAttribute="trailing" constant="5" id="zaa-EA-iqm"/>
+            </constraints>
+            <connections>
+                <outlet property="backGroundImageView" destination="UQX-ls-YgD" id="nSv-DC-lkm"/>
+                <outlet property="characterCount" destination="Lcc-KC-nnW" id="Ucp-zl-khZ"/>
+                <outlet property="chatBubbleTextView" destination="FnG-OI-9xW" id="5wt-Y8-lqI"/>
+                <outlet property="sendButton" destination="qXl-6L-xGz" id="sSB-NM-Bhv"/>
+                <outlet property="sendToLabel" destination="td9-Fa-ao4" id="tCg-4n-6PF"/>
+                <outlet property="textViewBackgroundImage" destination="wnl-6I-3LU" id="vdi-d5-msn"/>
+                <outlet property="textViewHeightConstraint" destination="aGX-zh-5Ff" id="TYy-il-ye7"/>
+            </connections>
+            <point key="canvasLocation" x="240" y="224"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgBackgroundBubble" width="279" height="33"/>
+        <image name="imgSendBtn" width="34" height="34"/>
+    </resources>
+</document>
