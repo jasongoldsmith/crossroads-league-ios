@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.0" contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRInviteView" customModule="Crossroads" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUo-4N-dVj">
+                    <rect key="frame" x="0.0" y="220" width="600" height="380"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-Bn-VXe">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-Zk-cC6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                    <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-NB-EcF">
+                                    <rect key="frame" x="539" y="13" width="44" height="29"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeInviteView" destination="iN0-l3-epB" eventType="touchUpInside" id="VfW-Hc-2Dz"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-Og-LW2" customClass="KSTokenView" customModule="Crossroads" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="531" height="54"/>
+                                    <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="JCX-Zk-cC6" secondAttribute="trailing" id="6MS-G5-ZwH"/>
+                                <constraint firstAttribute="bottom" secondItem="JCX-Zk-cC6" secondAttribute="bottom" id="AxJ-tQ-4z0"/>
+                                <constraint firstItem="JCX-Zk-cC6" firstAttribute="leading" secondItem="m9w-Bn-VXe" secondAttribute="leading" id="JJQ-kx-TG2"/>
+                                <constraint firstItem="JCX-Zk-cC6" firstAttribute="top" secondItem="m9w-Bn-VXe" secondAttribute="top" id="RMU-mH-1hK"/>
+                                <constraint firstItem="lKQ-Og-LW2" firstAttribute="leading" secondItem="m9w-Bn-VXe" secondAttribute="leading" id="RgF-Rp-j2X"/>
+                                <constraint firstItem="lKQ-Og-LW2" firstAttribute="top" secondItem="m9w-Bn-VXe" secondAttribute="top" id="V9W-sC-Q0C"/>
+                                <constraint firstItem="lKQ-Og-LW2" firstAttribute="bottom" secondItem="m9w-Bn-VXe" secondAttribute="bottom" id="VDk-Pi-vCt"/>
+                                <constraint firstItem="pHo-NB-EcF" firstAttribute="leading" secondItem="lKQ-Og-LW2" secondAttribute="trailing" constant="8" id="XSn-TY-N2v"/>
+                                <constraint firstAttribute="trailing" secondItem="pHo-NB-EcF" secondAttribute="trailing" constant="17" id="Y54-3M-1jf"/>
+                                <constraint firstAttribute="height" constant="54" id="ktH-JE-ACX"/>
+                                <constraint firstItem="pHo-NB-EcF" firstAttribute="centerY" secondItem="m9w-Bn-VXe" secondAttribute="centerY" id="lDe-2P-Caf"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inviting players will send them a message on Bungie.net." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkY-NV-tK2">
+                            <rect key="frame" x="50" y="72" width="500" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rr8-ff-LU3">
+                            <rect key="frame" x="0.0" y="330" width="600" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="wfR-OM-rQB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="INVITE">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="inviteButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="1RC-DA-tJC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19215686274509802" green="0.29411764705882354" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rr8-ff-LU3" secondAttribute="trailing" id="Bgl-h5-MFc"/>
+                        <constraint firstAttribute="trailing" secondItem="m9w-Bn-VXe" secondAttribute="trailing" id="JGD-oE-Fsv"/>
+                        <constraint firstItem="jkY-NV-tK2" firstAttribute="top" secondItem="m9w-Bn-VXe" secondAttribute="bottom" constant="18" id="MCm-k8-ffL"/>
+                        <constraint firstItem="rr8-ff-LU3" firstAttribute="leading" secondItem="jUo-4N-dVj" secondAttribute="leading" id="S4A-eg-zEh"/>
+                        <constraint firstAttribute="bottom" secondItem="rr8-ff-LU3" secondAttribute="bottom" id="gYX-bS-LqB"/>
+                        <constraint firstItem="m9w-Bn-VXe" firstAttribute="leading" secondItem="jUo-4N-dVj" secondAttribute="leading" id="jB6-vW-pgc"/>
+                        <constraint firstAttribute="trailing" secondItem="jkY-NV-tK2" secondAttribute="trailing" constant="50" id="lDh-0v-FWQ"/>
+                        <constraint firstItem="jkY-NV-tK2" firstAttribute="leading" secondItem="jUo-4N-dVj" secondAttribute="leading" constant="50" id="qQ4-9v-BfE"/>
+                        <constraint firstItem="m9w-Bn-VXe" firstAttribute="top" secondItem="jUo-4N-dVj" secondAttribute="top" id="yA4-ON-h2t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jUo-4N-dVj" secondAttribute="trailing" id="NYn-dZ-3qE"/>
+                <constraint firstItem="jUo-4N-dVj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OSS-la-nx6"/>
+                <constraint firstItem="jUo-4N-dVj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="220" id="mca-M8-X6r"/>
+                <constraint firstAttribute="bottom" secondItem="jUo-4N-dVj" secondAttribute="bottom" id="yXy-YT-7jg"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="jkY-NV-tK2" id="Xmp-eF-wgf"/>
+                <outlet property="inviteBtnBottomConst" destination="gYX-bS-LqB" id="wcZ-Fd-ZaO"/>
+                <outlet property="inviteButton" destination="rr8-ff-LU3" id="EOP-V5-NHu"/>
+                <outlet property="tokenView" destination="lKQ-Og-LW2" id="MZD-1O-uXm"/>
+                <outlet property="tokenViewContainerBackground" destination="JCX-Zk-cC6" id="XSM-47-9q8"/>
+            </connections>
+            <point key="canvasLocation" x="-18" y="502"/>
+        </view>
+    </objects>
+</document>
