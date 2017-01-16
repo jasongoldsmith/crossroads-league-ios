@@ -26,7 +26,6 @@
 		C7B47BBE1E28086A00D441BC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BA71E28086A00D441BC /* StringExtension.swift */; };
 		C7B47BBF1E28086A00D441BC /* TRApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BA81E28086A00D441BC /* TRApplicationManager.swift */; };
 		C7B47BC01E28086A00D441BC /* TRBranchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BA91E28086A00D441BC /* TRBranchManager.swift */; };
-		C7B47BC11E28086A00D441BC /* TRBungieLoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BAA1E28086A00D441BC /* TRBungieLoginValidation.swift */; };
 		C7B47BC21E28086A00D441BC /* TRDeepLinkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BAB1E28086A00D441BC /* TRDeepLinkObject.swift */; };
 		C7B47BC31E28086A00D441BC /* TRFireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BAC1E28086A00D441BC /* TRFireBaseManager.swift */; };
 		C7B47BC41E28086A00D441BC /* TRFunnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47BAD1E28086A00D441BC /* TRFunnelData.swift */; };
@@ -157,7 +156,6 @@
 		C7B47CC21E281A0E00D441BC /* TRRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47CB11E281A0E00D441BC /* TRRootViewController.swift */; };
 		C7B47CC31E281A0E00D441BC /* TRSendReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47CB21E281A0E00D441BC /* TRSendReportViewController.swift */; };
 		C7B47CC41E281A0E00D441BC /* TRSignInErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */; };
-		C7B47CC51E281A0E00D441BC /* TRWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47CB41E281A0E00D441BC /* TRWebViewViewController.swift */; };
 		C7B47CC91E281B4F00D441BC /* TRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47CC81E281B4F00D441BC /* TRConstants.swift */; };
 		EE4071AD5E5AA80F606038FE /* Pods_LOL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFB8ECFE7E4C259604253D3 /* Pods_LOL.framework */; };
 /* End PBXBuildFile section */
@@ -188,7 +186,6 @@
 		C7B47BA71E28086A00D441BC /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C7B47BA81E28086A00D441BC /* TRApplicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRApplicationManager.swift; sourceTree = "<group>"; };
 		C7B47BA91E28086A00D441BC /* TRBranchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRBranchManager.swift; sourceTree = "<group>"; };
-		C7B47BAA1E28086A00D441BC /* TRBungieLoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRBungieLoginValidation.swift; sourceTree = "<group>"; };
 		C7B47BAB1E28086A00D441BC /* TRDeepLinkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDeepLinkObject.swift; sourceTree = "<group>"; };
 		C7B47BAC1E28086A00D441BC /* TRFireBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRFireBaseManager.swift; sourceTree = "<group>"; };
 		C7B47BAD1E28086A00D441BC /* TRFunnelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRFunnelData.swift; sourceTree = "<group>"; };
@@ -319,7 +316,6 @@
 		C7B47CB11E281A0E00D441BC /* TRRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRRootViewController.swift; sourceTree = "<group>"; };
 		C7B47CB21E281A0E00D441BC /* TRSendReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSendReportViewController.swift; sourceTree = "<group>"; };
 		C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInErrorViewController.swift; sourceTree = "<group>"; };
-		C7B47CB41E281A0E00D441BC /* TRWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRWebViewViewController.swift; sourceTree = "<group>"; };
 		C7B47CC81E281B4F00D441BC /* TRConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRConstants.swift; sourceTree = "<group>"; };
 		ECFB8ECFE7E4C259604253D3 /* Pods_LOL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -411,7 +407,6 @@
 				C7B47BA71E28086A00D441BC /* StringExtension.swift */,
 				C7B47BA81E28086A00D441BC /* TRApplicationManager.swift */,
 				C7B47BA91E28086A00D441BC /* TRBranchManager.swift */,
-				C7B47BAA1E28086A00D441BC /* TRBungieLoginValidation.swift */,
 				C7B47BAB1E28086A00D441BC /* TRDeepLinkObject.swift */,
 				C7B47BAC1E28086A00D441BC /* TRFireBaseManager.swift */,
 				C7B47BAD1E28086A00D441BC /* TRFunnelData.swift */,
@@ -624,7 +619,6 @@
 				C7B47CA71E281A0E00D441BC /* TRChooseGroupViewController.swift */,
 				C7B47CAD1E281A0E00D441BC /* TRLegalViewController.swift */,
 				C7B47CAF1E281A0E00D441BC /* TRMessageSentConfViewController.swift */,
-				C7B47CB41E281A0E00D441BC /* TRWebViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -821,7 +815,6 @@
 				C7B47C301E2809FC00D441BC /* TRActivityModifiersInfo.swift in Sources */,
 				C7B47CC31E281A0E00D441BC /* TRSendReportViewController.swift in Sources */,
 				C7B47C331E2809FC00D441BC /* TRCommentInfo.swift in Sources */,
-				C7B47BC11E28086A00D441BC /* TRBungieLoginValidation.swift in Sources */,
 				C7B47C5B1E280E7100D441BC /* TRCaroselCellView.swift in Sources */,
 				C7B47B9E1E2807F800D441BC /* KSTokenField.swift in Sources */,
 				C7B47BCB1E28086A00D441BC /* TRStoryBoardManager.swift in Sources */,
@@ -832,7 +825,6 @@
 				C7B47BCC1E28086A00D441BC /* UIApplicationExtension.swift in Sources */,
 				C7B47C8C1E28138500D441BC /* TRDatePicker.swift in Sources */,
 				C7B47C5F1E280E7100D441BC /* TREventInfoPlayerCell.swift in Sources */,
-				C7B47CC51E281A0E00D441BC /* TRWebViewViewController.swift in Sources */,
 				C7B47CB61E281A0E00D441BC /* TRBaseViewController.swift in Sources */,
 				C7B47C5D1E280E7100D441BC /* TRErrorNotificationView.swift in Sources */,
 				C7B47C081E2809DF00D441BC /* TRGetEventRequest.swift in Sources */,

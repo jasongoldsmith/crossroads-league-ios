@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,7 +45,7 @@
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="rootVC" id="BYZ-38-t0r" customClass="TRRootViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootVC" id="BYZ-38-t0r" customClass="TRRootViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -94,7 +94,7 @@
         <!--Choose Group View Controller-->
         <scene sceneID="5Pc-tI-9JQ">
             <objects>
-                <viewController storyboardIdentifier="chooseGroup" id="Hk0-IT-ZlF" customClass="TRChooseGroupViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseGroup" id="Hk0-IT-ZlF" customClass="TRChooseGroupViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k1z-ct-gNP"/>
                         <viewControllerLayoutGuide type="bottom" id="2WA-Rs-ejf"/>
@@ -158,7 +158,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-IK-CtW" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-IK-CtW" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                         <rect key="frame" x="523" y="13" width="44" height="44"/>
                                         <state key="normal" image="iconNotificationsOn"/>
                                         <state key="selected" image="iconNotificationsOff"/>
@@ -328,7 +328,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Data Source-->
         <scene sceneID="Yuj-uc-7aP">
             <objects>
-                <viewController storyboardIdentifier="loginOptions" id="GCe-sl-3u9" customClass="TRLoginOptionViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginOptions" id="GCe-sl-3u9" customClass="TRLoginOptionViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9L3-Es-dEz"/>
                         <viewControllerLayoutGuide type="bottom" id="VFK-zq-jCs"/>
@@ -483,7 +483,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign In Error View Controller-->
         <scene sceneID="bS0-YC-bMp">
             <objects>
-                <viewController storyboardIdentifier="SIGINERROR" id="kLn-2s-R4G" customClass="TRSignInErrorViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SIGINERROR" id="kLn-2s-R4G" customClass="TRSignInErrorViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U2M-zp-Ndd"/>
                         <viewControllerLayoutGuide type="bottom" id="TUC-NT-Dou"/>
@@ -560,7 +560,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Forgot Password View Controller-->
         <scene sceneID="rGs-SO-CTj">
             <objects>
-                <viewController storyboardIdentifier="forgotPassword" id="xrT-dz-8g5" customClass="TRForgotPasswordViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="forgotPassword" id="xrT-dz-8g5" customClass="TRForgotPasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hQU-I6-siB"/>
                         <viewControllerLayoutGuide type="bottom" id="t94-VO-gcV"/>
@@ -838,7 +838,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--CROSSROADS-->
         <scene sceneID="Q7R-6W-xgu">
             <objects>
-                <viewController storyboardIdentifier="webviewVC" title="CROSSROADS" id="FFV-3I-58h" customClass="TRWebViewViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webviewVC" title="CROSSROADS" id="FFV-3I-58h" customClass="TRWebViewViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jFI-IN-fhu"/>
                         <viewControllerLayoutGuide type="bottom" id="myY-E5-yxM"/>
@@ -879,7 +879,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Event Detail View Controller-->
         <scene sceneID="KBg-kJ-0xr">
             <objects>
-                <viewController storyboardIdentifier="eventDescriptionVC" id="ylH-PI-zc9" customClass="TREventDetailViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventDescriptionVC" id="ylH-PI-zc9" customClass="TREventDetailViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SZv-Sb-Y8a"/>
                         <viewControllerLayoutGuide type="bottom" id="ikf-rV-Vma"/>
@@ -941,7 +941,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgNavGradientBg" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-sl-3qB">
                                 <rect key="frame" x="0.0" y="80" width="600" height="180"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lML-KN-3nB" customClass="TRInsertLabel" customModule="Overwatch" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lML-KN-3nB" customClass="TRInsertLabel" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="72" y="181" width="27" height="13"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
@@ -1242,7 +1242,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Legal View Controller-->
         <scene sceneID="Ncw-Ae-IHM">
             <objects>
-                <viewController storyboardIdentifier="legalWebView" id="IOo-gx-K2M" customClass="TRLegalViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="legalWebView" id="IOo-gx-K2M" customClass="TRLegalViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sLK-01-FLj"/>
                         <viewControllerLayoutGuide type="bottom" id="lrB-st-kDK"/>
@@ -1260,7 +1260,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Profile View Controller-->
         <scene sceneID="Dpu-Rd-GzN">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="RJW-k0-l6u" customClass="TRProfileViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="RJW-k0-l6u" customClass="TRProfileViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5T3-1W-a1y"/>
                         <viewControllerLayoutGuide type="bottom" id="ftz-Fk-rbT"/>
@@ -1463,7 +1463,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Change Password View Controller-->
         <scene sceneID="Deb-nP-xt5">
             <objects>
-                <viewController id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6E-96-PgV"/>
                         <viewControllerLayoutGuide type="bottom" id="Kb1-Pl-dTK"/>
@@ -1646,7 +1646,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Contact Us-->
         <scene sceneID="LaP-JU-gQW">
             <objects>
-                <viewController storyboardIdentifier="sendReportVC" title="Contact Us" id="vH8-Nd-68e" customClass="TRSendReportViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sendReportVC" title="Contact Us" id="vH8-Nd-68e" customClass="TRSendReportViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lFW-Yw-m9S"/>
                         <viewControllerLayoutGuide type="bottom" id="aYC-fX-WDX"/>
@@ -1843,7 +1843,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Message Sent Conf View Controller-->
         <scene sceneID="27Y-Ev-n5M">
             <objects>
-                <viewController storyboardIdentifier="messageSent" id="703-P7-HS9" customClass="TRMessageSentConfViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="messageSent" id="703-P7-HS9" customClass="TRMessageSentConfViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RYJ-AM-xXA"/>
                         <viewControllerLayoutGuide type="bottom" id="N8n-3Z-Y6W"/>
@@ -1907,7 +1907,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Event List View Controller-->
         <scene sceneID="ovf-Ol-GMU">
             <objects>
-                <viewController storyboardIdentifier="eventListVC" id="Ni1-Nm-5hW" customClass="TREventListViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventListVC" id="Ni1-Nm-5hW" customClass="TREventListViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKo-wg-rmi"/>
                         <viewControllerLayoutGuide type="bottom" id="hh2-ts-4BA"/>
@@ -2090,7 +2090,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--ADD ACTIVITY-->
         <scene sceneID="gyh-ht-VKW">
             <objects>
-                <viewController storyboardIdentifier="createeventvc" id="iX8-L2-jzY" customClass="TRCreateEventViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createeventvc" id="iX8-L2-jzY" customClass="TRCreateEventViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ayi-je-Xfm"/>
                         <viewControllerLayoutGuide type="bottom" id="i2g-3I-3sz"/>
@@ -2106,7 +2106,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGChooseActivity" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-f9-nTb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="324"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bim-z1-0Mm" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bim-z1-0Mm" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="153" y="280" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="N1V-YT-g8O"/>
@@ -2119,7 +2119,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="j15-Sf-xyc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edw-uz-yzl" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edw-uz-yzl" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="253" y="280" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="L5Q-3Z-jpq"/>
@@ -2132,7 +2132,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="REL-pJ-m5g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-A6-np8" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-A6-np8" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="153" y="179" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="NbN-os-73Q"/>
@@ -2145,7 +2145,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="Jtf-SY-e1S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWj-rT-82b" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWj-rT-82b" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="353" y="179" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="Kqa-DB-X7o"/>
@@ -2158,7 +2158,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="0Nx-WU-NPD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zec-Re-cT2" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zec-Re-cT2" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="253" y="179" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="P37-aR-9QB"/>
@@ -2171,7 +2171,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="tBD-Rw-pWH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbn-l8-9hm" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbn-l8-9hm" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="353" y="280" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="f20-Zw-YeK"/>
@@ -2184,7 +2184,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="lrJ-yk-W0Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZR-uT-eTb" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZR-uT-eTb" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="153" y="382" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="1VK-Vg-Udv"/>
@@ -2197,7 +2197,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="VJQ-R0-5uM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-MY-YsM" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-MY-YsM" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="253" y="382" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="2ms-QS-iGo"/>
@@ -2210,7 +2210,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="G0h-tJ-H1U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7K-k3-fIX" customClass="EventButton" customModule="Overwatch" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7K-k3-fIX" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="353" y="382" width="94" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="LmB-hS-bxp"/>
@@ -2301,7 +2301,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Create Event Final View-->
         <scene sceneID="1Jo-BH-6yS">
             <objects>
-                <viewController storyboardIdentifier="createventfinal" id="YXe-0q-e54" customClass="TRCreateEventFinalView" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createventfinal" id="YXe-0q-e54" customClass="TRCreateEventFinalView" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4za-Ly-Scu"/>
                         <viewControllerLayoutGuide type="bottom" id="x4L-YE-Rsh"/>
@@ -2713,7 +2713,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Game View Controller-->
         <scene sceneID="0X3-J5-MxH">
             <objects>
-                <viewController storyboardIdentifier="yatriView" id="kcL-1v-TAa" customClass="YTGameViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yatriView" id="kcL-1v-TAa" customClass="YTGameViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mav-Jl-yfR"/>
                         <viewControllerLayoutGuide type="bottom" id="iiI-UX-ZVb"/>
@@ -2731,7 +2731,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign Up Verificatio View Controller-->
         <scene sceneID="OJF-Sb-wzb">
             <objects>
-                <viewController storyboardIdentifier="verifyAccount" id="bMr-vX-UhF" customClass="TRSignUpVerificatioViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyAccount" id="bMr-vX-UhF" customClass="TRSignUpVerificatioViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QOd-qg-fx3"/>
                         <viewControllerLayoutGuide type="bottom" id="njn-tx-sYA"/>

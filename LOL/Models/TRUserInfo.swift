@@ -162,27 +162,15 @@ class TRUserInfo: NSObject {
     }
     
     class func isUserLoggedIn () -> Bool {
-
-        guard let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies else {
-            //Cookie Not Found
-            return false
-        }
         
-        var cookieCount = 0
-        for cookie in cookies {
-            if cookie.name == "bungleatk" {
-                cookieCount += 1
-            } else if cookie.name == "bungledid" {
-                cookieCount += 1
-            } else if cookie.name == "bungled" {
-                cookieCount += 1
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if (userDefaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserPwd) != nil) {
+            let userID = userDefaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserPwd) as? String
+            if let _ = userID {
+                return true
             }
         }
-        
-        if cookieCount == 3 {
-            return true
-        }
-        
+
         return false
     }
     

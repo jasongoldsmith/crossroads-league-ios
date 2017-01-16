@@ -91,9 +91,6 @@ class TRApplicationManager: NSObject {
     // Invitation Info
     var invitation: TRInvitationInfo?
     
-    //Bungie Login Validation
-    var bungieVarificationHelper: TRBungieLoginValidation = TRBungieLoginValidation()
-    
     //APP Configuration
     var appConfiguration: TRConfigInfo?
     
