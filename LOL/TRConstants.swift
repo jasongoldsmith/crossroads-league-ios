@@ -123,6 +123,7 @@ struct K {
     
     struct VIEWCONTROLLER_IDENTIFIERS {
         
+        static let VIEW_CONTROLLER_LOGIN                   = "login"
         static let VIEW_CONTROLLER_YATRI                   = "yatriView"
         static let ROOT_VIEW_CONTROLLER                    = "rootVC"
         static let VIEWCONTROLLER_SIGNUP                   = "signup"

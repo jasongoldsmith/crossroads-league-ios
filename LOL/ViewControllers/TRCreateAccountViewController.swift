@@ -122,19 +122,19 @@ class TRCreateAccountViewController: TRBaseViewController, UITextFieldDelegate, 
         
         
         let createRequest = TRAuthenticationRequest()
-        createRequest.registerTRUserWith(userInfo) { (value ) in  //, errorData) in
-            
-            if value == true {
-                self.createAccountSuccess()
-            } else {
-                
-                //Delete the saved Password if sign-in was not successful
-                defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
-                defaults.synchronize()
-                
-                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Account creation failed.")
-            }
-        }
+//        createRequest.registerTRUserWith(userInfo) { (value ) in  //, errorData) in
+//            
+//            if value == true {
+//                self.createAccountSuccess()
+//            } else {
+//                
+//                //Delete the saved Password if sign-in was not successful
+//                defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+//                defaults.synchronize()
+//                
+//                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Account creation failed.")
+//            }
+//        }
     }
     
     func createAccountSuccess() {

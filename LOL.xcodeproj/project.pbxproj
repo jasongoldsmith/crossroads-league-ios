@@ -650,10 +650,10 @@
 			isa = PBXGroup;
 			children = (
 				C7B47CAE1E281A0E00D441BC /* TRLoginOptionViewController.swift */,
-				C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */,
 				33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */,
 				33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */,
 				33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */,
+				C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */,
 			);
 			name = OnBoarding;
 			sourceTree = "<group>";

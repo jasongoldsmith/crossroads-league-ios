@@ -7,47 +7,32 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 
 class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    var regionDictionary: [String:String] = [
-        "Brazil": "BR",
-        "EU Nordic & East": "EUNE",
-        "EU West": "EUW",
-        "Japan": "JP",
-        "Korea": "KR",
-        "Latin America North": "LAN",
-        "Latin America South": "LAS",
-        "North America": "NA",
-        "Oceania": "OCE",
-        "Russia": "RU",
-        "Turkey": "TR"
-    ]
-
-    var regionalArray: [String] = ["Brazil",
-                                   "EU Nordic & East",
-                                   "EU West",
-                                   "Japan",
-                                   "Korea",
-                                   "Latin America North",
-                                   "Latin America South",
-                                   "North America",
-                                   "Oceania",
-                                   "Russia",
-                                   "Turkey"]
-    
-    private let REGION_CELL       = "regionCell"
+    var regionDictionary: [String: JSON]?
+    var regionalArray: [String] = []
     var selectedRegionCode: String?
+    
+    private let REGION_CELL = "regionCell"
     
     @IBOutlet weak var regionTableView: UITableView!
     @IBOutlet weak var userConsoleIdTextView: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.regionTableView?.registerNib(UINib(nibName: "TRRegionCell", bundle: nil), forCellReuseIdentifier: REGION_CELL)
+        
+        self.regionDictionary = (TRApplicationManager.sharedInstance.appConfiguration?.regionDict)!
+        if let _ = self.regionDictionary {
+            for (key, _) in self.regionDictionary! {
+                self.regionalArray.append("\(key)")
+            }
+        }
     }
  
     @IBAction func showRegionTable (sender: UIButton) {
@@ -59,6 +44,11 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     }
     
     @IBAction func joinCrossroadButton (sender: UIButton) {
+        
+        guard let _ = self.selectedRegionCode else {
+            return
+        }
+        
         _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, completion: { (didSucceed) in
             if didSucceed == true {
                 
@@ -109,6 +99,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         
         let cell = self.regionTableView.cellForRowAtIndexPath(indexPath) as? TRRegionCell
         self.regionTableView?.deselectRowAtIndexPath(indexPath, animated: false)
-        self.selectedRegionCode = self.regionDictionary[cell!.regionNameLabel.text!]
+        let cellText = cell!.regionNameLabel.text!
+        self.selectedRegionCode = self.regionDictionary![cellText]?.description
     }
 }

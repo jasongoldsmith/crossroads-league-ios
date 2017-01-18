@@ -51,12 +51,6 @@ class TRFunnelData {
         p["x-mixpanelid"] = mixpanel.distinctId
         
         
-        if let _ = addBungieHeader {
-            p["x-api-key"] = addBungieHeader!["x-api-key"]
-            p["x-csrf"] = addBungieHeader!["x-csrf"]
-            p["cookie"] = addBungieHeader!["cookie"]
-        }
-        
         return p
     }
     

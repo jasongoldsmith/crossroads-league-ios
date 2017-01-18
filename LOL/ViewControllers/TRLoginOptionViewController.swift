@@ -54,10 +54,6 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
         //Legal Statement
         self.addLegalStatmentText()
         
-        //Button Images
-        self.playStationButton.setImage(UIImage(named: "pSNLogo"), forState: .Normal)
-        self.xBoxButton.setImage(UIImage(named: "xboxLiveLogo"), forState: .Normal)
-        
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
         if userDefaults.boolForKey(K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN) == false && isUserLoggedIn == true {
@@ -79,8 +75,6 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
             self.crossRdLogoCenterConst?.constant = -1
             
             self.signInLabel.font = UIFont(name:"HelveticaNeue-Medium", size: 11)
-//            self.playStationButton?.imageView!.contentMode = .ScaleAspectFill
-//            self.xBoxButton.imageEdgeInsets = UIEdgeInsetsMake(10, 25, 10, 25)
         }
     }
     
@@ -99,6 +93,10 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
     }
     
     @IBAction func xBoxTapped(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let registerCrossroads = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_LOGIN) as! TRSignInViewController
+        registerCrossroads.isUserRegistering = true
+        self.navigationController?.pushViewController(registerCrossroads, animated: true)
     }
     
     @IBAction func playStationTapped(sender: AnyObject) {

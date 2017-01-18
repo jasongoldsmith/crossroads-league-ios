@@ -30,22 +30,24 @@ class TRRootViewController: TRBaseViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
-        if userDefaults.boolForKey(K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN) == false && isUserLoggedIn == true {
-            _ = TRAuthenticationRequest().logoutTRUser({ (value ) in
-                if value == true {
-                    self.appLoading()
-                }
-            })
-        } else {
-            userDefaults.setBool(true, forKey: K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN)
-            self.appLoading()
-        }
-        
-        //Add Observer to check if the user has been verified
-        TRApplicationManager.sharedInstance.fireBaseManager?.addUserObserverWithCompletion({ (didCompelete) in
+        _ = TRGetConfigRequest().getConfiguration({ (didSucceed) in
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
+            if userDefaults.boolForKey(K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN) == false && isUserLoggedIn == true {
+                _ = TRAuthenticationRequest().logoutTRUser({ (value ) in
+                    if value == true {
+                        self.appLoading()
+                    }
+                })
+            } else {
+                userDefaults.setBool(true, forKey: K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN)
+                self.appLoading()
+            }
             
+            //Add Observer to check if the user has been verified
+            TRApplicationManager.sharedInstance.fireBaseManager?.addUserObserverWithCompletion({ (didCompelete) in
+                
+            })
         })
     }
 

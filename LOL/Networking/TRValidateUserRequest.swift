@@ -16,9 +16,11 @@ class TRValidateUserRequest: TRRequest {
         var params = [String: AnyObject]()
         params["consoleId"] = summonerName
         params["region"] = region
+        params["_comments"] = "for a list of possible values use /api/v1/config"
         
         let request = TRRequest()
         request.params = params
+        request.URLMethod = .GET
         request.requestURL = validateUserUrl
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             

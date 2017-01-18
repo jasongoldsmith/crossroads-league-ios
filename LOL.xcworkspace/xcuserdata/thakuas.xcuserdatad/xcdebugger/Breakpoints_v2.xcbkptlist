@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LOL/ViewControllers/TRSignInCheckUserViewController.swift"
-            timestampString = "506412319.069961"
+            filePath = "LOL/Networking/TRAuthenticationRequest.swift"
+            timestampString = "506458622.993243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "joinCrossroadButton(_:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loginTRUserWithSuccess(_:password:completion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

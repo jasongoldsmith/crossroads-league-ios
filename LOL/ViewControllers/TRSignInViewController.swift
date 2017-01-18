@@ -26,6 +26,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     
     var errorView: TRErrorNotificationView?
     var selectedConsole: String?
+    var isUserRegistering: Bool = false
     
     
     override func viewDidLoad() {
@@ -40,6 +41,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
         
         self.userPwdTxtField.attributedPlaceholder = NSAttributedString(string:"Enter password", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
+        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter email address", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
         self.forgotPassword.addGestureRecognizer(self.leftTapGesture!)
     }
     
@@ -83,14 +85,12 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    func signInSuccess() {
+    func registerSuccess() {
         
         let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
         let vc : TRSignInCheckUserViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_VERIFY_USER) as! TRSignInCheckUserViewController
         
         self.navigationController?.pushViewController(vc, animated: true)
-
-        //performSegueWithIdentifier("TRSignInUnwindAction", sender: nil)
     }
     
     
@@ -105,33 +105,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         
         return true
     }
-    
-    
-//    @IBAction func playStationSelected () {
-//        self.selectedConsole = ConsoleTypes.PS4
-//        self.playStationButton?.backgroundColor = UIColor(red: 0/255, green: 134/255, blue: 208/255, alpha: 1)
-//        self.playStationButton?.layer.cornerRadius = 2.0
-//        self.playStationButton?.alpha = 1
-//        self.playStationImage?.alpha = 1
-//        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"En ter PlayStation Gamertag", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
-//        
-//        self.xBoxStationButton?.backgroundColor = UIColor.blackColor()
-//        self.xBoxStationImage?.alpha = 0.5
-//        self.xBoxStationButton?.alpha = 0.5
-//    }
-//    
-//    @IBAction func xBoxSelected () {
-//        self.selectedConsole = ConsoleTypes.XBOXONE
-//        self.xBoxStationButton?.backgroundColor = UIColor(red: 0/255, green: 134/255, blue: 208/255, alpha: 1)
-//        self.xBoxStationButton?.layer.cornerRadius = 2.0
-//        self.xBoxStationButton?.alpha = 1
-//        self.xBoxStationImage?.alpha = 1
-//        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter Xbox Gamertag", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
-//        
-//        self.playStationButton?.backgroundColor = UIColor.blackColor()
-//        self.playStationImage?.alpha = 0.5
-//        self.playStationButton?.alpha = 0.5
-//    }
     
     @IBAction func signInBtnTapped(sender: AnyObject) {
         
@@ -173,26 +146,56 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             invitationDict = invi.createSignInInvitationPayLoad()
         }
         
-        createRequest.loginTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
-            if let errorString = error {
-                if (errorString == "The username and password do not match our records.") {
-                    TRApplicationManager.sharedInstance.addErrorSubViewWithMessage(errorString)
-                    return
+        
+        if isUserRegistering == false {
+            createRequest.loginTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
+                if let errorString = error {
+                    if (errorString == "The username and password do not match our records.") {
+                        TRApplicationManager.sharedInstance.addErrorSubViewWithMessage(errorString)
+                        return
+                    } else {
+                        //Delete the saved Password if sign-in was not successful
+                        defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                        defaults.synchronize()
+                        
+                        // Add Error View
+                        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                        let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
+                        vc.userName = self.userNameTxtField.text
+                        vc.signInError = error
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
                 } else {
-                    //Delete the saved Password if sign-in was not successful
-                    defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
-                    defaults.synchronize()
-                    
-                    // Add Error View
-                    let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-                    let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
-                    vc.userName = self.userNameTxtField.text
-                    vc.signInError = error
-                    
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    if let _ = TRUserInfo.getConsoleID() {
+                        self.performSegueWithIdentifier("TRSignInUnwindAction", sender: nil)
+                    } else {
+                        self.registerSuccess()
+                    }
                 }
-            } else {
-                self.signInSuccess()
+            }
+        } else {
+            createRequest.registerTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
+                if let errorString = error {
+                    if (errorString == "The username and password do not match our records.") {
+                        TRApplicationManager.sharedInstance.addErrorSubViewWithMessage(errorString)
+                        return
+                    } else {
+                        //Delete the saved Password if sign-in was not successful
+                        defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                        defaults.synchronize()
+                        
+                        // Add Error View
+                        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                        let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
+                        vc.userName = self.userNameTxtField.text
+                        vc.signInError = error
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                } else {
+                    self.registerSuccess()
+                }
             }
         }
     }

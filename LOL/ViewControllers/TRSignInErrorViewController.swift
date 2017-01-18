@@ -16,12 +16,15 @@ class TRSignInErrorViewController: TRBaseViewController, TTTAttributedLabelDeleg
     var userName: String?
     var signInError: String?
     
-    @IBOutlet weak var supportText: TTTAttributedLabel!
+    @IBOutlet weak var supportText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.hideNavigationBar()
+        
+        if let _ = self.signInError {
+            self.supportText?.text = self.signInError
+        }
     }
     
     override func viewDidAppear(animated: Bool) {

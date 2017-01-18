@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class TRConfigInfo: NSObject {
     
     var mixPanelToken: String?
-    var playerDetailsUrl: String?
-    var xBoxLoginUrl: String?
-    var psnLoginUrl: String?
+    var regionDict: Dictionary<String, JSON>?
+    
 }

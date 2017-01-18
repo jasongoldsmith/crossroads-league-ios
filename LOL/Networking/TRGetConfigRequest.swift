@@ -26,20 +26,7 @@ class TRGetConfigRequest: TRRequest {
             
             let appConfig = TRConfigInfo()
             appConfig.mixPanelToken = swiftyJsonVar["mixpanelToken"].stringValue
-            appConfig.playerDetailsUrl = swiftyJsonVar["playerDetailsURL"].stringValue
-            appConfig.xBoxLoginUrl = swiftyJsonVar["xboxLoginURL"].stringValue
-            appConfig.psnLoginUrl = swiftyJsonVar["psnLoginURL"].stringValue
-            
-            
-            if let _ = appConfig.playerDetailsUrl {
-                NSUserDefaults.standardUserDefaults().setObject(appConfig.playerDetailsUrl, forKey: K.UserDefaultKey.APPLICATION_CONFIGURATIONS_PLAYER_DETAIL)
-            }
-            if let _ = appConfig.xBoxLoginUrl {
-                NSUserDefaults.standardUserDefaults().setObject(appConfig.xBoxLoginUrl, forKey: K.UserDefaultKey.APPLICATION_CONFIGURATIONS_PSN_URL)
-            }
-            if let _ = appConfig.psnLoginUrl {
-                NSUserDefaults.standardUserDefaults().setObject(appConfig.psnLoginUrl, forKey: K.UserDefaultKey.APPLICATION_CONFIGURATIONS_XBOX_URL)
-            }
+            appConfig.regionDict = swiftyJsonVar["LolRegions"].dictionary
             
             
             TRApplicationManager.sharedInstance.appConfiguration = appConfig
