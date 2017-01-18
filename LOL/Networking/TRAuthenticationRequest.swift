@@ -111,17 +111,8 @@ class TRAuthenticationRequest: TRRequest {
         
         let loginUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_LoginUrl
         var params = [String: AnyObject]()
-        if let _ = console {
-            params["consoles"] = console
-        } else { return }
-        
-        if password?.characters.isEmpty == false {
-            params["passWord"] = password
-        } else { return }
-        
-        if let _ = invitationDict {
-            params["invitation"] = invitationDict
-        }
+        params["userName"] = console!["userName"]
+        params["passWord"] = console!["passWord"]
         
         let request = TRRequest()
         request.params = params
@@ -137,12 +128,6 @@ class TRAuthenticationRequest: TRRequest {
             let userData = TRUserInfo()
             userData.parseUserResponse(responseObject)
             TRUserInfo.saveUserData(userData)
-            
-            for console in userData.consoles {
-                if console.isPrimary == true {
-                    TRUserInfo.saveConsolesObject(console)
-                }
-            }
             
             completion(error: nil, responseObject: (responseObject))
         }

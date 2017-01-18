@@ -72,9 +72,10 @@ struct K {
         #elseif ADHOC
             static let TR_BaseUrl            =   "https://travelerbackendproduction.herokuapp.com"
         #else
-            static let TR_BaseUrl            =   "https://travelerbackend.herokuapp.com"
+            static let TR_BaseUrl            =   "https://lol-development.herokuapp.com"
         #endif
         
+        static let TR_Validate_User      =   "/api/v1/a/user/addConsole"
         static let TR_RegisterUrl        =   "/api/v1/auth/register"
         static let TR_LoginUrl           =   "/api/v1/auth/login"
         static let TR_LogoutUrl          =   "/api/v1/auth/logout"
@@ -140,6 +141,7 @@ struct K {
         static let VIEW_CONTROLLER_SIGNIN_ERROR            = "SIGINERROR"
         static let VIEW_CONTROLLER_CONTACT_MESSAGE_SENT    = "messageSent"
         static let VIEW_CONTROLLER_WEB_VIEW_SIGNIN         = "webviewVC"
+        static let VIEW_CONTROLLER_VERIFY_USER             = "verifyUserView"
     }
     
     struct ActivityType {

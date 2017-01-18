@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
+		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
+		33C837C41E2D850D0057540F /* TRSignInCheckUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */; };
+		33C837C61E2EE35F0057540F /* TRValidateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */; };
+		33C837C81E2F0BF60057540F /* TRRegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C71E2F0BF60057540F /* TRRegionCell.swift */; };
+		33C837CB1E2F0C300057540F /* TRRegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C837CA1E2F0C300057540F /* TRRegionCell.xib */; };
 		33CD73951E2D5A7A009E63F2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD73941E2D5A7A009E63F2 /* GameKit.framework */; };
 		C7B47B6E1E26FD2A00D441BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */; };
 		C7B47B731E26FD2A00D441BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B711E26FD2A00D441BC /* Main.storyboard */; };
@@ -161,6 +167,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
+		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
+		33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInCheckUserViewController.swift; sourceTree = "<group>"; };
+		33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRValidateUserRequest.swift; sourceTree = "<group>"; };
+		33C837C71E2F0BF60057540F /* TRRegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRRegionCell.swift; sourceTree = "<group>"; };
+		33C837CA1E2F0C300057540F /* TRRegionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRegionCell.xib; sourceTree = "<group>"; };
 		33CD73941E2D5A7A009E63F2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		33CD73961E2D5A7F009E63F2 /* LOL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LOL.entitlements; sourceTree = "<group>"; };
 		5149D55C3707CF1765466ACF /* Pods-LOL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +358,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		33C837C91E2F0C000057540F /* RegionCell */ = {
+			isa = PBXGroup;
+			children = (
+				33C837C71E2F0BF60057540F /* TRRegionCell.swift */,
+				33C837CA1E2F0C300057540F /* TRRegionCell.xib */,
+			);
+			name = RegionCell;
+			sourceTree = "<group>";
+		};
 		C7B47B611E26FD2A00D441BC = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +487,7 @@
 				C7B47BF41E2809DF00D441BC /* TRUpdateGroupRequest.swift */,
 				C7B47BF51E2809DF00D441BC /* TRUpdateUser.swift */,
 				C7B47BF61E2809DF00D441BC /* TRUpdateUserGroupRequest.swift */,
+				33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -499,6 +521,7 @@
 				C7B47C6E1E280EB600D441BC /* Event_Table_Cells */,
 				C7B47C8E1E28138C00D441BC /* Pickers */,
 				C7B47C971E2813B200D441BC /* EventDescriptionCell */,
+				33C837C91E2F0C000057540F /* RegionCell */,
 				C7B47C3D1E280E7100D441BC /* EventButton.swift */,
 				C7B47C3E1E280E7100D441BC /* TRActivityIndicatorView.swift */,
 				C7B47C3F1E280E7100D441BC /* TRActivityIndicatorView.xib */,
@@ -628,6 +651,9 @@
 			children = (
 				C7B47CAE1E281A0E00D441BC /* TRLoginOptionViewController.swift */,
 				C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */,
+				33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */,
+				33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */,
+				33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */,
 			);
 			name = OnBoarding;
 			sourceTree = "<group>";
@@ -748,6 +774,7 @@
 				C7B47C661E280E7100D441BC /* TRSendChatMessageView.xib in Resources */,
 				C7B47C6A1E280E7100D441BC /* TRWebView.xib in Resources */,
 				C7B47C681E280E7100D441BC /* TRVerificationPromptView.xib in Resources */,
+				33C837CB1E2F0C300057540F /* TRRegionCell.xib in Resources */,
 				C7B47C961E2813AC00D441BC /* TREventDescriptionCell.xib in Resources */,
 				C7B47C8D1E28138500D441BC /* TRDatePicker.xib in Resources */,
 				C7B47C601E280E7100D441BC /* TREventInfoPlayerCell.xib in Resources */,
@@ -829,6 +856,7 @@
 				C7B47C5D1E280E7100D441BC /* TRErrorNotificationView.swift in Sources */,
 				C7B47C081E2809DF00D441BC /* TRGetEventRequest.swift in Sources */,
 				C7B47C0A1E2809DF00D441BC /* TRGetGroupByIDRequest.swift in Sources */,
+				33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */,
 				C7B47CC01E281A0E00D441BC /* TRMessageSentConfViewController.swift in Sources */,
 				C7B47C011E2809DF00D441BC /* TRCreateEventRequest.swift in Sources */,
 				C7B47C101E2809DF00D441BC /* TRJoinEventRequest.swift in Sources */,
@@ -839,6 +867,7 @@
 				C7B47C071E2809DF00D441BC /* TRGetConfigRequest.swift in Sources */,
 				C7B47BC41E28086A00D441BC /* TRFunnelData.swift in Sources */,
 				C7B47CC41E281A0E00D441BC /* TRSignInErrorViewController.swift in Sources */,
+				33C837C61E2EE35F0057540F /* TRValidateUserRequest.swift in Sources */,
 				C7B47C6D1E280EA700D441BC /* TRBaseEventTableCell.swift in Sources */,
 				C7B47C711E280EC500D441BC /* TREventActivityCardCell.swift in Sources */,
 				C7B47BBE1E28086A00D441BC /* StringExtension.swift in Sources */,
@@ -850,6 +879,7 @@
 				C7B47C0D1E2809DF00D441BC /* TRHelmetUpdateRequest.swift in Sources */,
 				C7B47C371E2809FC00D441BC /* TREventInfo.swift in Sources */,
 				C7B47C931E2813AC00D441BC /* TREventCommentCell.swift in Sources */,
+				33C837C81E2F0BF60057540F /* TRRegionCell.swift in Sources */,
 				C7B47BC21E28086A00D441BC /* TRDeepLinkObject.swift in Sources */,
 				C7B47C1A1E2809DF00D441BC /* TRUpdateUser.swift in Sources */,
 				C7B47C181E2809DF00D441BC /* TRSendPushMessage.swift in Sources */,
@@ -871,6 +901,7 @@
 				C7B47C321E2809FC00D441BC /* TRBungieGroupInfo.swift in Sources */,
 				C7B47C3C1E2809FC00D441BC /* TRUserInfo.swift in Sources */,
 				C7B47BFC1E2809DF00D441BC /* TRBungieInvitationCompletionRequest.swift in Sources */,
+				33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */,
 				C7B47BC51E28086A00D441BC /* TRInsertLabel.swift in Sources */,
 				C7B47C161E2809DF00D441BC /* TRRequestUpdateLegalRequest.swift in Sources */,
 				C7B47BBA1E28086A00D441BC /* ArrayExtension.swift in Sources */,
@@ -913,6 +944,7 @@
 				C7B47B9D1E2807F800D441BC /* KSToken.swift in Sources */,
 				C7B47C591E280E7100D441BC /* TRBungieGroupCell.swift in Sources */,
 				C7B47BCA1E28086A00D441BC /* TRPushNotification.swift in Sources */,
+				33C837C41E2D850D0057540F /* TRSignInCheckUserViewController.swift in Sources */,
 				C7B47C571E280E7100D441BC /* TRActivitySelectionCell.swift in Sources */,
 				C7B47BCE1E28086A00D441BC /* UIViewExtension.swift in Sources */,
 				C7B47C051E2809DF00D441BC /* TRgetActivityList.swift in Sources */,
@@ -1045,6 +1077,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/LOL/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1065,6 +1098,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/LOL/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
