@@ -14,13 +14,12 @@ class TRValidateUserRequest: TRRequest {
         
         let validateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_Validate_User
         var params = [String: AnyObject]()
-        params["consoleId"] = summonerName
-        params["region"] = region
+        params["consoleId"] = "deadman262"
+        params["region"] = "NA"
         params["_comments"] = "for a list of possible values use /api/v1/config"
         
         let request = TRRequest()
         request.params = params
-        request.URLMethod = .GET
         request.requestURL = validateUserUrl
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             
