@@ -10,12 +10,12 @@ import Foundation
 
 class TRValidateUserRequest: TRRequest {
     
-    func validateUser(summonerName: String, region: String, completion: TRValueCallBack) {
+    func validateUser(summonerName: String, region: String, completion:TRResponseCallBack) {
         
         let validateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_Validate_User
         var params = [String: AnyObject]()
-        params["consoleId"] = "deadman262"
-        params["region"] = "NA"
+        params["consoleId"] = summonerName
+        params["region"] = region
         params["_comments"] = "for a list of possible values use /api/v1/config"
         
         let request = TRRequest()
@@ -24,7 +24,7 @@ class TRValidateUserRequest: TRRequest {
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             
             if let _ = error {
-                print("Error Happened")
+                completion(error: error, responseObject: nil)
             }
             
             let userData = TRUserInfo()
@@ -32,10 +32,8 @@ class TRValidateUserRequest: TRRequest {
             TRUserInfo.saveUserData(userData)
 
             if let _ = userData.userID where userData.userID != "" {
-                completion(didSucceed: true)
+                completion(error: nil, responseObject: swiftyJsonVar)
             }
-            
-            completion(didSucceed: false)
         }
     }
 }

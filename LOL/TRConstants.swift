@@ -41,6 +41,7 @@ struct K {
             static let TR_USER_CLAN_ID  = "TR_USER_CLAN_ID"
             
             
+            static let TR_USER_CONSOLE_REGION  = "TR_USER_CONSOLE_REGION"
             static let TR_USER_CONSOLE_ID  = "TR_USER_CONSOLE_ID"
             static let TR_USER_BUNGIE_MEMBERSHIP_ID  = "TR_USER_BUNGIE_MEMBERSHIP_ID"
             static let TR_USER_CONSOLE_TYPE  = "TR_USER_CONSOLE_TYPE"

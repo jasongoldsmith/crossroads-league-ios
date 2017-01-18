@@ -49,11 +49,13 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
             return
         }
         
-        _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, completion: { (didSucceed) in
-            if didSucceed == true {
-                
+        _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, completion: { (error, responseObject) in 
+            
+            if let _ = error {
                 let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-                let vc : TRCreateAccountViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEWCONTROLLER_SIGNUP) as! TRCreateAccountViewController
+                let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
+                vc.signInError = error
+                
                 self.navigationController?.pushViewController(vc, animated: true)
             } else {
                 

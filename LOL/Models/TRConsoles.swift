@@ -16,6 +16,9 @@ struct ConsoleTypes {
 }
 
 class TRConsoles {
+    
+    var region: String?
+    var gamePlayerLevel: Int?
     var consoleId: String?
     var consoleType: String?
     var verifyStatus: String?
@@ -29,6 +32,7 @@ class TRConsoles {
         userDefaults.setValue(consoleObj.consoleId, forKey: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_ID)
         userDefaults.setValue(consoleObj.consoleType  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_TYPE)
         userDefaults.setValue(consoleObj.verifyStatus  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_CONSOLE_VERIFIED)
+        userDefaults.setValue(consoleObj.region  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_REGION)
     }
     
     class func getConsoleID () -> String? {
@@ -57,6 +61,16 @@ class TRConsoles {
         
         return nil
     }
+    
+    class func getConsoleRegion () -> String? {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if (userDefaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_REGION) != nil) {
+            return userDefaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_REGION) as? String
+        }
+        
+        return nil
+    }
+
     
     //Is Console Latest
     func isPlayStationConsoleLatest () -> Bool {
