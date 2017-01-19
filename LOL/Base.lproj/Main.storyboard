@@ -2094,22 +2094,23 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="40" y="227" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IYg-T6-uQs"/>
                                     <constraint firstAttribute="height" constant="50" id="Xyd-PQ-9MK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Summoner's Rift">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="IYg-T6-uQs"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="Gwb-iJ-i7R"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconSummRift" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-Sx-iRA">
+                                <rect key="frame" x="60" y="240" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="0yI-DK-RBM"/>
+                                    <constraint firstAttribute="height" constant="24" id="qod-cV-dif"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-np-CAB" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="287" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2121,6 +2122,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="BsL-pZ-BE4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTwistedTreeline" translatesAutoresizingMaskIntoConstraints="NO" id="36S-0H-r2z">
+                                <rect key="frame" x="60" y="300" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Quf-BP-Q3N"/>
+                                    <constraint firstAttribute="height" constant="24" id="q1M-77-hm5"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-9G-lH9" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="345" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2132,6 +2140,24 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="K13-dp-Tu6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-vd-WAC" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="405" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Custom">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="eex-nE-IZS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCustom" translatesAutoresizingMaskIntoConstraints="NO" id="8H2-Ns-lWE">
+                                <rect key="frame" x="60" y="418" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="GXM-Iy-s76"/>
+                                    <constraint firstAttribute="height" constant="24" id="Jo3-2p-Jxj"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDJ-Ze-dzS" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="499" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2143,6 +2169,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="NY4-dK-Rk3"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconSummRift" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-hp-98C">
+                                <rect key="frame" x="60" y="512" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="TcZ-Td-KCR"/>
+                                    <constraint firstAttribute="height" constant="24" id="WBY-Rd-i3r"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-Ir-4TW" customClass="EventButton" customModule="LOL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="559" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2154,6 +2187,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="QAS-eH-Izf"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTwistedTreeline" translatesAutoresizingMaskIntoConstraints="NO" id="PuN-Eh-YwQ">
+                                <rect key="frame" x="60" y="572" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="EKQ-ji-DJk"/>
+                                    <constraint firstAttribute="width" constant="24" id="qUX-QN-nyR"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGChooseActivity" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-f9-nTb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="230"/>
                             </imageView>
@@ -2196,23 +2236,20 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="textColor" red="0.74117647060000003" green="0.69803921570000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-vd-WAC" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="40" y="405" width="520" height="50"/>
-                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="Custom">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="eex-nE-IZS"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconARAM" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-Hf-8r7">
+                                <rect key="frame" x="60" y="358" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="e1B-th-1SM"/>
+                                    <constraint firstAttribute="width" constant="24" id="wch-BK-Df4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="width" secondItem="39E-C1-dVL" secondAttribute="width" id="0eb-Hm-nTa"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="trailing" secondItem="cx4-np-CAB" secondAttribute="trailing" id="1oe-uF-q9y"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="jbL-vd-WAC" secondAttribute="leading" id="1xF-Iq-LW7"/>
+                            <constraint firstItem="bBh-Hf-8r7" firstAttribute="leading" secondItem="36S-0H-r2z" secondAttribute="leading" id="26g-fX-b3V"/>
                             <constraint firstItem="jbL-vd-WAC" firstAttribute="width" secondItem="mXD-9G-lH9" secondAttribute="width" id="2cy-hd-gRB"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="2gl-um-Vb8"/>
                             <constraint firstItem="aDP-f9-nTb" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leading" id="4Wm-V8-aHN"/>
@@ -2229,6 +2266,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="height" secondItem="cx4-np-CAB" secondAttribute="height" id="Ay9-Db-13c"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="top" secondItem="39E-C1-dVL" secondAttribute="bottom" constant="10" id="C81-Bq-7zU"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="39E-C1-dVL" secondAttribute="leading" id="D2j-rY-tMD"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="top" secondItem="KSF-hp-98C" secondAttribute="bottom" constant="-37" id="FW4-ir-ob0"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="width" secondItem="jbL-vd-WAC" secondAttribute="width" id="Ftz-tT-oLf"/>
                             <constraint firstItem="G1Y-mR-Qy6" firstAttribute="centerX" secondItem="3bu-3w-LuR" secondAttribute="centerX" id="HUo-Y0-zrJ"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="centerX" secondItem="0ju-Zl-M2q" secondAttribute="centerX" id="Hj8-od-DRc"/>
@@ -2237,15 +2275,18 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="3bu-3w-LuR" firstAttribute="top" secondItem="qBH-9P-IF2" secondAttribute="bottom" constant="-48" id="IqQ-gX-yu4"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="39E-C1-dVL" secondAttribute="leading" id="Ju1-zV-qT4"/>
                             <constraint firstItem="jbL-vd-WAC" firstAttribute="width" secondItem="mXD-9G-lH9" secondAttribute="width" id="JwC-Hj-BYr"/>
+                            <constraint firstItem="8H2-Ns-lWE" firstAttribute="leading" secondItem="bBh-Hf-8r7" secondAttribute="leading" id="K1w-FH-GiH"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="L6n-AJ-ecY"/>
                             <constraint firstAttribute="trailing" secondItem="39E-C1-dVL" secondAttribute="trailing" constant="40" id="Ma4-GB-jKs"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="top" secondItem="wDJ-Ze-dzS" secondAttribute="bottom" constant="10" id="NGH-Kg-gEL"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="top" secondItem="sSz-Nf-TI2" secondAttribute="bottom" constant="10" id="Nyr-ac-CaD"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="top" secondItem="8H2-Ns-lWE" secondAttribute="bottom" constant="-37" id="Olc-m7-zuS"/>
                             <constraint firstItem="sSz-Nf-TI2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" id="PSP-SX-nGY"/>
                             <constraint firstAttribute="trailing" secondItem="a4l-9U-N2b" secondAttribute="trailing" constant="14" id="Plc-ZC-VIG"/>
                             <constraint firstItem="0ju-Zl-M2q" firstAttribute="leading" secondItem="wDJ-Ze-dzS" secondAttribute="leading" id="QCg-3R-bg0"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="wDJ-Ze-dzS" secondAttribute="leading" id="RzI-Q5-J9m"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="height" secondItem="jbL-vd-WAC" secondAttribute="height" id="SAu-n2-I9u"/>
+                            <constraint firstItem="bBh-Hf-8r7" firstAttribute="top" secondItem="mXD-9G-lH9" secondAttribute="bottom" constant="-37" id="SRr-im-dHW"/>
                             <constraint firstItem="sSz-Nf-TI2" firstAttribute="top" secondItem="jbL-vd-WAC" secondAttribute="bottom" constant="15" id="Sem-CK-mus"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="KIY-Ir-4TW" secondAttribute="leading" id="Tv1-D5-0LE"/>
                             <constraint firstItem="G1Y-mR-Qy6" firstAttribute="top" secondItem="3bu-3w-LuR" secondAttribute="bottom" constant="10" id="Up9-1d-czT"/>
@@ -2253,11 +2294,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="leading" secondItem="jbL-vd-WAC" secondAttribute="leading" id="Xgd-rA-s6Z"/>
                             <constraint firstItem="jbL-vd-WAC" firstAttribute="height" secondItem="mXD-9G-lH9" secondAttribute="height" id="Yjs-y1-eeF"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="Z6j-5q-Dku"/>
+                            <constraint firstItem="fwM-Sx-iRA" firstAttribute="leading" secondItem="39E-C1-dVL" secondAttribute="leading" constant="20" id="Zhn-sa-R1j"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="width" secondItem="cx4-np-CAB" secondAttribute="width" id="Zsu-lS-PcM"/>
                             <constraint firstItem="39E-C1-dVL" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leadingMargin" constant="20" id="aC0-lS-RiW"/>
                             <constraint firstItem="jbL-vd-WAC" firstAttribute="height" secondItem="mXD-9G-lH9" secondAttribute="height" id="aP2-VT-kl1"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="cFY-RQ-TZ7"/>
                             <constraint firstItem="39E-C1-dVL" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leading" constant="40" id="cNj-Gv-Rp3"/>
+                            <constraint firstItem="PuN-Eh-YwQ" firstAttribute="leading" secondItem="KSF-hp-98C" secondAttribute="leading" id="cfD-40-OGN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="39E-C1-dVL" secondAttribute="trailing" constant="20" id="cwJ-QL-4XM"/>
                             <constraint firstItem="jbL-vd-WAC" firstAttribute="leading" secondItem="mXD-9G-lH9" secondAttribute="leading" id="dUM-i6-h8A"/>
                             <constraint firstItem="3bu-3w-LuR" firstAttribute="top" secondItem="ayi-je-Xfm" secondAttribute="bottom" constant="88" id="dYu-Hq-OxN"/>
@@ -2265,8 +2308,11 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="i2g-3I-3sz" firstAttribute="top" secondItem="0ju-Zl-M2q" secondAttribute="bottom" id="eUr-mA-sDd"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="width" secondItem="cx4-np-CAB" secondAttribute="width" id="eZY-ov-3Ao"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="height" secondItem="wDJ-Ze-dzS" secondAttribute="height" id="eg6-XB-hAK"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="top" secondItem="PuN-Eh-YwQ" secondAttribute="bottom" constant="-37" id="emE-7F-FVl"/>
                             <constraint firstItem="39E-C1-dVL" firstAttribute="top" secondItem="G1Y-mR-Qy6" secondAttribute="bottom" constant="10" id="f2O-Fa-PJM"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="height" secondItem="jbL-vd-WAC" secondAttribute="height" id="gAQ-K3-3og"/>
+                            <constraint firstItem="fwM-Sx-iRA" firstAttribute="top" secondItem="39E-C1-dVL" secondAttribute="bottom" constant="-37" id="hbR-XN-zmV"/>
+                            <constraint firstItem="KSF-hp-98C" firstAttribute="leading" secondItem="8H2-Ns-lWE" secondAttribute="leading" id="htX-zp-HUf"/>
                             <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="iMh-Ia-nmm"/>
                             <constraint firstItem="a4l-9U-N2b" firstAttribute="top" secondItem="0ju-Zl-M2q" secondAttribute="top" constant="23" id="jLT-EC-NdJ"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="top" secondItem="cx4-np-CAB" secondAttribute="bottom" constant="8" symbolic="YES" id="jMV-rJ-Zea"/>
@@ -2278,7 +2324,9 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="mXD-9G-lH9" secondAttribute="trailing" id="pfF-l4-EUS"/>
                             <constraint firstItem="qBH-9P-IF2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" constant="-4" id="qNc-q2-fWs"/>
                             <constraint firstItem="wDJ-Ze-dzS" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="qUY-C6-RjD"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="top" secondItem="36S-0H-r2z" secondAttribute="bottom" constant="-37" id="slI-s0-DCh"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="height" secondItem="cx4-np-CAB" secondAttribute="height" id="tq8-Sm-8jX"/>
+                            <constraint firstItem="36S-0H-r2z" firstAttribute="leading" secondItem="fwM-Sx-iRA" secondAttribute="leading" id="v5U-Al-TAj"/>
                             <constraint firstItem="mXD-9G-lH9" firstAttribute="leading" secondItem="cx4-np-CAB" secondAttribute="leading" id="vS4-x9-YAF"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="width" secondItem="wDJ-Ze-dzS" secondAttribute="width" id="vsl-MW-gcj"/>
                             <constraint firstItem="KIY-Ir-4TW" firstAttribute="width" secondItem="wDJ-Ze-dzS" secondAttribute="width" id="wre-EV-SZR"/>
@@ -3603,10 +3651,12 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="TrLoadingimgBackgroundMap" width="375" height="667"/>
         <image name="eventsViewBG" width="375" height="667"/>
         <image name="gradientOverlayGroups" width="340" height="357"/>
+        <image name="iconARAM" width="24" height="24"/>
         <image name="iconArrowDown" width="10" height="5"/>
         <image name="iconBackArrow" width="44" height="44"/>
         <image name="iconCollapseArrow" width="44" height="44"/>
         <image name="iconCrossroadsLogin" width="20" height="24"/>
+        <image name="iconCustom" width="24" height="24"/>
         <image name="iconDetails" width="14" height="15"/>
         <image name="iconGhostDefault" width="40" height="40"/>
         <image name="iconNotificationsOff" width="44" height="44"/>
@@ -3617,6 +3667,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="iconShare" width="44" height="44"/>
         <image name="iconShowpassword" width="26" height="17"/>
         <image name="iconStartTime" width="20" height="20"/>
+        <image name="iconSummRift" width="24" height="24"/>
+        <image name="iconTwistedTreeline" width="24" height="24"/>
         <image name="iconXboxoneConsole" width="26" height="26"/>
         <image name="imgBGChooseActivity" width="375" height="230"/>
         <image name="imgBGSIGNIN" width="375" height="326"/>
