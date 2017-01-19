@@ -32,15 +32,7 @@ class TRRootViewController: TRBaseViewController {
 
         _ = TRGetConfigRequest().getConfiguration({ (didSucceed) in
             let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
-            if isUserLoggedIn == true {
-                _ = TRAuthenticationRequest().logoutTRUser({ (value ) in
-                    if value == true {
-                        self.appLoading()
-                    }
-                })
-            } else {
-                self.appLoading()
-            }
+            self.appLoading()
             
             //Add Observer to check if the user has been verified
             TRApplicationManager.sharedInstance.fireBaseManager?.addUserObserverWithCompletion({ (didCompelete) in

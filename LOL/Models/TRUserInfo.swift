@@ -309,6 +309,7 @@ class TRUserInfo: NSObject {
     
     class func removeUserData () {
         
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_REGION)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_ID)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_TYPE)

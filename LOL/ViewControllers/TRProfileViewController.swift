@@ -250,7 +250,6 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
                 if value == true {
                     
                     self.dismissViewControllerAnimated(false, completion:{
-                        TRUserInfo.removeUserData()
                         TRApplicationManager.sharedInstance.purgeSavedData()
 
                         self.didMoveToParentViewController(nil)
