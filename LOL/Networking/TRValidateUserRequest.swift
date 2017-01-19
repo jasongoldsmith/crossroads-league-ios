@@ -10,7 +10,7 @@ import Foundation
 
 class TRValidateUserRequest: TRRequest {
     
-    func validateUser(summonerName: String, region: String, completion:TRResponseCallBack) {
+    func validateUser(summonerName: String, region: String, viewWillHandleError: Bool, completion:TRResponseCallBack) {
         
         let validateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_Validate_User
         var params = [String: AnyObject]()
@@ -21,6 +21,7 @@ class TRValidateUserRequest: TRRequest {
         let request = TRRequest()
         request.params = params
         request.requestURL = validateUserUrl
+        request.viewHandlesError = viewWillHandleError
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             
             if let _ = error {

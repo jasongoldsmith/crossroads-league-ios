@@ -49,7 +49,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
             return
         }
         
-        _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, completion: { (error, responseObject) in 
+        _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, viewWillHandleError: true, completion: { (error, responseObject) in
             
             if let _ = error {
                 let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
@@ -58,7 +58,9 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             } else {
-                
+                self.dismissViewController(true, dismissed: { (didDismiss) in
+                    
+                })
             }
         })
     }

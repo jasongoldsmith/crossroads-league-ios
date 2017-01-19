@@ -56,14 +56,6 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
-        if userDefaults.boolForKey(K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN) == false && isUserLoggedIn == true {
-            let errorView = NSBundle.mainBundle().loadNibNamed("TRCustomError", owner: self, options: nil)[0] as! TRCustomError
-            errorView.errorMessageHeader?.text = "CHANGES TO SIGN IN"
-            errorView.errorMessageDescription?.text = "Good news! You can now sign in using your Xbox or PlayStation account (the same one you use for Bungie.net)"
-            errorView.frame = self.view.frame
-            errorView.delegate = self
-            self.view.addSubview(errorView)
-        }
         
         if DeviceType.IS_IPHONE_4_OR_LESS || DeviceType.IS_IPHONE_5 {
             self.crossRdLogoTopConst?.constant = 90
@@ -84,12 +76,6 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-    }
-
-
-    func okButtonPressed () {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setBool(true, forKey: K.UserDefaultKey.FORCED_LOGOUT_NEW_SIGN_IN)
     }
     
     @IBAction func xBoxTapped(sender: AnyObject) {

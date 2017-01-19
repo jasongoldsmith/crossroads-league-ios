@@ -31,7 +31,6 @@ struct K {
         static let INSTALL_INFO_SENT = "INSTALL_INFO_SENT"
         static let Platform_Info_Dict = "Platform_Info_Dict"
         static let FORCED_LOGOUT = "FORCED_LOGOUT" 
-        static let FORCED_LOGOUT_NEW_SIGN_IN = "FORCED_LOGOUT_NEW_SIGN_IN"
         
         struct UserAccountInfo {
             static let TR_UserName      = "TR_UserName"

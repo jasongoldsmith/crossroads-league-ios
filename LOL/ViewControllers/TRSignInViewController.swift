@@ -85,15 +85,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    func registerSuccess() {
-        
-        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-        let vc : TRSignInCheckUserViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_VERIFY_USER) as! TRSignInCheckUserViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         if (textField == self.userNameTxtField) {
@@ -150,22 +141,17 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         if isUserRegistering == false {
             createRequest.loginTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
                 if let errorString = error {
-                    if (errorString == "The username and password do not match our records.") {
-                        TRApplicationManager.sharedInstance.addErrorSubViewWithMessage(errorString)
-                        return
-                    } else {
-                        //Delete the saved Password if sign-in was not successful
-                        defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
-                        defaults.synchronize()
-                        
-                        // Add Error View
-                        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-                        let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
-                        vc.userName = self.userNameTxtField.text
-                        vc.signInError = error
-                        
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
+                    //Delete the saved Password if sign-in was not successful
+                    defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                    defaults.synchronize()
+                    
+                    // Add Error View
+                    let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                    let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
+                    vc.userName = self.userNameTxtField.text
+                    vc.signInError = error
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
                 } else {
                     if let _ = TRUserInfo.getConsoleID() {
                         self.performSegueWithIdentifier("TRSignInUnwindAction", sender: nil)
@@ -176,11 +162,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             }
         } else {
             createRequest.registerTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
-                if let errorString = error {
-                    if (errorString == "The username and password do not match our records.") {
-                        TRApplicationManager.sharedInstance.addErrorSubViewWithMessage(errorString)
-                        return
-                    } else {
+                if let _ = error {
                         //Delete the saved Password if sign-in was not successful
                         defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
                         defaults.synchronize()
@@ -192,7 +174,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
                         vc.signInError = error
                         
                         self.navigationController?.pushViewController(vc, animated: true)
-                    }
                 } else {
                     self.registerSuccess()
                 }
@@ -200,6 +181,13 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         }
     }
     
+    func registerSuccess() {
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let vc : TRSignInCheckUserViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_VERIFY_USER) as! TRSignInCheckUserViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func forgotPasswordTapped (sender: UITapGestureRecognizer) {
         let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
