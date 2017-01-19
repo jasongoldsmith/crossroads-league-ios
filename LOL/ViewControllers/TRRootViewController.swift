@@ -59,19 +59,47 @@ class TRRootViewController: TRBaseViewController {
                 })
             })
         } else {
-            _ = TRGetEventsList().getEventsListWithClearActivityBackGround(true, clearBG: true, indicatorTopConstraint: self.ACTIVITY_INDICATOR_TOP_CONSTRAINT, completion: { (didSucceed) -> () in
-                
-                var showEventListLandingPage = false
-                
-                if(didSucceed == true) {
-                    showEventListLandingPage = true
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            var console = [String: AnyObject]()
+            let userName = defaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserName) as? String
+            let userPW   = defaults.objectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserPwd) as? String
+            console["userName"] = userName
+            console["passWord"] = userPW
+            
+            let createRequest = TRAuthenticationRequest()
+            createRequest.showActivityIndicator = false
+            createRequest.showActivityIndicatorBgClear = true
+            
+            createRequest.loginTRUserWith(console, password: userName, invitationDict: nil) { (error, responseObject) in
+                if let _ = error {
+                    //Delete the saved Password if sign-in was not successful
+                    defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                    defaults.synchronize()
                     
-                    TRApplicationManager.sharedInstance.addSlideMenuController(self, pushData: self.pushNotificationData, branchData: self.branchLinkData, showLandingPage: showEventListLandingPage, showGroups: false)
-                    self.pushNotificationData = nil
+                    // Add Error View
+                    let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                    let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
+                    vc.userName = userName
+                    vc.signInError = error
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
                 } else {
-                    self.appManager.log.debug("Failed")
+                    _ = TRGetEventsList().getEventsListWithClearActivityBackGround(true, clearBG: true, indicatorTopConstraint: self.ACTIVITY_INDICATOR_TOP_CONSTRAINT, completion: { (didSucceed) -> () in
+                        
+                        var showEventListLandingPage = false
+                        
+                        if(didSucceed == true) {
+                            showEventListLandingPage = true
+                            
+                            TRApplicationManager.sharedInstance.addSlideMenuController(self, pushData: self.pushNotificationData, branchData: self.branchLinkData, showLandingPage: showEventListLandingPage, showGroups: false)
+                            self.pushNotificationData = nil
+                        } else {
+                            self.appManager.log.debug("Failed")
+                        }
+                    })
                 }
-            })
+            }
         }
     }
     
