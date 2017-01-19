@@ -1908,23 +1908,23 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HnB-tK-Gh9">
-                                <rect key="frame" x="10" y="149" width="580" height="402"/>
+                                <rect key="frame" x="10" y="111" width="580" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EventHeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-EZ-x8P">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="138"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EventHeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-EZ-x8P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="138" id="db4-nL-jVG"/>
+                                    <constraint firstAttribute="height" constant="100" id="db4-nL-jVG"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="segmentControlBG" translatesAutoresizingMaskIntoConstraints="NO" id="2xU-P6-pHh">
-                                <rect key="frame" x="0.0" y="83" width="600" height="55"/>
+                                <rect key="frame" x="0.0" y="45" width="600" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Apw-9a-64s"/>
                                     <constraint firstAttribute="width" constant="600" id="G9J-CU-L9H"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z2g-Bm-q4G">
-                                <rect key="frame" x="22" y="135" width="150" height="3"/>
+                                <rect key="frame" x="22" y="97" width="150" height="3"/>
                                 <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="6sO-5K-4BO"/>
@@ -1932,7 +1932,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VH7-Fj-a7t">
-                                <rect key="frame" x="430" y="135" width="150" height="3"/>
+                                <rect key="frame" x="430" y="97" width="150" height="3"/>
                                 <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="0cV-k2-vs1"/>
@@ -1940,7 +1940,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ros-Bk-ZVy">
-                                <rect key="frame" x="0.0" y="104" width="600" height="31"/>
+                                <rect key="frame" x="0.0" y="66" width="600" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0vw-bJ-nf6"/>
@@ -1986,7 +1986,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="5" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="huA-O1-54n">
-                                <rect key="frame" x="10" y="149" width="580" height="401"/>
+                                <rect key="frame" x="10" y="111" width="580" height="439"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ni1-Nm-5hW" id="ibN-Bk-cdt"/>
