@@ -45,7 +45,6 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1304,28 +1303,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.96999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lly-Ep-C9p">
-                                <rect key="frame" x="175" y="421" width="250" height="44"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.12549019610000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="YW7-o7-ArM"/>
-                                    <constraint firstAttribute="width" constant="250" id="bmj-bm-Bqb"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="v9J-Zf-mPw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Log Out"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bmj-bm-Bqb"/>
-                                        <exclude reference="v9J-Zf-mPw"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="logOutUser" destination="RJW-k0-l6u" eventType="touchUpInside" id="fEx-AS-okz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" alpha="0.96999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yga-kS-xxF">
-                                <rect key="frame" x="175" y="367" width="250" height="44"/>
+                                <rect key="frame" x="175" y="260" width="250" height="44"/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.12549019610000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="L8Y-eH-Zq0"/>
@@ -1333,7 +1312,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="width" constant="250" id="xkf-aj-fT9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Invite Friends"/>
+                                <state key="normal" title="Change Password"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="L8Y-eH-Zq0"/>
@@ -1341,11 +1320,11 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="inviteFriends" destination="RJW-k0-l6u" eventType="touchUpInside" id="Vrv-3r-hrB"/>
+                                    <action selector="chnagePassword:" destination="RJW-k0-l6u" eventType="touchUpInside" id="Q0x-17-62x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.96999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnx-Nj-sRV">
-                                <rect key="frame" x="175" y="313" width="250" height="44"/>
+                                <rect key="frame" x="175" y="314" width="250" height="44"/>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.12549019607843137" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FpD-OM-DKK"/>
@@ -1364,7 +1343,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="sendReport" destination="RJW-k0-l6u" eventType="touchUpInside" id="fpg-I1-kc6"/>
+                                    <action selector="sendReport" destination="RJW-k0-l6u" eventType="touchUpInside" id="OhA-BM-SLl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-C3-JX9" customClass="TTTAttributedLabel">
@@ -1389,55 +1368,47 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-BI-7UK">
-                                <rect key="frame" x="175" y="253" width="250" height="44"/>
-                                <color key="backgroundColor" red="0.011764705882352941" green="0.31764705882352939" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="PlayStation 4">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <button opaque="NO" alpha="0.96999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lly-Ep-C9p">
+                                <rect key="frame" x="175" y="368" width="250" height="44"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.12549019610000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YW7-o7-ArM"/>
+                                    <constraint firstAttribute="width" constant="250" id="bmj-bm-Bqb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="v9J-Zf-mPw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Log Out"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bmj-bm-Bqb"/>
+                                        <exclude reference="v9J-Zf-mPw"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="consoleButtonPressed:" destination="RJW-k0-l6u" eventType="touchUpInside" id="LFT-s0-p7B"/>
+                                    <action selector="logOutUser" destination="RJW-k0-l6u" eventType="touchUpInside" id="fEx-AS-okz"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconArrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-zO-JUp">
-                                <rect key="frame" x="403" y="270" width="10" height="5"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPsnConsole" translatesAutoresizingMaskIntoConstraints="NO" id="pJ4-DM-yXy">
-                                <rect key="frame" x="185" y="262" width="26" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="xml-hr-Fqh"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.36470588240000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2Ax-E1-ccC" firstAttribute="centerX" secondItem="NgN-Kf-uF4" secondAttribute="centerX" id="0ov-PX-oVN"/>
                             <constraint firstItem="yga-kS-xxF" firstAttribute="trailing" secondItem="lly-Ep-C9p" secondAttribute="trailing" id="9ce-CJ-tbo"/>
-                            <constraint firstItem="Gnx-Nj-sRV" firstAttribute="top" secondItem="cYS-BI-7UK" secondAttribute="bottom" constant="16" id="AMu-gt-rd7"/>
-                            <constraint firstItem="pJ4-DM-yXy" firstAttribute="top" secondItem="cYS-BI-7UK" secondAttribute="bottom" constant="-35" id="CSx-m5-Md1"/>
                             <constraint firstItem="lly-Ep-C9p" firstAttribute="centerX" secondItem="NgN-Kf-uF4" secondAttribute="centerX" id="CnL-VA-5E1"/>
+                            <constraint firstItem="yga-kS-xxF" firstAttribute="top" secondItem="2Ax-E1-ccC" secondAttribute="bottom" constant="37" id="DGG-mk-C8j"/>
                             <constraint firstItem="APu-zA-Kyk" firstAttribute="top" secondItem="tHf-b5-jNh" secondAttribute="bottom" constant="-180" id="Djd-Id-5SO"/>
-                            <constraint firstItem="Gnx-Nj-sRV" firstAttribute="leading" secondItem="cYS-BI-7UK" secondAttribute="leading" id="E3r-lW-Qfe"/>
                             <constraint firstItem="ftz-Fk-rbT" firstAttribute="top" secondItem="APu-zA-Kyk" secondAttribute="bottom" id="FTi-yC-HEm"/>
                             <constraint firstAttribute="trailing" secondItem="APu-zA-Kyk" secondAttribute="trailing" id="KEb-y9-KTh"/>
                             <constraint firstItem="ftz-Fk-rbT" firstAttribute="top" secondItem="xsB-j0-IhM" secondAttribute="bottom" constant="12" id="L2t-uE-jW3"/>
-                            <constraint firstItem="cYS-BI-7UK" firstAttribute="leading" secondItem="pJ4-DM-yXy" secondAttribute="trailing" constant="-36" id="NY2-ID-Y4C"/>
+                            <constraint firstItem="lly-Ep-C9p" firstAttribute="top" secondItem="Gnx-Nj-sRV" secondAttribute="bottom" constant="10" id="NHh-v0-A39"/>
+                            <constraint firstItem="Gnx-Nj-sRV" firstAttribute="top" secondItem="yga-kS-xxF" secondAttribute="bottom" constant="10" id="PCu-pD-x6F"/>
                             <constraint firstItem="Z9P-C3-JX9" firstAttribute="leading" secondItem="xsB-j0-IhM" secondAttribute="leading" id="PZx-vg-DQf"/>
-                            <constraint firstItem="lly-Ep-C9p" firstAttribute="top" secondItem="yga-kS-xxF" secondAttribute="bottom" constant="10" id="SoA-WI-koC"/>
-                            <constraint firstItem="LXc-zO-JUp" firstAttribute="leading" secondItem="cYS-BI-7UK" secondAttribute="trailing" constant="-22" id="Sva-ci-j42"/>
-                            <constraint firstItem="pJ4-DM-yXy" firstAttribute="centerY" secondItem="cYS-BI-7UK" secondAttribute="centerY" id="VqV-gf-OSk"/>
                             <constraint firstItem="xsB-j0-IhM" firstAttribute="centerX" secondItem="NgN-Kf-uF4" secondAttribute="centerX" id="WNz-sU-1Xq"/>
-                            <constraint firstItem="LXc-zO-JUp" firstAttribute="top" secondItem="cYS-BI-7UK" secondAttribute="bottom" constant="-27" id="Y0d-4J-x8V"/>
                             <constraint firstItem="Gnx-Nj-sRV" firstAttribute="trailing" secondItem="yga-kS-xxF" secondAttribute="trailing" id="YFl-OK-jh6"/>
-                            <constraint firstItem="cYS-BI-7UK" firstAttribute="top" secondItem="2Ax-E1-ccC" secondAttribute="bottom" constant="30" id="ZfX-hC-7FD"/>
                             <constraint firstItem="2Ax-E1-ccC" firstAttribute="top" secondItem="tHf-b5-jNh" secondAttribute="bottom" constant="20" id="aOx-1l-ZZY"/>
-                            <constraint firstItem="cYS-BI-7UK" firstAttribute="centerX" secondItem="tHf-b5-jNh" secondAttribute="centerX" id="d1p-CM-Jtd"/>
                             <constraint firstItem="xsB-j0-IhM" firstAttribute="top" secondItem="Z9P-C3-JX9" secondAttribute="bottom" id="eIn-ds-J3L"/>
                             <constraint firstItem="Gnx-Nj-sRV" firstAttribute="leading" secondItem="yga-kS-xxF" secondAttribute="leading" id="iDx-0A-Hmx"/>
                             <constraint firstItem="tHf-b5-jNh" firstAttribute="centerX" secondItem="NgN-Kf-uF4" secondAttribute="centerX" id="k5R-5t-PSN"/>
                             <constraint firstItem="APu-zA-Kyk" firstAttribute="top" secondItem="NgN-Kf-uF4" secondAttribute="top" id="ors-v8-jEh"/>
-                            <constraint firstItem="yga-kS-xxF" firstAttribute="top" secondItem="Gnx-Nj-sRV" secondAttribute="bottom" constant="10" id="pHl-E5-rta"/>
                             <constraint firstItem="yga-kS-xxF" firstAttribute="leading" secondItem="lly-Ep-C9p" secondAttribute="leading" id="svd-AO-Zkl"/>
                             <constraint firstItem="Z9P-C3-JX9" firstAttribute="centerX" secondItem="APu-zA-Kyk" secondAttribute="centerX" id="tMe-gy-fIo"/>
                             <constraint firstItem="APu-zA-Kyk" firstAttribute="leading" secondItem="NgN-Kf-uF4" secondAttribute="leading" id="y1n-Rl-YXN"/>
@@ -1453,11 +1424,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         <outlet property="avatorUserName" destination="2Ax-E1-ccC" id="7fA-AP-VWF"/>
                         <outlet property="backGroundImageView" destination="APu-zA-Kyk" id="ZtR-PJ-PhM"/>
                         <outlet property="buildNumberLabel" destination="Z9P-C3-JX9" id="gXo-n1-1FR"/>
-                        <outlet property="changePasswordButton" destination="Gnx-Nj-sRV" id="t3B-vy-lVd"/>
-                        <outlet property="consoleButton" destination="cYS-BI-7UK" id="Yve-JR-giS"/>
-                        <outlet property="consoleButtonImageView" destination="pJ4-DM-yXy" id="3FP-Dq-quX"/>
-                        <outlet property="consoleDropDownArrow" destination="LXc-zO-JUp" id="jQZ-RE-5k3"/>
-                        <outlet property="contactUsButton" destination="yga-kS-xxF" id="wDr-me-tNz"/>
+                        <outlet property="changePasswordButton" destination="yga-kS-xxF" id="LPF-1C-cAp"/>
+                        <outlet property="contactUsButton" destination="Gnx-Nj-sRV" id="7ra-cd-LtJ"/>
                         <outlet property="legalLabel" destination="xsB-j0-IhM" id="0BP-2m-pf4"/>
                         <outlet property="logOutButton" destination="lly-Ep-C9p" id="nhz-x9-cL1"/>
                         <segue destination="IOo-gx-K2M" kind="show" identifier="TRShowLegalView" id="XeX-Px-D3l"/>
@@ -1476,7 +1444,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Change Password View Controller-->
         <scene sceneID="Deb-nP-xt5">
             <objects>
-                <viewController id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changePassword" id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6E-96-PgV"/>
                         <viewControllerLayoutGuide type="bottom" id="Kb1-Pl-dTK"/>

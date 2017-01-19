@@ -143,6 +143,7 @@ struct K {
         static let VIEW_CONTROLLER_CONTACT_MESSAGE_SENT    = "messageSent"
         static let VIEW_CONTROLLER_WEB_VIEW_SIGNIN         = "webviewVC"
         static let VIEW_CONTROLLER_VERIFY_USER             = "verifyUserView"
+        static let VIEW_CONTROLLER_CHANGE_PASSWORD         = "changePassword"
     }
     
     struct ActivityType {

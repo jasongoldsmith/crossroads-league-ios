@@ -20,21 +20,12 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
     @IBOutlet weak var buildNumberLabel: TTTAttributedLabel!
     @IBOutlet weak var legalLabel: TTTAttributedLabel!
     
-    //Console Buttons/ Image
-    @IBOutlet weak var consoleButton: UIButton!
-    @IBOutlet weak var consoleButtonImageView: UIImageView!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
-    @IBOutlet weak var consoleDropDownArrow: UIImageView!
     
     
-    var consoleTwoButton: UIButton?
-    var consoleAddButton: UIButton?
     var currentUser: TRPlayerInfo?
-    var isConsoleMenuOpen: Bool = false
-    var consoleAddButtonImageView: UIImageView?
-    var consoleTwoButtonImageView: UIImageView?
     
     
     override func viewDidLoad() {
@@ -47,10 +38,6 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         self.changePasswordButton.layer.cornerRadius = 2.0
         self.contactUsButton.layer.cornerRadius = 2.0
         self.logOutButton.layer.cornerRadius = 2.0
-        
-        if TRApplicationManager.sharedInstance.currentUser?.consoles.count == 1 {
-            self.consoleDropDownArrow?.hidden = true
-        }
 }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,15 +45,10 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         
         self.updateView()
         self.backGroundImageView?.clipsToBounds = true
-        self.consoleButton.round([.TopLeft, .TopRight], radius: 2.0)
-        self.consoleButton?.round([.BottomRight, .BottomLeft], radius: 2.0)
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        self.removeConsoleDropDown()
-        self.isConsoleMenuOpen = false
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -112,38 +94,6 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
     }
 
     func updateView () {
-        
-        if let console = TRApplicationManager.sharedInstance.currentUser?.getDefaultConsole() {
-            switch console.consoleType! {
-            case ConsoleTypes.XBOX360:
-                self.consoleButton.setTitle("Xbox 360", forState: .Normal)
-                self.consoleButtonImageView.image = UIImage(named: "iconXboxoneConsole")
-                self.avatorImageView?.roundRectView(3.0, borderColor: UIColor(red: 77/255, green: 194/255, blue: 34/255, alpha: 1))
-                break
-            case ConsoleTypes.XBOXONE:
-                self.consoleButton.setTitle("Xbox One", forState: .Normal)
-                self.consoleButtonImageView.image = UIImage(named: "iconXboxoneConsole")
-                self.avatorImageView?.roundRectView(3.0, borderColor: UIColor(red: 77/255, green: 194/255, blue: 34/255, alpha: 1))
-                break
-            case ConsoleTypes.PS3:
-                self.consoleButton.setTitle("PlayStation 3", forState: .Normal)
-                self.consoleButtonImageView.image = UIImage(named: "iconPsnConsole")
-                self.avatorImageView?.roundRectView(3.0, borderColor: UIColor(red: 1/255, green: 59/255, blue: 152/255, alpha: 1))
-                break
-            case ConsoleTypes.PS4:
-                self.consoleButton.setTitle("PlayStation 4", forState: .Normal)
-                self.consoleButtonImageView.image = UIImage(named: "iconPsnConsole")
-                self.avatorImageView?.roundRectView(3.0, borderColor: UIColor(red: 1/255, green: 59/255, blue: 152/255, alpha: 1))
-                break
-            default:
-                break
-            }
-            
-            if TRApplicationManager.sharedInstance.currentUser?.consoles.count < 2 {
-                self.avatorImageView?.roundRectView(3.0, borderColor: UIColor(red: 55/255, green: 100/255, blue: 109/255, alpha: 1))
-            }
-        }
-        
         self.currentUser = TRApplicationManager.sharedInstance.getPlayerObjectForCurrentUser()
         
         // User Image
@@ -199,6 +149,18 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
                 })
             }
         })
+    }
+    
+    
+    @IBAction func chnagePassword (sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let vc : TRChangePasswordViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_CHANGE_PASSWORD) as! TRChangePasswordViewController
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.hidden = true
+        self.presentViewController(navigationController, animated: true, completion: {
+            
+        })
+
     }
     
     
@@ -275,186 +237,6 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         }))
         
         presentViewController(refreshAlert, animated: true, completion: nil)
-    }
-    
-    //MARK:- ADD CONSOLE VIEW
-    
-    
-    @IBAction func consoleButtonPressed (sender: UIButton) {
-        
-        if self.isConsoleMenuOpen == true {
-            self.removeConsoleDropDown()
-            self.consoleButton?.round([.BottomRight, .BottomLeft], radius: 2.0)
-        } else {
-            self.currentConsoleButtonPressed()
-            self.consoleButton?.round([.BottomRight, .BottomLeft], radius: 0.0)
-        }
-        
-        self.isConsoleMenuOpen = !self.isConsoleMenuOpen
-    }
-    
-    func removeConsoleDropDown () {
-        self.consoleAddButton?.removeFromSuperview()
-        self.consoleTwoButton?.removeFromSuperview()
-        self.consoleAddButtonImageView?.removeFromSuperview()
-        self.consoleTwoButtonImageView?.removeFromSuperview()
-    }
-    
-    func currentConsoleButtonPressed () {
-        for console in (TRApplicationManager.sharedInstance.currentUser?.consoles)! {
-            if console.isPrimary == false {
-                self.addConsoleButtonFOrType(self.consoleButton, console: console)
-            }
-        }
-    }
-    
-    func addConsoleButtonFOrType (sender: UIButton, console: TRConsoles) {
-        self.consoleTwoButton = UIButton(type: .Custom)
-        self.consoleTwoButton?.backgroundColor = UIColor(red: 0/255, green: 56/255, blue: 71/255, alpha: 1)
-        self.consoleTwoButton?.frame = CGRectMake(sender.frame.origin.x, sender.frame.origin.y + sender.frame.size.height, sender.frame.size.width, sender.frame.size.height)
-        self.consoleTwoButton?.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
-        self.consoleTwoButton?.addTarget(self, action: #selector(TRProfileViewController.changePrimaryConsole), forControlEvents: .TouchUpInside)
-        self.consoleTwoButton?.layer.borderColor = UIColor(red: 3/255, green: 81/255, blue: 102/255, alpha: 1).CGColor
-        self.consoleTwoButton?.layer.borderWidth = 2.0
-        
-        self.consoleTwoButtonImageView = UIImageView.init(image: UIImage(named: "iconAddConsole"))
-        self.consoleTwoButtonImageView!.frame = CGRectMake((self.consoleTwoButton?.frame.origin.x)! + 10, (self.consoleTwoButton?.frame.origin.y)! + 10, self.consoleTwoButtonImageView!.frame.size.width, self.consoleTwoButtonImageView!.frame.size.height)
-
-        switch console.consoleType! {
-        case ConsoleTypes.XBOX360:
-            self.consoleTwoButton?.setTitle("Xbox 360", forState: .Normal)
-            self.consoleTwoButtonImageView!.image = UIImage(named: "iconXboxoneConsole")
-            break
-        case ConsoleTypes.XBOXONE:
-            self.consoleTwoButton?.setTitle("Xbox One", forState: .Normal)
-            self.consoleTwoButtonImageView!.image = UIImage(named: "iconXboxoneConsole")
-            break
-        case ConsoleTypes.PS3:
-            self.consoleTwoButton?.setTitle("PlayStation 3", forState: .Normal)
-            self.consoleTwoButtonImageView!.image = UIImage(named: "iconPsnConsole")
-            break
-        case ConsoleTypes.PS4:
-            self.consoleTwoButton?.setTitle("PlayStation 4", forState: .Normal)
-            self.consoleTwoButtonImageView!.image = UIImage(named: "iconPsnConsole")
-            break
-        default:
-            break
-        }
-        
-        
-        self.view.addSubview(self.consoleTwoButton!)
-        self.view.addSubview(self.consoleTwoButtonImageView!)
-    }
-    
-//    func addNewConsole () {
-//        
-//        var consoleOptions :[String] = []
-//        let existingConsoles = TRApplicationManager.sharedInstance.currentUser?.consoles
-//        for console in existingConsoles! {
-//            
-//            switch console.consoleType! {
-//            case ConsoleTypes.PS4:
-//                if existingConsoles?.count == 1 {
-//                    consoleOptions.append("Xbox One")
-//                    consoleOptions.append("Xbox 360")
-//                }
-//                break
-//            case ConsoleTypes.PS3:
-//                if existingConsoles?.count == 1 {
-//                    consoleOptions.append("PlayStation 4")
-//                    consoleOptions.append("Xbox One")
-//                    consoleOptions.append("Xbox 360")
-//                } else {
-//                    consoleOptions.append("PlayStation 4")
-//                    let console = TRApplicationManager.sharedInstance.currentUser?.consoles.filter{$0.consoleType == ConsoleTypes.XBOX360}
-//                    if let hasEvent = console?.count where hasEvent > 0 {
-//                        consoleOptions.append("Xbox One")
-//                    }
-//                }
-//                break
-//            case ConsoleTypes.XBOX360:
-//                if existingConsoles?.count == 1 {
-//                    consoleOptions.append("Xbox One")
-//                    consoleOptions.append("PlayStation 4")
-//                    consoleOptions.append("PlayStation 3")
-//                } else {
-//                    consoleOptions.append("Xbox One")
-//                    let console = TRApplicationManager.sharedInstance.currentUser?.consoles.filter{$0.consoleType == ConsoleTypes.PS3}
-//                    if let hasEvent = console?.count where hasEvent > 0 {
-//                        consoleOptions.append("PlayStation 4")
-//                    }
-//                }
-//                break
-//            case ConsoleTypes.XBOXONE:
-//                if existingConsoles?.count == 1 {
-//                    consoleOptions.append("PlayStation 4")
-//                    consoleOptions.append("PlayStation 3")
-//                }
-//                break
-//            default:
-//                break
-//            }
-//        }
-//    
-//        //Unique Elements in Array
-//        consoleOptions = consoleOptions.unique
-//        
-//        let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-//        let addConsoleViewCont = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_BUNGIE_VERIFICATION) as! TRAddConsoleViewController
-//        addConsoleViewCont.openedFromProfile = true
-//        addConsoleViewCont.consoleNameArray = consoleOptions
-//        
-//        self.presentViewController(addConsoleViewCont, animated: true) { 
-//            
-//        }
-//    }
-    
-    
-    func changePrimaryConsole () {
-        
-        self.removeConsoleDropDown()
-        self.isConsoleMenuOpen = false
-        
-        var consoleType = ""
-        let buttonText = self.consoleTwoButton?.titleLabel?.text
-        
-        guard let _ = buttonText else {
-            return
-        }
-        
-        switch buttonText! as String {
-        case "PlayStation 4":
-            consoleType = ConsoleTypes.PS4
-            break
-        case "PlayStation 3":
-            consoleType = ConsoleTypes.PS3
-            break
-        case "Xbox One":
-            consoleType = ConsoleTypes.XBOXONE
-            break
-        case "Xbox 360":
-            consoleType = ConsoleTypes.XBOX360
-            break
-        default:
-            break
-        }
-        
-        _ = TRChangeConsoleRequest().changeConsole(consoleType, completion: { (didSucceed) in
-            if didSucceed == true {
-                _ = TRGetEventsList().getEventsListWithClearActivityBackGround(false, clearBG: false, indicatorTopConstraint: nil, completion: { (didSucceed) -> () in
-                    if didSucceed == true {
-                        let sliderView = TRApplicationManager.sharedInstance.slideMenuController as SlideMenuController
-                        let eventView = sliderView.mainViewController! as? TREventListViewController
-                        
-                        if let _ = eventView {
-                            eventView!.reloadEventTable()
-                            eventView!.updateUserAvatorImage()
-                            self.updateView()
-                        }
-                    }
-                })
-            }
-        })
     }
     
     deinit {
