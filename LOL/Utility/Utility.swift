@@ -79,3 +79,9 @@ func weekDayDateFormat () -> String {
     return "EEEE 'at' h:mm a"
 }
 
+//MARK- STRING
+
+func componentsSeparatedByString(charact: String) -> Array<String>? {
+    return charact.componentsSeparatedByString(",")
+}
+

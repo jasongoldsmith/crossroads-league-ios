@@ -107,7 +107,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         self.dropDownTableView.hidden = true
         self.dropDownTableView.layer.borderWidth = 3.0
         self.dropDownTableView.layer.cornerRadius = 2.0
-        self.dropDownTableView.layer.borderColor = UIColor(red: 3/255, green: 81/255, blue: 102/255, alpha: 1).CGColor
+        self.dropDownTableView.layer.borderColor = UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1).CGColor
         
         self.activityDetailButton.setTitle("Details (Optional)", forState: .Normal)
         
@@ -128,8 +128,14 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         self.selectedActivity = activityInfo
         
         // Update View
-        if let activitySubType = activityInfo.activitySubType {
-            self.activityNameLabel.text = activitySubType.uppercaseString
+        if let activityType = activityInfo.activityType {
+            
+            let activityNameArray = componentsSeparatedByString(activityType)
+            if let _ = activityNameArray where activityNameArray?.count > 1 {
+                self.activityNameLabel.text = activityNameArray![1].uppercaseString
+            } else {
+                self.activityNameLabel.text = activityType.uppercaseString
+            }
         }
         
         if let level = activityInfo.activityLevel where level != "0" {

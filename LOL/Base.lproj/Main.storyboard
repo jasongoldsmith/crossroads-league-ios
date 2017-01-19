@@ -573,7 +573,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlD-4b-Ozd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="884"/>
+            <point key="canvasLocation" x="638" y="632"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="rGs-SO-CTj">
@@ -851,7 +851,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1901" y="876"/>
+            <point key="canvasLocation" x="1429" y="624"/>
         </scene>
         <!--CROSSROADS-->
         <scene sceneID="Q7R-6W-xgu">
@@ -1005,7 +1005,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-uu-5cX">
                                 <rect key="frame" x="32" y="256" width="125" height="3"/>
-                                <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.58039215690000001" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="aGb-zh-KK6"/>
                                     <constraint firstAttribute="width" constant="125" id="od7-YP-5DJ"/>
@@ -1013,7 +1013,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3u-Lz-xh1">
                                 <rect key="frame" x="443" y="256" width="125" height="3"/>
-                                <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.58039215690000001" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="ais-74-DPa"/>
                                     <constraint firstAttribute="height" constant="3" id="cT1-sy-LAk"/>
@@ -2072,7 +2072,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-211" y="990"/>
+            <point key="canvasLocation" x="-115" y="624"/>
         </scene>
         <!--ADD ACTIVITY-->
         <scene sceneID="gyh-ht-VKW">
@@ -2679,7 +2679,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-lg-5BV">
                                 <rect key="frame" x="40" y="317" width="520" height="231"/>
-                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.69803921570000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dropDownCell" textLabel="CHX-mr-JEV" style="IBUITableViewCellStyleDefault" id="Ued-Wt-QcP">
                                         <rect key="frame" x="0.0" y="28" width="520" height="44"/>
@@ -2697,7 +2697,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.21960784310000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -2791,7 +2791,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDV-7u-Sh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="2582"/>
+            <point key="canvasLocation" x="-157" y="1767"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="0X3-J5-MxH">
@@ -2935,7 +2935,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TA0-UN-euH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="-315"/>
+            <point key="canvasLocation" x="1542" y="-185"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="Hi6-2S-mTf">
