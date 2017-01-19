@@ -110,13 +110,14 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
     func updateUserAvatorImage () {
         
         //Avator for Current Player
+        self.avatorImageView?.roundRectView(3, borderColor: UIColor(red: 148/255, green: 123/255, blue: 66/255, alpha: 1))
         if TRUserInfo.isUserVerified()! != ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue {
             self.avatorImageView?.image = UIImage(named: "default_helmet.png")
         } else {
             if self.avatorImageView?.image == nil {
                 if let imageUrl = TRUserInfo.getUserImageString() {
                     let imageUrl = NSURL(string: imageUrl)
-                    self.avatorImageView?.sd_setImageWithURL(imageUrl)
+                    self.avatorImageView?.sd_setImageWithURL(imageUrl, placeholderImage: UIImage(named: "default_helmet.png"))
                 }
             }
         }
