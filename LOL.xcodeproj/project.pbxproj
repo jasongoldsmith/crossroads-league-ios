@@ -661,8 +661,8 @@
 		C7B47CC71E281A3E00D441BC /* CreateEvent */ = {
 			isa = PBXGroup;
 			children = (
-				C7B47CA81E281A0E00D441BC /* TRCreateEventFinalView.swift */,
 				C7B47CA91E281A0E00D441BC /* TRCreateEventViewController.swift */,
+				C7B47CA81E281A0E00D441BC /* TRCreateEventFinalView.swift */,
 			);
 			name = CreateEvent;
 			sourceTree = "<group>";

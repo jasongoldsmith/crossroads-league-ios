@@ -45,6 +45,12 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -2084,128 +2090,75 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39E-C1-dVL" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="227" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IYg-T6-uQs"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xyd-PQ-9MK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Summoner's Rift">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IYg-T6-uQs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="Gwb-iJ-i7R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-np-CAB" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="287" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Twisted Treeline">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="BsL-pZ-BE4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-9G-lH9" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="345" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="ARAM">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="K13-dp-Tu6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDJ-Ze-dzS" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="499" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Summoner's Rift">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="NY4-dK-Rk3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-Ir-4TW" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="559" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Twisted Treeline">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="QAS-eH-Izf"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGChooseActivity" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-f9-nTb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="230"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bim-z1-0Mm" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="153" y="280" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="N1V-YT-g8O"/>
-                                    <constraint firstAttribute="width" constant="94" id="Qmq-en-F2B"/>
-                                </constraints>
-                                <state key="normal" image="imgCruicible"/>
-                                <state key="selected" image="imgCruicibleSelected"/>
-                                <state key="highlighted" image="imgCruicibleSelected"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="j15-Sf-xyc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edw-uz-yzl" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="253" y="280" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="L5Q-3Z-jpq"/>
-                                    <constraint firstAttribute="width" constant="94" id="nFS-bB-NCr"/>
-                                </constraints>
-                                <state key="normal" image="imgStrikes"/>
-                                <state key="selected" image="imgStrikesOnTap"/>
-                                <state key="highlighted" image="imgStrikesOnTap"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="REL-pJ-m5g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-A6-np8" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="153" y="179" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="NbN-os-73Q"/>
-                                    <constraint firstAttribute="height" constant="96" id="fWG-NR-bnO"/>
-                                </constraints>
-                                <state key="normal" image="imgFeatured"/>
-                                <state key="selected" image="imgRaidsSelected"/>
-                                <state key="highlighted" image="imgFeaturedOnTap"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="Jtf-SY-e1S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWj-rT-82b" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="353" y="179" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="Kqa-DB-X7o"/>
-                                    <constraint firstAttribute="height" constant="96" id="wq7-sn-YhW"/>
-                                </constraints>
-                                <state key="normal" image="imgArena"/>
-                                <state key="selected" image="imgArenaOnTap"/>
-                                <state key="highlighted" image="imgArenaOnTap"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="0Nx-WU-NPD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zec-Re-cT2" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="253" y="179" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="P37-aR-9QB"/>
-                                    <constraint firstAttribute="width" constant="94" id="fC6-li-Y4q"/>
-                                </constraints>
-                                <state key="normal" image="imgRaids"/>
-                                <state key="selected" image="imgWeekliesSelected"/>
-                                <state key="highlighted" image="imgRaidsSelected"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="tBD-Rw-pWH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbn-l8-9hm" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="353" y="280" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="f20-Zw-YeK"/>
-                                    <constraint firstAttribute="width" constant="94" id="xYF-vF-o1W"/>
-                                </constraints>
-                                <state key="normal" image="imgPatrol"/>
-                                <state key="selected" image="imgPatrolOnTap"/>
-                                <state key="highlighted" image="imgPatrolOnTap"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="lrJ-yk-W0Z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZR-uT-eTb" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="153" y="382" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="1VK-Vg-Udv"/>
-                                    <constraint firstAttribute="width" constant="94" id="xpa-nS-ZVb"/>
-                                </constraints>
-                                <state key="normal" image="imgStory"/>
-                                <state key="selected" image="imgStorySelected"/>
-                                <state key="highlighted" image="imgStorySelected"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="VJQ-R0-5uM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-MY-YsM" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="253" y="382" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="2ms-QS-iGo"/>
-                                    <constraint firstAttribute="height" constant="96" id="ajD-vo-qbr"/>
-                                </constraints>
-                                <state key="normal" image="imgQuest"/>
-                                <state key="selected" image="imgQuestSelected"/>
-                                <state key="highlighted" image="imgQuestSelected"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="G0h-tJ-H1U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7K-k3-fIX" customClass="EventButton" customModule="LOL" customModuleProvider="target">
-                                <rect key="frame" x="353" y="382" width="94" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="LmB-hS-bxp"/>
-                                    <constraint firstAttribute="width" constant="94" id="rh8-ub-Y4u"/>
-                                </constraints>
-                                <state key="normal" image="imgExotic"/>
-                                <state key="selected" image="imgExoticSelected"/>
-                                <state key="highlighted" image="imgExoticSelected"/>
-                                <connections>
-                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="s6O-Fi-B32"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR ACTIVITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-9P-IF2">
-                                <rect key="frame" x="177" y="132" width="247" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE GAME MODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-9P-IF2">
+                                <rect key="frame" x="186" y="132" width="220" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="ZxI-ya-z1q"/>
                                 </constraints>
@@ -2228,51 +2181,152 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="cancelButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="mIS-yj-sHW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_title_graphic" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-3w-LuR">
+                                <rect key="frame" x="262" y="108" width="77" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PVP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-mR-Qy6">
+                                <rect key="frame" x="285" y="198" width="31" height="19"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
+                                <color key="textColor" red="0.74117647058823533" green="0.69803921568627447" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CO-OP VS. AI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSz-Nf-TI2">
+                                <rect key="frame" x="251" y="470" width="99" height="19"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
+                                <color key="textColor" red="0.74117647060000003" green="0.69803921570000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-vd-WAC" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                <rect key="frame" x="40" y="405" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Custom">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="eex-nE-IZS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zec-Re-cT2" firstAttribute="top" secondItem="qBH-9P-IF2" secondAttribute="bottom" constant="23" id="01y-ZS-HQ7"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="width" secondItem="39E-C1-dVL" secondAttribute="width" id="0eb-Hm-nTa"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="trailing" secondItem="cx4-np-CAB" secondAttribute="trailing" id="1oe-uF-q9y"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="jbL-vd-WAC" secondAttribute="leading" id="1xF-Iq-LW7"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="width" secondItem="mXD-9G-lH9" secondAttribute="width" id="2cy-hd-gRB"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="2gl-um-Vb8"/>
                             <constraint firstItem="aDP-f9-nTb" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leading" id="4Wm-V8-aHN"/>
                             <constraint firstItem="0ju-Zl-M2q" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leadingMargin" constant="-20" id="4yB-Ri-ctI"/>
-                            <constraint firstItem="bim-z1-0Mm" firstAttribute="leading" secondItem="rqR-A6-np8" secondAttribute="leading" id="7KE-h0-WDE"/>
-                            <constraint firstItem="Skp-MY-YsM" firstAttribute="bottom" secondItem="2ZR-uT-eTb" secondAttribute="bottom" id="9Ml-Q4-Trt"/>
-                            <constraint firstItem="2ZR-uT-eTb" firstAttribute="top" secondItem="bim-z1-0Mm" secondAttribute="bottom" constant="6" id="A6E-ZZ-l4r"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="trailing" secondItem="mXD-9G-lH9" secondAttribute="trailing" id="5ID-ga-ZZT"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="leading" secondItem="mXD-9G-lH9" secondAttribute="leading" id="6Rk-Ot-sK7"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="height" secondItem="39E-C1-dVL" secondAttribute="height" id="6dd-gG-CBA"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="width" secondItem="jbL-vd-WAC" secondAttribute="width" id="7UO-UP-cp7"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="leading" secondItem="wDJ-Ze-dzS" secondAttribute="leading" id="7bw-y9-yHf"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="39E-C1-dVL" secondAttribute="trailing" id="A0q-Pv-PH9"/>
+                            <constraint firstItem="3bu-3w-LuR" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" id="ADE-HI-5lZ"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="top" secondItem="mXD-9G-lH9" secondAttribute="bottom" constant="10" id="ADt-lk-2Mo"/>
                             <constraint firstItem="aDP-f9-nTb" firstAttribute="top" secondItem="VHb-Gc-Kgz" secondAttribute="top" id="AN9-1I-t5u"/>
-                            <constraint firstItem="rqR-A6-np8" firstAttribute="centerY" secondItem="zec-Re-cT2" secondAttribute="centerY" id="DBJ-dD-KH4"/>
-                            <constraint firstItem="Skp-MY-YsM" firstAttribute="leading" secondItem="2ZR-uT-eTb" secondAttribute="trailing" constant="6" id="H59-i7-1c3"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="height" secondItem="cx4-np-CAB" secondAttribute="height" id="Ay9-Db-13c"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="top" secondItem="39E-C1-dVL" secondAttribute="bottom" constant="10" id="C81-Bq-7zU"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="39E-C1-dVL" secondAttribute="leading" id="D2j-rY-tMD"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="width" secondItem="jbL-vd-WAC" secondAttribute="width" id="Ftz-tT-oLf"/>
+                            <constraint firstItem="G1Y-mR-Qy6" firstAttribute="centerX" secondItem="3bu-3w-LuR" secondAttribute="centerX" id="HUo-Y0-zrJ"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="centerX" secondItem="0ju-Zl-M2q" secondAttribute="centerX" id="Hj8-od-DRc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0ju-Zl-M2q" secondAttribute="trailing" constant="-20" id="IQ9-a1-49c"/>
-                            <constraint firstItem="RWj-rT-82b" firstAttribute="leading" secondItem="zec-Re-cT2" secondAttribute="trailing" constant="6" id="MNJ-V5-fuc"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="KIY-Ir-4TW" secondAttribute="trailing" id="IoW-Wt-0My"/>
+                            <constraint firstItem="3bu-3w-LuR" firstAttribute="top" secondItem="qBH-9P-IF2" secondAttribute="bottom" constant="-48" id="IqQ-gX-yu4"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="39E-C1-dVL" secondAttribute="leading" id="Ju1-zV-qT4"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="width" secondItem="mXD-9G-lH9" secondAttribute="width" id="JwC-Hj-BYr"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="L6n-AJ-ecY"/>
+                            <constraint firstAttribute="trailing" secondItem="39E-C1-dVL" secondAttribute="trailing" constant="40" id="Ma4-GB-jKs"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="top" secondItem="wDJ-Ze-dzS" secondAttribute="bottom" constant="10" id="NGH-Kg-gEL"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="top" secondItem="sSz-Nf-TI2" secondAttribute="bottom" constant="10" id="Nyr-ac-CaD"/>
+                            <constraint firstItem="sSz-Nf-TI2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" id="PSP-SX-nGY"/>
                             <constraint firstAttribute="trailing" secondItem="a4l-9U-N2b" secondAttribute="trailing" constant="14" id="Plc-ZC-VIG"/>
-                            <constraint firstItem="i2g-3I-3sz" firstAttribute="top" secondItem="2ZR-uT-eTb" secondAttribute="bottom" constant="122" id="Vyw-83-gun"/>
-                            <constraint firstItem="RWj-rT-82b" firstAttribute="centerY" secondItem="zec-Re-cT2" secondAttribute="centerY" id="XKG-mV-ozz"/>
-                            <constraint firstItem="wbn-l8-9hm" firstAttribute="leading" secondItem="edw-uz-yzl" secondAttribute="trailing" constant="6" id="bsE-EW-L6b"/>
+                            <constraint firstItem="0ju-Zl-M2q" firstAttribute="leading" secondItem="wDJ-Ze-dzS" secondAttribute="leading" id="QCg-3R-bg0"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="wDJ-Ze-dzS" secondAttribute="leading" id="RzI-Q5-J9m"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="height" secondItem="jbL-vd-WAC" secondAttribute="height" id="SAu-n2-I9u"/>
+                            <constraint firstItem="sSz-Nf-TI2" firstAttribute="top" secondItem="jbL-vd-WAC" secondAttribute="bottom" constant="15" id="Sem-CK-mus"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="KIY-Ir-4TW" secondAttribute="leading" id="Tv1-D5-0LE"/>
+                            <constraint firstItem="G1Y-mR-Qy6" firstAttribute="top" secondItem="3bu-3w-LuR" secondAttribute="bottom" constant="10" id="Up9-1d-czT"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="width" secondItem="39E-C1-dVL" secondAttribute="width" id="Vp3-ue-gjB"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="leading" secondItem="jbL-vd-WAC" secondAttribute="leading" id="Xgd-rA-s6Z"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="height" secondItem="mXD-9G-lH9" secondAttribute="height" id="Yjs-y1-eeF"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="Z6j-5q-Dku"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="width" secondItem="cx4-np-CAB" secondAttribute="width" id="Zsu-lS-PcM"/>
+                            <constraint firstItem="39E-C1-dVL" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leadingMargin" constant="20" id="aC0-lS-RiW"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="height" secondItem="mXD-9G-lH9" secondAttribute="height" id="aP2-VT-kl1"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="wDJ-Ze-dzS" secondAttribute="trailing" id="cFY-RQ-TZ7"/>
+                            <constraint firstItem="39E-C1-dVL" firstAttribute="leading" secondItem="VHb-Gc-Kgz" secondAttribute="leading" constant="40" id="cNj-Gv-Rp3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="39E-C1-dVL" secondAttribute="trailing" constant="20" id="cwJ-QL-4XM"/>
+                            <constraint firstItem="jbL-vd-WAC" firstAttribute="leading" secondItem="mXD-9G-lH9" secondAttribute="leading" id="dUM-i6-h8A"/>
+                            <constraint firstItem="3bu-3w-LuR" firstAttribute="top" secondItem="ayi-je-Xfm" secondAttribute="bottom" constant="88" id="dYu-Hq-OxN"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="39E-C1-dVL" secondAttribute="trailing" id="dx1-Aq-Gf8"/>
                             <constraint firstItem="i2g-3I-3sz" firstAttribute="top" secondItem="0ju-Zl-M2q" secondAttribute="bottom" id="eUr-mA-sDd"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="width" secondItem="cx4-np-CAB" secondAttribute="width" id="eZY-ov-3Ao"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="height" secondItem="wDJ-Ze-dzS" secondAttribute="height" id="eg6-XB-hAK"/>
+                            <constraint firstItem="39E-C1-dVL" firstAttribute="top" secondItem="G1Y-mR-Qy6" secondAttribute="bottom" constant="10" id="f2O-Fa-PJM"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="height" secondItem="jbL-vd-WAC" secondAttribute="height" id="gAQ-K3-3og"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="iMh-Ia-nmm"/>
                             <constraint firstItem="a4l-9U-N2b" firstAttribute="top" secondItem="0ju-Zl-M2q" secondAttribute="top" constant="23" id="jLT-EC-NdJ"/>
-                            <constraint firstItem="wbn-l8-9hm" firstAttribute="top" secondItem="RWj-rT-82b" secondAttribute="bottom" constant="5" id="jdS-bd-dMj"/>
-                            <constraint firstItem="bim-z1-0Mm" firstAttribute="centerY" secondItem="edw-uz-yzl" secondAttribute="centerY" id="kBl-HI-Hnv"/>
-                            <constraint firstItem="edw-uz-yzl" firstAttribute="centerY" secondItem="wbn-l8-9hm" secondAttribute="centerY" id="lCU-WX-iFg"/>
-                            <constraint firstItem="J7K-k3-fIX" firstAttribute="leading" secondItem="Skp-MY-YsM" secondAttribute="trailing" constant="6" id="mya-cH-ldE"/>
-                            <constraint firstItem="qBH-9P-IF2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" id="qNc-q2-fWs"/>
-                            <constraint firstItem="J7K-k3-fIX" firstAttribute="bottom" secondItem="Skp-MY-YsM" secondAttribute="bottom" id="rd6-HY-e2l"/>
-                            <constraint firstItem="2ZR-uT-eTb" firstAttribute="leading" secondItem="bim-z1-0Mm" secondAttribute="leading" id="s5b-m8-H4n"/>
-                            <constraint firstItem="edw-uz-yzl" firstAttribute="centerX" secondItem="zec-Re-cT2" secondAttribute="centerX" id="sdQ-jR-23c"/>
-                            <constraint firstItem="zec-Re-cT2" firstAttribute="leading" secondItem="rqR-A6-np8" secondAttribute="trailing" constant="6" id="tZY-vP-sQA"/>
-                            <constraint firstItem="zec-Re-cT2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" id="wy1-OK-MMu"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="top" secondItem="cx4-np-CAB" secondAttribute="bottom" constant="8" symbolic="YES" id="jMV-rJ-Zea"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="height" secondItem="wDJ-Ze-dzS" secondAttribute="height" id="ktm-K0-amZ"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="height" secondItem="39E-C1-dVL" secondAttribute="height" id="lip-kB-R35"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="leading" secondItem="mXD-9G-lH9" secondAttribute="leading" id="lmY-qH-Swh"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="trailing" secondItem="mXD-9G-lH9" secondAttribute="trailing" id="o7t-nq-DoD"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="leading" secondItem="jbL-vd-WAC" secondAttribute="leading" id="oBu-tE-PPh"/>
+                            <constraint firstItem="cx4-np-CAB" firstAttribute="trailing" secondItem="mXD-9G-lH9" secondAttribute="trailing" id="pfF-l4-EUS"/>
+                            <constraint firstItem="qBH-9P-IF2" firstAttribute="centerX" secondItem="VHb-Gc-Kgz" secondAttribute="centerX" constant="-4" id="qNc-q2-fWs"/>
+                            <constraint firstItem="wDJ-Ze-dzS" firstAttribute="trailing" secondItem="jbL-vd-WAC" secondAttribute="trailing" id="qUY-C6-RjD"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="height" secondItem="cx4-np-CAB" secondAttribute="height" id="tq8-Sm-8jX"/>
+                            <constraint firstItem="mXD-9G-lH9" firstAttribute="leading" secondItem="cx4-np-CAB" secondAttribute="leading" id="vS4-x9-YAF"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="width" secondItem="wDJ-Ze-dzS" secondAttribute="width" id="vsl-MW-gcj"/>
+                            <constraint firstItem="KIY-Ir-4TW" firstAttribute="width" secondItem="wDJ-Ze-dzS" secondAttribute="width" id="wre-EV-SZR"/>
                             <constraint firstAttribute="trailing" secondItem="aDP-f9-nTb" secondAttribute="trailing" id="xGx-Oj-D2F"/>
+                            <constraint firstItem="39E-C1-dVL" firstAttribute="top" secondItem="G1Y-mR-Qy6" secondAttribute="bottom" constant="10" id="y1P-dG-Fik"/>
                             <constraint firstItem="0ju-Zl-M2q" firstAttribute="top" secondItem="ayi-je-Xfm" secondAttribute="bottom" constant="-20" id="zB2-2X-zjD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4yB-Ri-ctI"/>
+                                <exclude reference="QCg-3R-bg0"/>
+                                <exclude reference="Ma4-GB-jKs"/>
+                                <exclude reference="cNj-Gv-Rp3"/>
+                                <exclude reference="y1P-dG-Fik"/>
+                                <exclude reference="0eb-Hm-nTa"/>
+                                <exclude reference="IoW-Wt-0My"/>
+                                <exclude reference="Ju1-zV-qT4"/>
+                                <exclude reference="RzI-Q5-J9m"/>
+                                <exclude reference="Tv1-D5-0LE"/>
+                                <exclude reference="cFY-RQ-TZ7"/>
+                                <exclude reference="dx1-Aq-Gf8"/>
+                                <exclude reference="lip-kB-R35"/>
+                                <exclude reference="1oe-uF-q9y"/>
+                                <exclude reference="Ay9-Db-13c"/>
+                                <exclude reference="eZY-ov-3Ao"/>
+                                <exclude reference="vS4-x9-YAF"/>
+                                <exclude reference="JwC-Hj-BYr"/>
+                                <exclude reference="Yjs-y1-eeF"/>
+                                <exclude reference="dUM-i6-h8A"/>
+                                <exclude reference="Ftz-tT-oLf"/>
+                                <exclude reference="gAQ-K3-3og"/>
+                                <exclude reference="o7t-nq-DoD"/>
+                                <exclude reference="oBu-tE-PPh"/>
+                                <exclude reference="qUY-C6-RjD"/>
+                                <exclude reference="L6n-AJ-ecY"/>
+                                <exclude reference="ktm-K0-amZ"/>
+                                <exclude reference="vsl-MW-gcj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ADD ACTIVITY" id="CYd-EP-I8v"/>
                     <connections>
-                        <outlet property="activityArenaButton" destination="RWj-rT-82b" id="08Z-LI-zpk"/>
-                        <outlet property="activityCrucibleButton" destination="bim-z1-0Mm" id="uuT-zb-wU8"/>
-                        <outlet property="activityExoticButton" destination="J7K-k3-fIX" id="1do-Mt-sqw"/>
-                        <outlet property="activityFeaturedButton" destination="rqR-A6-np8" id="STL-EY-LHi"/>
-                        <outlet property="activityPatrolButton" destination="wbn-l8-9hm" id="WH9-HT-8Fa"/>
-                        <outlet property="activityQuestButton" destination="Skp-MY-YsM" id="uqc-tc-fiJ"/>
-                        <outlet property="activityRaidButton" destination="zec-Re-cT2" id="xk8-sr-4yd"/>
-                        <outlet property="activityStrikeButton" destination="edw-uz-yzl" id="05L-Md-unz"/>
-                        <outlet property="activityStroryButton" destination="2ZR-uT-eTb" id="aBn-Fj-yXA"/>
+                        <outlet property="buttonFive" destination="wDJ-Ze-dzS" id="rcq-ux-35w"/>
+                        <outlet property="buttonFour" destination="jbL-vd-WAC" id="j3w-hb-xJO"/>
+                        <outlet property="buttonOne" destination="39E-C1-dVL" id="K14-9s-dtZ"/>
+                        <outlet property="buttonSix" destination="KIY-Ir-4TW" id="D2n-Cc-3fB"/>
+                        <outlet property="buttonThree" destination="mXD-9G-lH9" id="0gg-Jw-jfd"/>
+                        <outlet property="buttonTwo" destination="cx4-np-CAB" id="59l-GD-4fL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXY-wc-I4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2360,7 +2414,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsw-oj-qDq">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="50"/>
-                                        <color key="backgroundColor" red="0.01176470588" green="0.31764705879999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Title">
@@ -2370,7 +2424,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <action selector="showActivityName:" destination="YXe-0q-e54" eventType="touchUpInside" id="yMO-c7-rae"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconGhostDefault" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-yM-Tsp">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPeopleNeeded" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-yM-Tsp">
                                         <rect key="frame" x="13" y="14" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="5mf-gB-nKB"/>
@@ -2417,7 +2471,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edU-Qj-kZl">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="50"/>
-                                        <color key="backgroundColor" red="0.01176470588" green="0.31764705879999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Title">
@@ -2427,7 +2481,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <action selector="showCheckPoints:" destination="YXe-0q-e54" eventType="touchUpInside" id="RYt-VJ-XaP"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCheckpoint" translatesAutoresizingMaskIntoConstraints="NO" id="KKB-aQ-vRy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconRank" translatesAutoresizingMaskIntoConstraints="NO" id="KKB-aQ-vRy">
                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="4Px-Ds-dPB"/>
@@ -2472,7 +2526,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-xx-l5s">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="50"/>
-                                        <color key="backgroundColor" red="0.01176470588" green="0.31764705879999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Start Time - Now">
@@ -2529,7 +2583,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz1-JW-UV5">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="50"/>
-                                        <color key="backgroundColor" red="0.01176470588" green="0.31764705879999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Details">
@@ -2577,7 +2631,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-lg-5BV">
                                 <rect key="frame" x="40" y="317" width="520" height="231"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.31764705879999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dropDownCell" textLabel="CHX-mr-JEV" style="IBUITableViewCellStyleDefault" id="Ued-Wt-QcP">
                                         <rect key="frame" x="0.0" y="28" width="520" height="44"/>
@@ -3551,49 +3605,32 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="gradientOverlayGroups" width="340" height="357"/>
         <image name="iconArrowDown" width="10" height="5"/>
         <image name="iconBackArrow" width="44" height="44"/>
-        <image name="iconCheckpoint" width="20" height="20"/>
         <image name="iconCollapseArrow" width="44" height="44"/>
         <image name="iconCrossroadsLogin" width="20" height="24"/>
         <image name="iconDetails" width="14" height="15"/>
         <image name="iconGhostDefault" width="40" height="40"/>
         <image name="iconNotificationsOff" width="44" height="44"/>
         <image name="iconNotificationsOn" width="44" height="44"/>
+        <image name="iconPeopleNeeded" width="22" height="14"/>
         <image name="iconPsnConsole" width="26" height="26"/>
+        <image name="iconRank" width="20" height="23"/>
         <image name="iconShare" width="44" height="44"/>
         <image name="iconShowpassword" width="26" height="17"/>
         <image name="iconStartTime" width="20" height="20"/>
         <image name="iconXboxoneConsole" width="26" height="26"/>
-        <image name="imgArena" width="98" height="100"/>
-        <image name="imgArenaOnTap" width="98" height="100"/>
         <image name="imgBGChooseActivity" width="375" height="230"/>
         <image name="imgBGSIGNIN" width="375" height="326"/>
         <image name="imgBGSIGNIN-1" width="375" height="178"/>
         <image name="imgBGVNightfallStrikeDefault" width="375" height="326"/>
         <image name="imgBGVaultOfGlass" width="375" height="326"/>
-        <image name="imgCruicible" width="98" height="100"/>
-        <image name="imgCruicibleSelected" width="98" height="100"/>
         <image name="imgDogEar" width="28" height="28"/>
-        <image name="imgExotic" width="98" height="100"/>
-        <image name="imgExoticSelected" width="98" height="100"/>
-        <image name="imgFeatured" width="98" height="100"/>
-        <image name="imgFeaturedOnTap" width="98" height="100"/>
         <image name="imgGlobeIcon" width="60" height="60"/>
         <image name="imgLoginBtnTapped" width="90" height="90"/>
         <image name="imgLogoBadge" width="64" height="73"/>
         <image name="imgMisadventureSkull" width="216" height="188"/>
         <image name="imgNavGradientBg" width="375" height="180"/>
         <image name="imgNogroups" width="96" height="96"/>
-        <image name="imgPatrol" width="98" height="100"/>
-        <image name="imgPatrolOnTap" width="98" height="100"/>
-        <image name="imgQuest" width="98" height="100"/>
-        <image name="imgQuestSelected" width="98" height="100"/>
-        <image name="imgRaids" width="98" height="100"/>
-        <image name="imgRaidsSelected" width="98" height="100"/>
-        <image name="imgStory" width="98" height="100"/>
-        <image name="imgStorySelected" width="98" height="100"/>
-        <image name="imgStrikes" width="98" height="100"/>
-        <image name="imgStrikesOnTap" width="98" height="100"/>
-        <image name="imgWeekliesSelected" width="98" height="100"/>
+        <image name="img_title_graphic" width="77" height="80"/>
         <image name="profileBgImage" width="342" height="667"/>
         <image name="segmentControlBG" width="375" height="55"/>
     </resources>

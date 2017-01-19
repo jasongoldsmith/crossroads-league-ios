@@ -13,35 +13,43 @@ import SDWebImage
 
 class TRCreateEventViewController: TRBaseViewController {
  
-    @IBOutlet var activityIcon          : UIImageView?
-    @IBOutlet var activityFeaturedButton : EventButton?
-    @IBOutlet var activityRaidButton     : EventButton?
-    @IBOutlet var activityArenaButton    : EventButton?
-    @IBOutlet var activityCrucibleButton : EventButton?
-    @IBOutlet var activityStrikeButton   : EventButton?
-    @IBOutlet var activityPatrolButton   : EventButton?
-    @IBOutlet var activityStroryButton   : EventButton?
-    @IBOutlet var activityQuestButton    : EventButton?
-    @IBOutlet var activityExoticButton   : EventButton?
+    @IBOutlet var buttonOne     : EventButton?
+    @IBOutlet var buttonTwo     : EventButton?
+    @IBOutlet var buttonThree   : EventButton?
+    @IBOutlet var buttonFour    : EventButton?
+    @IBOutlet var buttonFive    : EventButton?
+    @IBOutlet var buttonSix     : EventButton?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideNavigationBar()
         
-        self.activityFeaturedButton?.activityTypeString = Activity_Type.FEATURED
-        self.activityRaidButton?.activityTypeString = Activity_Type.RAID
-        self.activityArenaButton?.activityTypeString = Activity_Type.ARENA
-        self.activityCrucibleButton?.activityTypeString = Activity_Type.CRUCIBLE
-        self.activityStrikeButton?.activityTypeString = Activity_Type.STRIKE
-        self.activityPatrolButton?.activityTypeString = Activity_Type.PATROL
-        self.activityStroryButton?.activityTypeString = Activity_Type.STORY
-        self.activityQuestButton?.activityTypeString  = Activity_Type.QUEST
-        self.activityExoticButton?.activityTypeString = Activity_Type.EXOTIC
-
+        self.buttonOne?.activityTypeString = Activity_Type.AI_RIFT
+        self.buttonTwo?.activityTypeString = Activity_Type.AI_TREELINE
+        self.buttonThree?.activityTypeString = Activity_Type.AI_ARAM
+        self.buttonFour?.activityTypeString = Activity_Type.AI_CUSTOM
+        self.buttonFive?.activityTypeString = Activity_Type.PVP_RIFT2
+        self.buttonSix?.activityTypeString = Activity_Type.PVP_TREELINE2
+        
+        self.addButtonShadows(self.buttonOne!)
+        self.addButtonShadows(self.buttonTwo!)
+        self.addButtonShadows(self.buttonThree!)
+        self.addButtonShadows(self.buttonFour!)
+        self.addButtonShadows(self.buttonFive!)
+        self.addButtonShadows(self.buttonSix!)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func addButtonShadows (sender: EventButton) {
+        sender.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).CGColor
+        sender.layer.shadowOffset = CGSizeMake(0.0, 2.0)
+        sender.layer.shadowOpacity = 1.0
+        sender.layer.masksToBounds = false
+        sender.layer.cornerRadius = 2.0
     }
     
     @IBAction func activityButtonPressed (sender: EventButton) {
