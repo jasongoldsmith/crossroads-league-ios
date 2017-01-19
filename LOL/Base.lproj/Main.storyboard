@@ -2144,7 +2144,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="40" y="405" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="Custom">
+                                <state key="normal" title="Rotating">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D2E41E31888600EE226F /* DictionaryExtension.swift */; };
 		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
 		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
 		33C837C41E2D850D0057540F /* TRSignInCheckUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */; };
@@ -167,6 +168,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3389D2E41E31888600EE226F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
 		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
 		33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInCheckUserViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B47BA31E28086A00D441BC /* ArrayExtension.swift */,
+				3389D2E41E31888600EE226F /* DictionaryExtension.swift */,
 				C7B47BA41E28086A00D441BC /* ConsoleButtons.xib */,
 				C7B47BA51E28086A00D441BC /* ExSlideMenuController.swift */,
 				C7B47BA61E28086A00D441BC /* NSDateExtension.swift */,
@@ -948,6 +951,7 @@
 				C7B47C571E280E7100D441BC /* TRActivitySelectionCell.swift in Sources */,
 				C7B47BCE1E28086A00D441BC /* UIViewExtension.swift in Sources */,
 				C7B47C051E2809DF00D441BC /* TRgetActivityList.swift in Sources */,
+				3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */,
 				C7B47C121E2809DF00D441BC /* TRLeaveEventRequest.swift in Sources */,
 				C7B47BC81E28086A00D441BC /* TRNavTransitionAnimator.swift in Sources */,
 				C7B47C0B1E2809DF00D441BC /* TRGetUserRequest.swift in Sources */,

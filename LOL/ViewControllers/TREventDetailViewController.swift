@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 import pop
 
 class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, CustomErrorDelegate, InvitationViewProtocol {
@@ -420,13 +421,18 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         
         if self.segmentControl?.selectedSegmentIndex == 0 {
             if section == 0 {
+                
                 let headerView = UILabel()
-                headerView.text = self.eventInfo?.clanName
                 headerView.textAlignment = .Center
                 headerView.textColor = UIColor.whiteColor()
                 headerView.font = UIFont(name:"HelveticaNeue", size: 12)
                 headerView.backgroundColor = UIColor(red: 32/255, green: 50/255, blue: 54/255, alpha: 1)
                 
+                if let eventClanID = self.eventInfo?.eventClanID {
+                    let regionName = TRApplicationManager.sharedInstance.appConfiguration?.regionDict!.keysForValue(JSON(eventClanID))
+                    headerView.text = regionName?.first
+                }
+
                 return headerView
             }
         }
