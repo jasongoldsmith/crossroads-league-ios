@@ -33,6 +33,9 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
                 self.regionalArray.append("\(key)")
             }
         }
+        
+        self.regionDictionary![self.regionalArray.first!]?.description
+        self.selectedRegionCode = ""
     }
  
     @IBAction func showRegionTable (sender: UIButton) {
