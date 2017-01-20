@@ -138,7 +138,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         if let hasCheckPoint = self.eventInfo?.eventActivity?.activityCheckPoint where hasCheckPoint != "" {
             self.hasCheckPoint = true
             let checkPoint = hasCheckPoint
-            let stringColorAttribute = [NSForegroundColorAttributeName: UIColor(red: 255/255, green: 198/255, blue: 0/255, alpha: 1)]
+            let stringColorAttribute = [NSForegroundColorAttributeName: UIColor.whiteColor()];
             
             let checkAttributedStr = NSAttributedString(string: checkPoint + "  ", attributes: stringColorAttribute)
 
