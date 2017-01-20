@@ -265,7 +265,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         }
         
         if self.dropDownTableView?.hidden == false {
-            self.dropDownTableView?.hidden = true
+            self.closeDropDown()
             self.showGropName = false
             
             return
@@ -295,7 +295,8 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         }
         
         if self.dropDownTableView?.hidden == false {
-            self.dropDownTableView?.hidden = true
+            
+            self.closeDropDown()
             self.showCheckPoint = false
             
             return
@@ -325,7 +326,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         }
         
         if self.dropDownTableView?.hidden == false {
-            self.dropDownTableView?.hidden = true
+            self.closeDropDown()
             self.showDetail = false
             
             return
@@ -473,6 +474,8 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
     }
     
     func closeDropDown () {
+        self.dataArray.removeAll()
+        self.dropDownTableView.reloadData()
         self.dropDownTableView.hidden = true
     }
     

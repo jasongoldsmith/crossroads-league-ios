@@ -258,11 +258,13 @@ enum Branch_Error: ErrorType {
 }
 
 enum Activity_Type: String {
-    case AI_RIFT        = "AI, Summoner's Rift"
-    case AI_TREELINE    = "AI, Twisted Treeline"
-    case AI_ARAM        = "PvP, ARAM"
-    case AI_CUSTOM      = "PvP, Rotating"
-    case PVP_RIFT2      = "PvP, Summoner's Rift"
-    case PVP_TREELINE2  = "PvP, Twisted Treeline"
+    
+    case PVP_ARAM        = "PvP, ARAM"
+    case PVP_CUSTOM      = "PvP, Rotating"
+    case PVP_RIFT       = "PvP, Summoner's Rift"
+    case PVP_TREELINE   = "PvP, Twisted Treeline"
+    
+    case AI_RIFT         = "AI, Summoner's Rift"
+    case AI_TREELINE     = "AI, Twisted Treeline"
 }
 

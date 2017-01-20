@@ -25,12 +25,13 @@ class TRCreateEventViewController: TRBaseViewController {
         super.viewDidLoad()
         self.hideNavigationBar()
         
-        self.buttonOne?.activityTypeString = Activity_Type.AI_RIFT
-        self.buttonTwo?.activityTypeString = Activity_Type.AI_TREELINE
-        self.buttonThree?.activityTypeString = Activity_Type.AI_ARAM
-        self.buttonFour?.activityTypeString = Activity_Type.AI_CUSTOM
-        self.buttonFive?.activityTypeString = Activity_Type.PVP_RIFT2
-        self.buttonSix?.activityTypeString = Activity_Type.PVP_TREELINE2
+        self.buttonOne?.activityTypeString = Activity_Type.PVP_RIFT
+        self.buttonTwo?.activityTypeString = Activity_Type.PVP_TREELINE
+        self.buttonThree?.activityTypeString = Activity_Type.PVP_ARAM
+        self.buttonFour?.activityTypeString = Activity_Type.PVP_CUSTOM
+        
+        self.buttonFive?.activityTypeString = Activity_Type.AI_RIFT
+        self.buttonSix?.activityTypeString = Activity_Type.AI_TREELINE
         
         self.addButtonShadows(self.buttonOne!)
         self.addButtonShadows(self.buttonTwo!)
