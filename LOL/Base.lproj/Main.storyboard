@@ -3241,7 +3241,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="x3J-Ew-2UA"/>
                                 </constraints>
-                                <state key="normal" title="North America">
+                                <state key="normal" title="Oceania">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
