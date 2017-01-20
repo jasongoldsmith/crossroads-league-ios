@@ -113,7 +113,7 @@ class TRBaseEventTableCell: UITableViewCell {
         
         // Set  Event Player Names
         if (eventInfo.eventPlayersArray.count < eventInfo.eventActivity?.activityMaxPlayers?.integerValue) {
-            let stringColorAttribute = [NSForegroundColorAttributeName: UIColor(red: 255/255, green: 198/255, blue: 0/255, alpha: 1)]
+            let stringColorAttribute = [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)]
             let extraPlayersRequiredCount = ((eventInfo.eventActivity?.activityMaxPlayers?.integerValue)! - eventInfo.eventPlayersArray.count)
             let extraPlayersRequiredCountString = String(extraPlayersRequiredCount)
             let extraPlayersRequiredCountStringNew = " LF" + "\(extraPlayersRequiredCountString)M"
