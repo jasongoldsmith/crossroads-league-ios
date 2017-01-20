@@ -490,7 +490,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                 
                 cell?.playerUserName.text = playersNameString
                 cell?.playerUserName?.textColor = UIColor(red: 255/255, green: 198/255, blue: 0/255, alpha: 1)
-                cell?.playerIcon.roundRectView (1, borderColor: UIColor.grayColor())
+                cell?.playerIcon.roundRectView (1, borderColor: UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1))
                 cell?.playerInviteButton.hidden = true
                 
                 //Add Player Object to Cancel/ Kick Button
@@ -594,7 +594,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                         commentCell.playerIcon?.image = UIImage(named: "iconProfileBlank")
                     } else {
                         commentCell.playerComment?.textColor = UIColor.whiteColor()
-                        commentCell.playerUserName?.textColor = UIColor(red: 255/255, green: 198/255, blue: 0/255, alpha: 1)
+                        commentCell.playerUserName?.textColor = UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1)
                     }
                 }
                 
@@ -618,7 +618,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
             }
             
             commentCell.playerUserName.text = playersNameString
-            commentCell.playerIcon.roundRectView (1, borderColor: UIColor.grayColor())
+            commentCell.playerIcon.roundRectView (1, borderColor: UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1))
             
             if let hasTime = self.eventInfo?.eventComments[indexPath.section].commentCreated {
                 let formatter = NSDateFormatter()
@@ -1036,7 +1036,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         } else {
             inviCell.blueBarView.hidden = true
             inviCell.invitationButton.hidden = true
-            inviCell.playerUserName?.textColor = UIColor(red: 255/255, green: 198/255, blue: 0/255, alpha: 1)
+            inviCell.playerUserName?.textColor = UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1)
         }
     }
     
