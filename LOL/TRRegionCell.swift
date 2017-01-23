@@ -12,4 +12,5 @@ class TRRegionCell: UITableViewCell {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var regionNameLabel: UILabel!
+    @IBOutlet weak var imageWithRadius: UIImageView!
 }

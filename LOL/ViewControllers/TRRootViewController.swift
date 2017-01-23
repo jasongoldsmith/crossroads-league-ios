@@ -31,7 +31,6 @@ class TRRootViewController: TRBaseViewController {
         super.viewDidAppear(animated)
 
         _ = TRGetConfigRequest().getConfiguration({ (didSucceed) in
-            let isUserLoggedIn = TRUserInfo.isUserLoggedIn()
             self.appLoading()
             
             //Add Observer to check if the user has been verified
@@ -85,19 +84,25 @@ class TRRootViewController: TRBaseViewController {
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                 } else {
-                    _ = TRGetEventsList().getEventsListWithClearActivityBackGround(true, clearBG: true, indicatorTopConstraint: self.ACTIVITY_INDICATOR_TOP_CONSTRAINT, completion: { (didSucceed) -> () in
-                        
-                        var showEventListLandingPage = false
-                        
-                        if(didSucceed == true) {
-                            showEventListLandingPage = true
+                    if let _ = TRUserInfo().consoles.first {
+                        _ = TRGetEventsList().getEventsListWithClearActivityBackGround(true, clearBG: true, indicatorTopConstraint: self.ACTIVITY_INDICATOR_TOP_CONSTRAINT, completion: { (didSucceed) -> () in
                             
-                            TRApplicationManager.sharedInstance.addSlideMenuController(self, pushData: self.pushNotificationData, branchData: self.branchLinkData, showLandingPage: showEventListLandingPage, showGroups: false)
-                            self.pushNotificationData = nil
-                        } else {
-                            self.appManager.log.debug("Failed")
-                        }
-                    })
+                            if(didSucceed == true) {
+                                TRApplicationManager.sharedInstance.addSlideMenuController(self, pushData: self.pushNotificationData, branchData: self.branchLinkData, showLandingPage: true, showGroups: false)
+                                self.pushNotificationData = nil
+                            } else {
+                                self.appManager.log.debug("Failed")
+                            }
+                        })
+                    } else {
+                        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                        let vc : TRSignInCheckUserViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_VERIFY_USER) as! TRSignInCheckUserViewController
+                        let navigationController = UINavigationController(rootViewController: vc)
+                        navigationController.navigationBar.hidden = true
+                        self.presentViewController(navigationController, animated: true, completion: {
+                            
+                        })
+                    }
                 }
             }
         }

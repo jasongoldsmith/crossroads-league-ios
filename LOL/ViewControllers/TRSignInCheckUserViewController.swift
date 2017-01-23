@@ -15,35 +15,67 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     var regionDictionary: [String: JSON]?
     var regionalArray: [String] = []
     var selectedRegionCode: String?
+    var selectedRegion: String?
     
     private let REGION_CELL = "regionCell"
     
     @IBOutlet weak var regionTableView: UITableView!
-    @IBOutlet weak var userConsoleIdTextView: UITextField!
     @IBOutlet weak var userNameTxtField: UITextField!
+    @IBOutlet weak var regionButton: UIButton!
+    @IBOutlet weak var userNameTextView: UIView!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var sendButtonBottomConst: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.regionTableView?.registerNib(UINib(nibName: "TRRegionCell", bundle: nil), forCellReuseIdentifier: REGION_CELL)
-        
-        self.regionDictionary = (TRApplicationManager.sharedInstance.appConfiguration?.regionDict)!
-        if let _ = self.regionDictionary {
-            for (key, _) in self.regionDictionary! {
-                self.regionalArray.append("\(key)")
-            }
-        }
-        
-        self.selectedRegionCode = self.regionDictionary![self.regionalArray.first!]?.description
         self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter summoners name", attributes: [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)])
+        self.regionButton?.layer.cornerRadius = 2.0
+        self.userNameTextView?.layer.cornerRadius = 2.0
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInCheckUserViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInCheckUserViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
+        
+        //Display array for Regions
+        self.createDisplayArray()
     }
  
+    func createDisplayArray () {
+        self.regionDictionary = (TRApplicationManager.sharedInstance.appConfiguration?.regionDict)!
+        
+        if let _ = self.selectedRegionCode {
+        } else {
+            self.selectedRegionCode = self.regionDictionary!.first?.0
+            self.selectedRegion = self.regionDictionary![self.selectedRegionCode!]?.description
+        }
+        
+        guard let _ = self.selectedRegionCode else {
+            return
+        }
+        
+        self.regionButton.setTitle(self.selectedRegion, forState: .Normal)
+        
+        if let _ = self.regionDictionary {
+            for (key, _) in self.regionDictionary! {
+                if key != self.selectedRegionCode {
+                    self.regionalArray.append("\(key)")
+                }
+            }
+        }
+    }
+    
     @IBAction func showRegionTable (sender: UIButton) {
         self.changeRegionalTableVisibility()
     }
     
     func changeRegionalTableVisibility () {
         self.regionTableView.hidden = !self.regionTableView.hidden
+        
+        if userNameTxtField.isFirstResponder() == true {
+            self.userNameTxtField?.resignFirstResponder()
+        }
     }
     
     @IBAction func joinCrossroadButton (sender: UIButton) {
@@ -52,7 +84,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
             return
         }
         
-        _ = TRValidateUserRequest().validateUser(self.userConsoleIdTextView.text!, region: self.selectedRegionCode!, viewWillHandleError: true, completion: { (error, responseObject) in
+        _ = TRValidateUserRequest().validateUser(self.userNameTxtField.text!, region: self.selectedRegionCode!, viewWillHandleError: true, completion: { (error, responseObject) in
             
             if let _ = error {
                 let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
@@ -85,7 +117,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.0
+        return 3.0
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -96,6 +128,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         
         let cell = tableView.dequeueReusableCellWithIdentifier(REGION_CELL) as! TRRegionCell
         cell.regionNameLabel.text = regionalArray[indexPath.section]
+        cell.imageWithRadius?.layer.cornerRadius = 2.0
         
         return cell
     }
@@ -107,6 +140,44 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         let cell = self.regionTableView.cellForRowAtIndexPath(indexPath) as? TRRegionCell
         self.regionTableView?.deselectRowAtIndexPath(indexPath, animated: false)
         let cellText = cell!.regionNameLabel.text!
+        
         self.selectedRegionCode = self.regionDictionary![cellText]?.description
+        self.selectedRegion = cellText
+        self.createDisplayArray()
     }
+    
+    
+    //MARK:- KEYBOARD
+    func keyboardWillShow(sender: NSNotification) {
+        
+        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+        
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+        
+        if keyboardSize.height == offset.height {
+            if self.view.frame.origin.y == 0 {
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.sendButtonBottomConst?.constant -= keyboardSize.height
+                })
+            }
+        } else {
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.view.frame.origin.y += keyboardSize.height - offset.height
+            })
+        }
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        
+        if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
+            self.view.frame.origin.y += keyboardSize.height
+        }
+        else {
+            self.sendButtonBottomConst?.constant = 0
+        }
+    }
+
 }

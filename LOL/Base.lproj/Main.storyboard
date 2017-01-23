@@ -3184,6 +3184,17 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-ZJ-AYO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="6Km-rt-0UF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Km-rt-0UF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-kI-XhT" userLabel="username View">
                                 <rect key="frame" x="10" y="251" width="580" height="66"/>
                                 <subviews>
@@ -3232,17 +3243,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-ZJ-AYO">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="6Km-rt-0UF"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6Km-rt-0UF"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H2-ZA-umd">
                                 <rect key="frame" x="10" y="10" width="44" height="44"/>
                                 <state key="normal" image="iconBackArrow"/>
@@ -3250,6 +3250,14 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="popViewController" destination="yVT-X2-sSQ" eventType="touchUpInside" id="Tq9-uW-8Y5"/>
                                 </connections>
                             </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4i-nW-THn">
+                                <rect key="frame" x="10" y="241" width="580" height="308"/>
+                                <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yVT-X2-sSQ" id="jCQ-c7-xF9"/>
+                                    <outlet property="delegate" destination="yVT-X2-sSQ" id="fZN-IV-yqi"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veJ-6u-0a2">
                                 <rect key="frame" x="10" y="191" width="580" height="50"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -3291,6 +3299,12 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconArrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="duY-92-Kj4">
+                                <rect key="frame" x="560" y="213" width="10" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="eUT-3Y-d1T"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3298,6 +3312,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="wyx-kI-XhT" firstAttribute="trailing" secondItem="veJ-6u-0a2" secondAttribute="trailing" id="5xC-Bc-Yhb"/>
                             <constraint firstItem="0H2-ZA-umd" firstAttribute="top" secondItem="WIO-Iq-Pqh" secondAttribute="topMargin" constant="10" id="767-Fj-PVx"/>
                             <constraint firstItem="zwf-XH-F5o" firstAttribute="centerX" secondItem="WIO-Iq-Pqh" secondAttribute="centerX" id="9El-xD-3uF"/>
+                            <constraint firstItem="z4i-nW-THn" firstAttribute="leading" secondItem="WIO-Iq-Pqh" secondAttribute="leadingMargin" constant="-10" id="AKt-ZW-t7g"/>
                             <constraint firstItem="wyx-kI-XhT" firstAttribute="leading" secondItem="veJ-6u-0a2" secondAttribute="leading" id="Chf-rs-GVs"/>
                             <constraint firstItem="0H2-ZA-umd" firstAttribute="leading" secondItem="WIO-Iq-Pqh" secondAttribute="leadingMargin" constant="-10" id="Dwp-pv-cEn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="veJ-6u-0a2" secondAttribute="trailing" constant="-10" id="E4Z-vW-dWG"/>
@@ -3307,18 +3322,35 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="veJ-6u-0a2" firstAttribute="leading" secondItem="WIO-Iq-Pqh" secondAttribute="leadingMargin" constant="-10" id="IMb-3z-YBZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pc0-Mn-iwX" secondAttribute="trailing" constant="-20" id="Jjk-0b-7Og"/>
                             <constraint firstItem="veJ-6u-0a2" firstAttribute="top" secondItem="zwf-XH-F5o" secondAttribute="bottom" constant="21" id="Jy3-fr-iBs"/>
+                            <constraint firstItem="B1N-Fs-kCd" firstAttribute="top" secondItem="z4i-nW-THn" secondAttribute="bottom" constant="1" id="Ny9-ae-tCp"/>
+                            <constraint firstItem="duY-92-Kj4" firstAttribute="centerY" secondItem="veJ-6u-0a2" secondAttribute="centerY" id="PKl-1W-32q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="duY-92-Kj4" secondAttribute="trailing" constant="10" id="QAe-JD-4F2"/>
+                            <constraint firstItem="duY-92-Kj4" firstAttribute="top" secondItem="veJ-6u-0a2" secondAttribute="bottom" constant="-28" id="SBE-3t-1dm"/>
                             <constraint firstItem="B1N-Fs-kCd" firstAttribute="leading" secondItem="WIO-Iq-Pqh" secondAttribute="leadingMargin" constant="-20" id="WCr-5s-XgP"/>
+                            <constraint firstItem="B1N-Fs-kCd" firstAttribute="top" secondItem="z4i-nW-THn" secondAttribute="bottom" constant="1" id="X9m-wq-Br5"/>
                             <constraint firstItem="zwf-XH-F5o" firstAttribute="top" secondItem="T2b-Bk-kbV" secondAttribute="bottom" constant="8" id="f4r-nS-9cd"/>
                             <constraint firstItem="T2b-Bk-kbV" firstAttribute="centerX" secondItem="WIO-Iq-Pqh" secondAttribute="centerX" id="fLN-Xr-w3r"/>
                             <constraint firstItem="8ai-5O-JMX" firstAttribute="top" secondItem="B1N-Fs-kCd" secondAttribute="bottom" id="htc-OD-UVm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z4i-nW-THn" secondAttribute="trailing" constant="-10" id="hw8-OS-fp7"/>
                             <constraint firstItem="T2b-Bk-kbV" firstAttribute="top" secondItem="tLI-Qw-cOJ" secondAttribute="bottom" constant="88" id="lV5-yb-4ou"/>
+                            <constraint firstItem="z4i-nW-THn" firstAttribute="top" secondItem="veJ-6u-0a2" secondAttribute="bottom" id="mEb-Jp-6jE"/>
                             <constraint firstItem="OYX-ZJ-AYO" firstAttribute="leading" secondItem="WIO-Iq-Pqh" secondAttribute="leadingMargin" constant="-20" id="n3j-Hk-yCJ"/>
                             <constraint firstItem="pc0-Mn-iwX" firstAttribute="top" secondItem="WIO-Iq-Pqh" secondAttribute="topMargin" id="oKP-9L-iRz"/>
                             <constraint firstItem="OYX-ZJ-AYO" firstAttribute="top" secondItem="WIO-Iq-Pqh" secondAttribute="topMargin" id="u4t-fo-XKw"/>
                             <constraint firstItem="8ai-5O-JMX" firstAttribute="top" secondItem="pc0-Mn-iwX" secondAttribute="bottom" id="ux9-Ib-qcd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ny9-ae-tCp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="regionButton" destination="veJ-6u-0a2" id="jdz-J7-QFq"/>
+                        <outlet property="regionTableView" destination="z4i-nW-THn" id="8G6-CM-4P4"/>
+                        <outlet property="sendButton" destination="B1N-Fs-kCd" id="Lff-Nc-zgQ"/>
+                        <outlet property="sendButtonBottomConst" destination="htc-OD-UVm" id="U53-WH-sba"/>
+                        <outlet property="userNameTextView" destination="wyx-kI-XhT" id="Qp0-n0-T9C"/>
                         <outlet property="userNameTxtField" destination="Rjb-XC-aNy" id="hg5-3b-Lnh"/>
                     </connections>
                 </viewController>
