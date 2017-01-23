@@ -158,7 +158,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.sendButtonBottomConst?.constant -= keyboardSize.height
+                    self.sendButtonBottomConst?.constant += keyboardSize.height
                 })
             }
         } else {
