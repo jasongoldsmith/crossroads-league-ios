@@ -20,7 +20,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     
     @IBOutlet weak var regionTableView: UITableView!
     @IBOutlet weak var userConsoleIdTextView: UITextField!
-    
+    @IBOutlet weak var userNameTxtField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         }
         
         self.selectedRegionCode = self.regionDictionary![self.regionalArray.first!]?.description
+        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter summoners name", attributes: [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)])
     }
  
     @IBAction func showRegionTable (sender: UIButton) {

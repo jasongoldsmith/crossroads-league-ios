@@ -21,6 +21,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     @IBOutlet weak var userNameTxtField: UITextField!
     @IBOutlet weak var userPwdTxtField: UITextField!
     @IBOutlet weak var viewInfoLabel: UILabel!
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var sendButtonBottomConst: NSLayoutConstraint!
     
     
@@ -46,6 +47,10 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         
         //Legal Statement
         self.addLegalStatmentText()
+        
+        if self.isUserRegistering == true {
+            self.sendButton.setTitle("NEXT", forState: .Normal)
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
