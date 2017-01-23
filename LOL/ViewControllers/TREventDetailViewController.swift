@@ -274,7 +274,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
             let isCurrentUserInTheEvent = TRApplicationManager.sharedInstance.isCurrentPlayerInAnEvent(self.eventInfo!)
             if isCurrentUserInTheEvent == true {
                 self.joinButton.hidden = false
-                self.joinButton?.backgroundColor = UIColor(red: 148/255, green: 123/255, blue: 66/255, alpha: 1)
+                self.joinButton?.backgroundColor = UIColor(red: 210/255, green: 145/255, blue: 0/255, alpha: 1)
                 self.joinButton?.addTarget(self, action: #selector(leaveEvent(_:)), forControlEvents: .TouchUpInside)
                 self.joinButton?.setTitle("LEAVE", forState: .Normal)
                 self.tableViewBottomConstraint.constant = 0

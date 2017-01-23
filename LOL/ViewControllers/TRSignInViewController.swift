@@ -9,7 +9,7 @@
 import UIKit
 import TTTAttributedLabel
 
-class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
+class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestureRecognizerDelegate, TTTAttributedLabelDelegate {
     
     
     private let xAxis: CGFloat = 0.0
@@ -17,11 +17,11 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     private let yAxisWithClosedKeyBoard: CGFloat = 20.0
     private var leftTapGesture: UITapGestureRecognizer?
     
+    @IBOutlet weak var legalLabel: TTTAttributedLabel!
     @IBOutlet weak var userNameTxtField: UITextField!
     @IBOutlet weak var userPwdTxtField: UITextField!
-    @IBOutlet weak var forgotPassword: UILabel!
-    @IBOutlet weak var appIconImage: UIImageView!
     @IBOutlet weak var viewInfoLabel: UILabel!
+    @IBOutlet weak var sendButtonBottomConst: NSLayoutConstraint!
     
     
     var errorView: TRErrorNotificationView?
@@ -40,9 +40,12 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
         
-        self.userPwdTxtField.attributedPlaceholder = NSAttributedString(string:"Enter password", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
-        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter email address", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
-        self.forgotPassword.addGestureRecognizer(self.leftTapGesture!)
+        let textColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
+        self.userPwdTxtField.attributedPlaceholder = NSAttributedString(string:"Enter password", attributes: [NSForegroundColorAttributeName: textColor])
+        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter email address", attributes: [NSForegroundColorAttributeName: textColor])
+        
+        //Legal Statement
+        self.addLegalStatmentText()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -76,6 +79,41 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     }
     
     
+    func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
+        let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let legalViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_WEB_VIEW) as! TRLegalViewController
+        legalViewController.linkToOpen = url
+        self.presentViewController(legalViewController, animated: true, completion: {
+            
+        })
+    }
+    
+    func addLegalStatmentText () {
+        let legalString = "By signing in, I have read and agree to the Crossroads Terms of Service and Privacy Policy. © Catalyst Foundry 2016"
+        
+        let customerAgreement = "Terms of Service"
+        let privacyPolicy = "Privacy Policy"
+        
+        self.legalLabel?.text = legalString
+        
+        // Add HyperLink to Bungie
+        let nsString = legalString as NSString
+        
+        let rangeCustomerAgreement = nsString.rangeOfString(customerAgreement)
+        let rangePrivacyPolicy = nsString.rangeOfString(privacyPolicy)
+        let urlCustomerAgreement = NSURL(string: "https://www.crossroadsapp.co/terms")!
+        let urlPrivacyPolicy = NSURL(string: "https://www.crossroadsapp.co/privacy")!
+        
+        let subscriptionNoticeLinkAttributes = [
+            NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1),
+            NSUnderlineStyleAttributeName: NSNumber(bool:true),
+            ]
+        self.legalLabel?.linkAttributes = subscriptionNoticeLinkAttributes
+        self.legalLabel?.addLinkToURL(urlCustomerAgreement, withRange: rangeCustomerAgreement)
+        self.legalLabel?.addLinkToURL(urlPrivacyPolicy, withRange: rangePrivacyPolicy)
+        self.legalLabel?.delegate = self
+    }
+    
     @IBAction func handleSwipeRight(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -100,7 +138,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     @IBAction func signInBtnTapped(sender: AnyObject) {
         
         // Close KeyBoards
-        self.resignKeyBoardResponders()
+        //self.resignKeyBoardResponders()
         
         if userNameTxtField.text?.isEmpty  == true {
             let displatString: String?
@@ -199,7 +237,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     @IBAction func dismissKeyboard(recognizer : UITapGestureRecognizer) {
         
         self.errorView?.frame = CGRectMake(xAxis, yAxisWithClosedKeyBoard, self.errorView!.frame.size.width, self.errorView!.frame.size.height)
-        self.resignKeyBoardResponders()
+        //self.resignKeyBoardResponders()
     }
     
     @IBAction func showPasswordClicked () {
@@ -228,9 +266,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.view.frame.origin.y -= keyboardSize.height
-                    self.appIconImage?.alpha = 0
-                    self.viewInfoLabel?.alpha = 0
+                    self.sendButtonBottomConst?.constant -= keyboardSize.height
                 })
             }
         } else {
@@ -248,9 +284,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             self.view.frame.origin.y += keyboardSize.height
         }
         else {
-            self.appIconImage?.alpha = 1
-            self.viewInfoLabel?.alpha = 1
-            self.view.frame.origin.y = 0
+            self.sendButtonBottomConst?.constant = 0
         }
     }
     
