@@ -51,13 +51,14 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="rootVC" id="BYZ-38-t0r" customClass="TRRootViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootVC" id="BYZ-38-t0r" customClass="TRRootViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -106,7 +107,7 @@
         <!--Choose Group View Controller-->
         <scene sceneID="5Pc-tI-9JQ">
             <objects>
-                <viewController storyboardIdentifier="chooseGroup" id="Hk0-IT-ZlF" customClass="TRChooseGroupViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseGroup" id="Hk0-IT-ZlF" customClass="TRChooseGroupViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k1z-ct-gNP"/>
                         <viewControllerLayoutGuide type="bottom" id="2WA-Rs-ejf"/>
@@ -170,7 +171,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-IK-CtW" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-IK-CtW" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                         <rect key="frame" x="523" y="13" width="44" height="44"/>
                                         <state key="normal" image="iconNotificationsOn"/>
                                         <state key="selected" image="iconNotificationsOff"/>
@@ -340,7 +341,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Data Source-->
         <scene sceneID="Yuj-uc-7aP">
             <objects>
-                <viewController storyboardIdentifier="loginOptions" id="GCe-sl-3u9" customClass="TRLoginOptionViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginOptions" id="GCe-sl-3u9" customClass="TRLoginOptionViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9L3-Es-dEz"/>
                         <viewControllerLayoutGuide type="bottom" id="VFK-zq-jCs"/>
@@ -488,7 +489,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign In Error View Controller-->
         <scene sceneID="bS0-YC-bMp">
             <objects>
-                <viewController storyboardIdentifier="SIGINERROR" id="kLn-2s-R4G" customClass="TRSignInErrorViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SIGINERROR" id="kLn-2s-R4G" customClass="TRSignInErrorViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U2M-zp-Ndd"/>
                         <viewControllerLayoutGuide type="bottom" id="TUC-NT-Dou"/>
@@ -568,7 +569,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Forgot Password View Controller-->
         <scene sceneID="rGs-SO-CTj">
             <objects>
-                <viewController storyboardIdentifier="forgotPassword" id="xrT-dz-8g5" customClass="TRForgotPasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="forgotPassword" id="xrT-dz-8g5" customClass="TRForgotPasswordViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hQU-I6-siB"/>
                         <viewControllerLayoutGuide type="bottom" id="t94-VO-gcV"/>
@@ -846,7 +847,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--CROSSROADS-->
         <scene sceneID="Q7R-6W-xgu">
             <objects>
-                <viewController storyboardIdentifier="webviewVC" title="CROSSROADS" id="FFV-3I-58h" customClass="TRWebViewViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webviewVC" title="CROSSROADS" id="FFV-3I-58h" customClass="TRWebViewViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jFI-IN-fhu"/>
                         <viewControllerLayoutGuide type="bottom" id="myY-E5-yxM"/>
@@ -887,7 +888,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Event Detail View Controller-->
         <scene sceneID="KBg-kJ-0xr">
             <objects>
-                <viewController storyboardIdentifier="eventDescriptionVC" id="ylH-PI-zc9" customClass="TREventDetailViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventDescriptionVC" id="ylH-PI-zc9" customClass="TREventDetailViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SZv-Sb-Y8a"/>
                         <viewControllerLayoutGuide type="bottom" id="ikf-rV-Vma"/>
@@ -949,7 +950,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgNavGradientBg" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-sl-3qB">
                                 <rect key="frame" x="0.0" y="80" width="600" height="180"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lML-KN-3nB" customClass="TRInsertLabel" customModule="LOL" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lML-KN-3nB" customClass="TRInsertLabel" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="72" y="181" width="27" height="13"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
@@ -1250,7 +1251,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Legal View Controller-->
         <scene sceneID="Ncw-Ae-IHM">
             <objects>
-                <viewController storyboardIdentifier="legalWebView" id="IOo-gx-K2M" customClass="TRLegalViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="legalWebView" id="IOo-gx-K2M" customClass="TRLegalViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sLK-01-FLj"/>
                         <viewControllerLayoutGuide type="bottom" id="lrB-st-kDK"/>
@@ -1268,7 +1269,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Profile View Controller-->
         <scene sceneID="Dpu-Rd-GzN">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="RJW-k0-l6u" customClass="TRProfileViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="RJW-k0-l6u" customClass="TRProfileViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5T3-1W-a1y"/>
                         <viewControllerLayoutGuide type="bottom" id="ftz-Fk-rbT"/>
@@ -1440,7 +1441,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Change Password View Controller-->
         <scene sceneID="Deb-nP-xt5">
             <objects>
-                <viewController storyboardIdentifier="changePassword" id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changePassword" id="waR-kb-Ldy" customClass="TRChangePasswordViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6E-96-PgV"/>
                         <viewControllerLayoutGuide type="bottom" id="Kb1-Pl-dTK"/>
@@ -1454,6 +1455,113 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHp-QF-7aW" userLabel="currentEmail">
+                                <rect key="frame" x="20" y="347" width="560" height="66"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-E1-gIS">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="M4v-r0-tuV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgIconEmail" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-HZ-Ahd">
+                                        <rect key="frame" x="17" y="25" width="20" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Ysu-t3-Q39"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ru-FS-DCu">
+                                        <rect key="frame" x="60" y="25" width="8" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldDidDidUpdate:" destination="waR-kb-Ldy" eventType="editingChanged" id="hoL-mN-uQt"/>
+                                            <outlet property="delegate" destination="waR-kb-Ldy" id="JHy-Cq-eBr"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qzB-E1-gIS" secondAttribute="trailing" id="0tH-tY-2sT"/>
+                                    <constraint firstItem="qzB-E1-gIS" firstAttribute="centerY" secondItem="BHr-HZ-Ahd" secondAttribute="centerY" id="40R-Hb-L2S"/>
+                                    <constraint firstItem="qzB-E1-gIS" firstAttribute="leading" secondItem="eHp-QF-7aW" secondAttribute="leading" id="4D0-YG-8md"/>
+                                    <constraint firstItem="qzB-E1-gIS" firstAttribute="centerY" secondItem="6ru-FS-DCu" secondAttribute="centerY" id="8hi-nq-IzC"/>
+                                    <constraint firstItem="6ru-FS-DCu" firstAttribute="leading" secondItem="BHr-HZ-Ahd" secondAttribute="trailing" constant="23" id="9Nq-r5-beQ"/>
+                                    <constraint firstAttribute="height" constant="66" id="I2T-lP-wOi"/>
+                                    <constraint firstItem="qzB-E1-gIS" firstAttribute="top" secondItem="eHp-QF-7aW" secondAttribute="top" id="JcY-0i-kYI"/>
+                                    <constraint firstItem="6ru-FS-DCu" firstAttribute="leading" secondItem="BHr-HZ-Ahd" secondAttribute="trailing" constant="22" id="MA1-nu-EEA"/>
+                                    <constraint firstItem="BHr-HZ-Ahd" firstAttribute="leading" secondItem="eHp-QF-7aW" secondAttribute="leading" constant="17" id="VZf-c9-g3n"/>
+                                    <constraint firstItem="BHr-HZ-Ahd" firstAttribute="leading" secondItem="eHp-QF-7aW" secondAttribute="leading" constant="17" id="j3k-k0-kaZ"/>
+                                    <constraint firstItem="BHr-HZ-Ahd" firstAttribute="centerY" secondItem="6ru-FS-DCu" secondAttribute="centerY" id="q6o-Ay-lVV"/>
+                                    <constraint firstItem="BHr-HZ-Ahd" firstAttribute="top" secondItem="eHp-QF-7aW" secondAttribute="top" constant="25" id="qmv-Mr-734"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="40R-Hb-L2S"/>
+                                        <exclude reference="j3k-k0-kaZ"/>
+                                        <exclude reference="q6o-Ay-lVV"/>
+                                        <exclude reference="MA1-nu-EEA"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTn-zL-p7S" userLabel="UpdatedEmail">
+                                <rect key="frame" x="20" y="415" width="560" height="66"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hps-Tx-hFl">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="koW-fc-8YW">
+                                        <rect key="frame" x="58" y="18" width="408" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldDidDidUpdate:" destination="waR-kb-Ldy" eventType="editingChanged" id="UX0-Ik-tch"/>
+                                            <outlet property="delegate" destination="waR-kb-Ldy" id="dyh-ir-muY"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hps-Tx-hFl" secondAttribute="bottom" id="0oI-Lp-TUU"/>
+                                    <constraint firstItem="koW-fc-8YW" firstAttribute="top" secondItem="wTn-zL-p7S" secondAttribute="top" constant="18" id="1IW-Pu-m92"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="2VW-a9-hFZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hps-Tx-hFl" secondAttribute="trailing" id="5k2-Ei-MhQ"/>
+                                    <constraint firstAttribute="height" constant="66" id="95M-LI-PA9"/>
+                                    <constraint firstItem="koW-fc-8YW" firstAttribute="leading" secondItem="wTn-zL-p7S" secondAttribute="leading" constant="58" id="V8L-m1-uOi"/>
+                                    <constraint firstItem="Hps-Tx-hFl" firstAttribute="centerY" secondItem="koW-fc-8YW" secondAttribute="centerY" id="XEA-Y1-kaY"/>
+                                    <constraint firstAttribute="trailing" secondItem="koW-fc-8YW" secondAttribute="trailing" constant="94" id="Xbc-ZF-fMY"/>
+                                    <constraint firstItem="Hps-Tx-hFl" firstAttribute="leading" secondItem="wTn-zL-p7S" secondAttribute="leading" id="daO-22-dWx"/>
+                                    <constraint firstItem="Hps-Tx-hFl" firstAttribute="top" secondItem="wTn-zL-p7S" secondAttribute="top" id="hKf-Mz-tLd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2VW-a9-hFZ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="UOx-r7-3i0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="5BY-MS-zaj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5BY-MS-zaj"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmD-SK-IaE">
+                                <rect key="frame" x="246" y="310" width="109" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF0-O5-NFY">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.21176470588235294" green="0.36470588235294116" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
@@ -1476,16 +1584,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9i-0X-CEf">
-                                <rect key="frame" x="228" y="29" width="145" height="17"/>
+                                <rect key="frame" x="228" y="108" width="145" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="imgGlobeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-dQ-8N4">
-                                <rect key="frame" x="270" y="161" width="60" height="60"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-XE-7uI">
-                                <rect key="frame" x="20" y="271" width="560" height="66"/>
+                                <rect key="frame" x="20" y="146" width="560" height="66"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c53-KL-0qr">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
@@ -1495,17 +1600,10 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TrImgIconPassword" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-ii-lys">
-                                        <rect key="frame" x="17" y="16" width="21" height="23"/>
+                                        <rect key="frame" x="17" y="21" width="21" height="23"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OLD PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBq-AV-BG5">
-                                        <rect key="frame" x="60" y="16" width="79" height="12"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                        <color key="textColor" red="0.0" green="0.71372549019607845" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-ee-fcM">
-                                        <rect key="frame" x="60" y="28" width="407" height="30"/>
+                                        <rect key="frame" x="60" y="18" width="407" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1524,23 +1622,17 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-K5-1Qd">
-                                <rect key="frame" x="20" y="339" width="560" height="66"/>
+                                <rect key="frame" x="20" y="214" width="560" height="66"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5Z-IS-i3m">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEW PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-Yd-Iah">
-                                        <rect key="frame" x="60" y="16" width="82" height="12"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                        <color key="textColor" red="0.0" green="0.71372549019999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TrImgIconPassword" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-Ii-0pA">
-                                        <rect key="frame" x="17" y="16" width="21" height="23"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconShowpassword" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-Ii-0pA">
+                                        <rect key="frame" x="506" y="8" width="50" height="50"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-q1-ACh">
-                                        <rect key="frame" x="58" y="28" width="408" height="30"/>
+                                        <rect key="frame" x="58" y="18" width="408" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1575,23 +1667,33 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PzO-K5-1Qd" firstAttribute="top" secondItem="eLH-XE-7uI" secondAttribute="bottom" constant="2" id="1dn-4F-a4N"/>
+                            <constraint firstItem="rmD-SK-IaE" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="bottom" constant="30" id="3UW-1w-uSQ"/>
                             <constraint firstItem="Kb1-Pl-dTK" firstAttribute="top" secondItem="MdW-uk-ic1" secondAttribute="bottom" id="6UK-be-7PA"/>
+                            <constraint firstItem="eHp-QF-7aW" firstAttribute="top" secondItem="rmD-SK-IaE" secondAttribute="bottom" constant="20" id="Cc8-xd-Lvi"/>
                             <constraint firstItem="PzO-K5-1Qd" firstAttribute="trailing" secondItem="eLH-XE-7uI" secondAttribute="trailing" id="E23-BE-uPW"/>
+                            <constraint firstItem="UOx-r7-3i0" firstAttribute="top" secondItem="GZg-Mh-nzE" secondAttribute="topMargin" id="G9N-Df-9Wg"/>
                             <constraint firstItem="PzO-K5-1Qd" firstAttribute="leading" secondItem="eLH-XE-7uI" secondAttribute="leading" id="H2R-DX-GGg"/>
-                            <constraint firstItem="ca3-dQ-8N4" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="L8j-LH-hmm"/>
+                            <constraint firstItem="rmD-SK-IaE" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="KDR-nh-1fC"/>
+                            <constraint firstItem="l9i-0X-CEf" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="LQP-zK-nnQ"/>
                             <constraint firstAttribute="trailing" secondItem="uF0-O5-NFY" secondAttribute="trailing" id="LW2-XP-9Bx"/>
-                            <constraint firstItem="l9i-0X-CEf" firstAttribute="centerX" secondItem="ca3-dQ-8N4" secondAttribute="centerX" id="MeE-BY-ftm"/>
+                            <constraint firstItem="wTn-zL-p7S" firstAttribute="top" secondItem="eHp-QF-7aW" secondAttribute="bottom" constant="2" id="NNb-xn-Ac0"/>
                             <constraint firstItem="1Xi-Yn-RpD" firstAttribute="top" secondItem="s6E-96-PgV" secondAttribute="bottom" constant="1" id="PII-3C-T8r"/>
+                            <constraint firstItem="wTn-zL-p7S" firstAttribute="leading" secondItem="eHp-QF-7aW" secondAttribute="leading" id="Qc9-XY-JJs"/>
                             <constraint firstItem="uEy-2B-kvx" firstAttribute="centerY" secondItem="GZg-Mh-nzE" secondAttribute="centerY" id="SdP-jJ-bId"/>
                             <constraint firstItem="uEy-2B-kvx" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="Vo2-yJ-5Qf"/>
+                            <constraint firstItem="wTn-zL-p7S" firstAttribute="top" secondItem="eHp-QF-7aW" secondAttribute="bottom" constant="2" id="WFQ-jU-iCf"/>
                             <constraint firstItem="MdW-uk-ic1" firstAttribute="leading" secondItem="GZg-Mh-nzE" secondAttribute="leading" id="Y6M-gZ-MM7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UOx-r7-3i0" secondAttribute="trailing" constant="-20" id="Yzp-wr-eRm"/>
                             <constraint firstItem="uF0-O5-NFY" firstAttribute="leading" secondItem="GZg-Mh-nzE" secondAttribute="leading" id="ae9-TA-QNW"/>
                             <constraint firstItem="c5Z-IS-i3m" firstAttribute="trailing" secondItem="c53-KL-0qr" secondAttribute="trailing" id="c3Z-19-r00"/>
-                            <constraint firstItem="MdW-uk-ic1" firstAttribute="top" secondItem="l9i-0X-CEf" secondAttribute="bottom" constant="-46" id="cgB-Qq-U8i"/>
-                            <constraint firstItem="eLH-XE-7uI" firstAttribute="top" secondItem="ca3-dQ-8N4" secondAttribute="bottom" constant="50" id="jnP-GP-Mf9"/>
-                            <constraint firstItem="ca3-dQ-8N4" firstAttribute="top" secondItem="l9i-0X-CEf" secondAttribute="bottom" constant="115" id="pmp-Dg-Cc7"/>
+                            <constraint firstItem="l9i-0X-CEf" firstAttribute="top" secondItem="MdW-uk-ic1" secondAttribute="top" constant="108" id="cgB-Qq-U8i"/>
+                            <constraint firstItem="UOx-r7-3i0" firstAttribute="leading" secondItem="GZg-Mh-nzE" secondAttribute="leadingMargin" constant="-20" id="gVm-dF-dWf"/>
+                            <constraint firstItem="eHp-QF-7aW" firstAttribute="trailing" secondItem="PzO-K5-1Qd" secondAttribute="trailing" id="iow-27-r3P"/>
                             <constraint firstItem="eLH-XE-7uI" firstAttribute="leading" secondItem="GZg-Mh-nzE" secondAttribute="leadingMargin" id="pqV-vu-2xx"/>
                             <constraint firstAttribute="trailing" secondItem="MdW-uk-ic1" secondAttribute="trailing" id="rLq-lW-9fa"/>
+                            <constraint firstItem="eHp-QF-7aW" firstAttribute="leading" secondItem="PzO-K5-1Qd" secondAttribute="leading" id="rQi-lu-P5m"/>
+                            <constraint firstItem="eLH-XE-7uI" firstAttribute="top" secondItem="l9i-0X-CEf" secondAttribute="bottom" constant="21" id="t1A-JP-Jy0"/>
+                            <constraint firstItem="wTn-zL-p7S" firstAttribute="trailing" secondItem="eHp-QF-7aW" secondAttribute="trailing" id="tld-bP-DuJ"/>
                             <constraint firstItem="uF0-O5-NFY" firstAttribute="bottom" secondItem="Kb1-Pl-dTK" secondAttribute="top" id="umG-l5-1S7"/>
                             <constraint firstItem="1Xi-Yn-RpD" firstAttribute="leading" secondItem="GZg-Mh-nzE" secondAttribute="leading" constant="11" id="w07-Jx-ovL"/>
                             <constraint firstItem="eLH-XE-7uI" firstAttribute="trailing" secondItem="GZg-Mh-nzE" secondAttribute="trailingMargin" id="x28-RL-kcG"/>
@@ -1602,8 +1704,12 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="newEmail" destination="koW-fc-8YW" id="uXv-UE-v8X"/>
+                        <outlet property="newEmailView" destination="wTn-zL-p7S" id="l1M-gr-xXx"/>
                         <outlet property="newPassword" destination="j0E-q1-ACh" id="H0c-cB-CKZ"/>
                         <outlet property="newPasswordView" destination="PzO-K5-1Qd" id="QAE-uV-ku1"/>
+                        <outlet property="oldEmail" destination="6ru-FS-DCu" id="Fjy-2J-PNm"/>
+                        <outlet property="oldEmailView" destination="eHp-QF-7aW" id="PLF-NH-11f"/>
                         <outlet property="oldPassword" destination="Mbu-ee-fcM" id="rww-X4-gd5"/>
                         <outlet property="oldPasswordView" destination="eLH-XE-7uI" id="roD-ct-3kj"/>
                         <outlet property="passwordUpdatedLabel" destination="uEy-2B-kvx" id="z9j-4g-WzB"/>
@@ -1618,12 +1724,12 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1517" y="1757"/>
+            <point key="canvasLocation" x="-1499" y="1738"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="LaP-JU-gQW">
             <objects>
-                <viewController storyboardIdentifier="sendReportVC" title="Contact Us" id="vH8-Nd-68e" customClass="TRSendReportViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sendReportVC" title="Contact Us" id="vH8-Nd-68e" customClass="TRSendReportViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lFW-Yw-m9S"/>
                         <viewControllerLayoutGuide type="bottom" id="aYC-fX-WDX"/>
@@ -1820,7 +1926,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Message Sent Conf View Controller-->
         <scene sceneID="27Y-Ev-n5M">
             <objects>
-                <viewController storyboardIdentifier="messageSent" id="703-P7-HS9" customClass="TRMessageSentConfViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="messageSent" id="703-P7-HS9" customClass="TRMessageSentConfViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RYJ-AM-xXA"/>
                         <viewControllerLayoutGuide type="bottom" id="N8n-3Z-Y6W"/>
@@ -1884,7 +1990,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Event List View Controller-->
         <scene sceneID="ovf-Ol-GMU">
             <objects>
-                <viewController storyboardIdentifier="eventListVC" id="Ni1-Nm-5hW" customClass="TREventListViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventListVC" id="Ni1-Nm-5hW" customClass="TREventListViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKo-wg-rmi"/>
                         <viewControllerLayoutGuide type="bottom" id="hh2-ts-4BA"/>
@@ -2067,7 +2173,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--ADD ACTIVITY-->
         <scene sceneID="gyh-ht-VKW">
             <objects>
-                <viewController storyboardIdentifier="createeventvc" id="iX8-L2-jzY" customClass="TRCreateEventViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createeventvc" id="iX8-L2-jzY" customClass="TRCreateEventViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ayi-je-Xfm"/>
                         <viewControllerLayoutGuide type="bottom" id="i2g-3I-3sz"/>
@@ -2080,7 +2186,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39E-C1-dVL" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39E-C1-dVL" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="227" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2101,7 +2207,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="24" id="qod-cV-dif"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-np-CAB" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-np-CAB" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="287" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
@@ -2119,7 +2225,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="24" id="q1M-77-hm5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-9G-lH9" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-9G-lH9" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="345" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
@@ -2130,7 +2236,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="activityButtonPressed:" destination="iX8-L2-jzY" eventType="touchUpInside" id="K13-dp-Tu6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-vd-WAC" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-vd-WAC" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="405" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
@@ -2148,7 +2254,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="24" id="Jo3-2p-Jxj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDJ-Ze-dzS" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDJ-Ze-dzS" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="499" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
@@ -2166,7 +2272,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="24" id="WBY-Rd-i3r"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-Ir-4TW" customClass="EventButton" customModule="LOL" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-Ir-4TW" customClass="EventButton" customModule="Crossroads_for_LoL" customModuleProvider="target">
                                 <rect key="frame" x="40" y="559" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
@@ -2374,7 +2480,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Create Event Final View-->
         <scene sceneID="1Jo-BH-6yS">
             <objects>
-                <viewController storyboardIdentifier="createventfinal" id="YXe-0q-e54" customClass="TRCreateEventFinalView" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createventfinal" id="YXe-0q-e54" customClass="TRCreateEventFinalView" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4za-Ly-Scu"/>
                         <viewControllerLayoutGuide type="bottom" id="x4L-YE-Rsh"/>
@@ -2786,7 +2892,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Game View Controller-->
         <scene sceneID="0X3-J5-MxH">
             <objects>
-                <viewController storyboardIdentifier="yatriView" id="kcL-1v-TAa" customClass="YTGameViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yatriView" id="kcL-1v-TAa" customClass="YTGameViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mav-Jl-yfR"/>
                         <viewControllerLayoutGuide type="bottom" id="iiI-UX-ZVb"/>
@@ -2804,7 +2910,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign Up Verificatio View Controller-->
         <scene sceneID="OJF-Sb-wzb">
             <objects>
-                <viewController storyboardIdentifier="verifyAccount" id="bMr-vX-UhF" customClass="TRSignUpVerificatioViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyAccount" id="bMr-vX-UhF" customClass="TRSignUpVerificatioViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QOd-qg-fx3"/>
                         <viewControllerLayoutGuide type="bottom" id="njn-tx-sYA"/>
@@ -2930,7 +3036,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign In View Controller-->
         <scene sceneID="Hi6-2S-mTf">
             <objects>
-                <viewController storyboardIdentifier="login" id="7TH-yK-9j1" customClass="TRSignInViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="7TH-yK-9j1" customClass="TRSignInViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sWm-yD-hvv"/>
                         <viewControllerLayoutGuide type="bottom" id="yYu-tK-u3c"/>
@@ -3171,7 +3277,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Sign In Check User View Controller-->
         <scene sceneID="xZD-rG-U9T">
             <objects>
-                <viewController storyboardIdentifier="verifyUserView" id="yVT-X2-sSQ" customClass="TRSignInCheckUserViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyUserView" id="yVT-X2-sSQ" customClass="TRSignInCheckUserViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLI-Qw-cOJ"/>
                         <viewControllerLayoutGuide type="bottom" id="8ai-5O-JMX"/>
@@ -3361,7 +3467,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <!--Create Account View Controller-->
         <scene sceneID="EDb-Kd-l1z">
             <objects>
-                <viewController storyboardIdentifier="signup" id="af4-4X-nuH" customClass="TRCreateAccountViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signup" id="af4-4X-nuH" customClass="TRCreateAccountViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QnQ-j0-zzr"/>
                         <viewControllerLayoutGuide type="bottom" id="ZWu-9B-qeU"/>
@@ -3694,6 +3800,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="imgBGVaultOfGlass" width="375" height="326"/>
         <image name="imgDogEar" width="16" height="16"/>
         <image name="imgGlobeIcon" width="60" height="60"/>
+        <image name="imgIconEmail" width="22" height="18"/>
         <image name="imgLoginBtnTapped" width="90" height="90"/>
         <image name="imgLogoBadge" width="64" height="73"/>
         <image name="imgMisadventureSkull" width="216" height="188"/>

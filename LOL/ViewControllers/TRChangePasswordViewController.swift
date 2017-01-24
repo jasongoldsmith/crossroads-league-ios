@@ -17,7 +17,11 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     @IBOutlet weak var oldPasswordView: UIView!
     @IBOutlet weak var newPasswordView: UIView!
     @IBOutlet weak var passwordUpdatedLabel: UILabel!
-    
+    @IBOutlet weak var oldEmailView: UIView!
+    @IBOutlet weak var newEmailView: UIView!
+    @IBOutlet weak var oldEmail: UITextField!
+    @IBOutlet weak var newEmail: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +30,11 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRChangePasswordViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
 
         // Placeholder Strings
-        self.oldPassword.attributedPlaceholder = NSAttributedString(string:"Enter old password", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
-        self.newPassword.attributedPlaceholder = NSAttributedString(string:"Enter new password", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
+        let textColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
+        self.oldPassword.attributedPlaceholder = NSAttributedString(string:"Enter current password", attributes: [NSForegroundColorAttributeName: textColor])
+        self.newPassword.attributedPlaceholder = NSAttributedString(string:"Enter new password", attributes: [NSForegroundColorAttributeName: textColor])
+        self.oldEmail.attributedPlaceholder = NSAttributedString(string:"Enter current email address", attributes: [NSForegroundColorAttributeName: textColor])
+        self.newEmail.attributedPlaceholder = NSAttributedString(string:"Enter new email address", attributes: [NSForegroundColorAttributeName: textColor])
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -78,7 +85,7 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if keyboardSize.height == offset.height {
-            if self.view.frame.origin.y == 0 {
+            if self.view.frame.origin.y == 0 && (self.oldEmail.isFirstResponder() == true || self.newEmail.isFirstResponder() == true) {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.view.frame.origin.y -= keyboardSize.height
                 })
