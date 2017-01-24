@@ -84,7 +84,7 @@ class TRRootViewController: TRBaseViewController {
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                 } else {
-                    if let _ = TRUserInfo().consoles.first {
+                    if let _ = TRApplicationManager.sharedInstance.currentUser?.consoles.first {
                         _ = TRGetEventsList().getEventsListWithClearActivityBackGround(true, clearBG: true, indicatorTopConstraint: self.ACTIVITY_INDICATOR_TOP_CONSTRAINT, completion: { (didSucceed) -> () in
                             
                             if(didSucceed == true) {
