@@ -101,7 +101,15 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     }
     
     @IBAction func popViewController () {
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        if self.navigationController?.viewControllers.count > 1 {
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            TRUserInfo.removeUserData()
+            self.dismissViewController(true, dismissed: { (didDismiss) in
+                
+            })
+        }
     }
     
     //MARK:- Table Delegate Methods

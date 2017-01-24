@@ -2942,6 +2942,17 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrLoadingimgBackgroundMap" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-Ha-rDp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="sVZ-9p-N0o">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="S0i-fd-469"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="S0i-fd-469"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXB-Gd-KyK" userLabel="username View">
                                 <rect key="frame" x="10" y="165" width="580" height="66"/>
                                 <subviews>
@@ -3100,17 +3111,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="popViewController" destination="7TH-yK-9j1" eventType="touchUpInside" id="tup-Jt-8Vf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="sVZ-9p-N0o">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="S0i-fd-469"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="S0i-fd-469"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3243,13 +3243,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H2-ZA-umd">
-                                <rect key="frame" x="10" y="10" width="44" height="44"/>
-                                <state key="normal" image="iconBackArrow"/>
-                                <connections>
-                                    <action selector="popViewController" destination="yVT-X2-sSQ" eventType="touchUpInside" id="Tq9-uW-8Y5"/>
-                                </connections>
-                            </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4i-nW-THn">
                                 <rect key="frame" x="10" y="241" width="580" height="308"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.19607843137254902" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -3305,6 +3298,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="width" constant="10" id="eUT-3Y-d1T"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H2-ZA-umd">
+                                <rect key="frame" x="10" y="10" width="44" height="44"/>
+                                <state key="normal" image="iconBackArrow"/>
+                                <connections>
+                                    <action selector="popViewController" destination="yVT-X2-sSQ" eventType="touchUpInside" id="Tq9-uW-8Y5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
