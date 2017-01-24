@@ -269,11 +269,9 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if keyboardSize.height == offset.height {
-            if self.view.frame.origin.y == 0 {
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    if self.userNameTxtField.isFirstResponder() == false && self.userPwdTxtField?.isFirstResponder() == false {
-                        self.sendButtonBottomConst?.constant -= keyboardSize.height
-                    }
+            if self.sendButtonBottomConst?.constant == 0 {
+                UIView.animateWithDuration(0.4, animations: { () -> Void in
+                    self.sendButtonBottomConst?.constant -= keyboardSize.height
                 })
             }
         } else {
