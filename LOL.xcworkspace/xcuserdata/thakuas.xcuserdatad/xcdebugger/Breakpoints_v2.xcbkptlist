@@ -17,38 +17,6 @@
             endingLineNumber = "31"
             landmarkName = "loginTRUserWithSuccess(_:password:completion:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LOL.TRAuthenticationRequest.loginTRUserWithSuccess (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, password : Swift.Optional&lt;Swift.String&gt;, completion : (didSucceed : Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LOL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thakuas/Desktop/projects/LoL-iOS/LOL/Networking/TRAuthenticationRequest.swift"
-                  timestampString = "506986095.00203"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "2398">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LOL.TRAuthenticationRequest.(loginTRUserWithSuccess (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, password : Swift.Optional&lt;Swift.String&gt;, completion : (didSucceed : Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "LOL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thakuas/Desktop/projects/LoL-iOS/LOL/Networking/TRAuthenticationRequest.swift"
-                  timestampString = "506986095.00231"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "176">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

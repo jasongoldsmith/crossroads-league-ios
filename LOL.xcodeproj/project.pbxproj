@@ -179,7 +179,7 @@
 		33CD73961E2D5A7F009E63F2 /* LOL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LOL.entitlements; sourceTree = "<group>"; };
 		5149D55C3707CF1765466ACF /* Pods-LOL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFFF5067A65688FEED9E298 /* Pods-LOL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.release.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.release.xcconfig"; sourceTree = "<group>"; };
-		C7B47B6A1E26FD2A00D441BC /* LOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B47B6A1E26FD2A00D441BC /* Crossroads for LoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crossroads for LoL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B47B721E26FD2A00D441BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7B47B741E26FD2A00D441BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -384,7 +384,7 @@
 		C7B47B6B1E26FD2A00D441BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7B47B6A1E26FD2A00D441BC /* LOL.app */,
+				C7B47B6A1E26FD2A00D441BC /* Crossroads for LoL.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -699,7 +699,7 @@
 			);
 			name = LOL;
 			productName = Overwatch;
-			productReference = C7B47B6A1E26FD2A00D441BC /* LOL.app */;
+			productReference = C7B47B6A1E26FD2A00D441BC /* Crossroads for LoL.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1026,7 +1026,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1065,7 +1065,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1086,7 +1086,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.crossroadsapp.leagueoflegends;
-				PRODUCT_NAME = LOL;
+				PRODUCT_NAME = "Crossroads for LoL";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LOL-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
@@ -1107,7 +1107,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.crossroadsapp.leagueoflegends;
-				PRODUCT_NAME = LOL;
+				PRODUCT_NAME = "Crossroads for LoL";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LOL-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
