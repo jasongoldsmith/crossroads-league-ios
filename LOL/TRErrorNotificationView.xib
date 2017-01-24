@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -12,23 +12,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRErrorNotificationView" customModule="Crossroads" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRErrorNotificationView" customModule="Crossroads_for_LoL" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="376" height="86"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISADVENTURE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-9a-eR6">
-                    <rect key="frame" x="64" y="12" width="235" height="23"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-9a-eR6">
+                    <rect key="frame" x="59" y="12" width="235" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="235" id="93B-bM-Ku0"/>
                         <constraint firstAttribute="height" constant="23" id="DFf-lM-00S"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="51N-eg-el7">
-                    <rect key="frame" x="64" y="24" width="304" height="54"/>
+                    <rect key="frame" x="59" y="24" width="304" height="54"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="54" id="3Jq-xa-amB"/>
                         <constraint firstAttribute="width" constant="304" id="n5J-1a-A4E"/>
@@ -51,14 +51,14 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-fo-wzO">
-                    <rect key="frame" x="22" y="18" width="29" height="23"/>
+                    <rect key="frame" x="22" y="18" width="24" height="23"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="29" id="2dS-Pj-dR7"/>
+                        <constraint firstAttribute="width" constant="24" id="2dS-Pj-dR7"/>
                         <constraint firstAttribute="height" constant="23" id="bnb-8m-OWP"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.82352941176470584" green="0.56862745098039214" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="t7E-fo-wzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="FuD-zU-IO0"/>
                 <constraint firstItem="hCf-uw-Hc9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="Jb3-nh-raa"/>
@@ -69,7 +69,7 @@
                 <constraint firstAttribute="trailing" secondItem="hCf-uw-Hc9" secondAttribute="trailing" constant="9" id="cff-4F-CbO"/>
                 <constraint firstItem="LtI-9a-eR6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="hyh-l1-MlW"/>
                 <constraint firstItem="51N-eg-el7" firstAttribute="top" secondItem="LtI-9a-eR6" secondAttribute="bottom" constant="-11" id="qfB-Pd-yJk"/>
-                <constraint firstAttribute="trailing" secondItem="51N-eg-el7" secondAttribute="trailing" constant="8" id="yGu-TF-Uap"/>
+                <constraint firstAttribute="trailing" secondItem="51N-eg-el7" secondAttribute="trailing" constant="13" id="yGu-TF-Uap"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -77,6 +77,7 @@
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="S6C-py-Cs4"/>
+                    <exclude reference="VwL-ek-ap1"/>
                 </mask>
             </variation>
             <connections>
@@ -87,6 +88,6 @@
     </objects>
     <resources>
         <image name="iconCloseSm" width="14" height="14"/>
-        <image name="iconError" width="29" height="23"/>
+        <image name="iconError" width="24" height="24"/>
     </resources>
 </document>
