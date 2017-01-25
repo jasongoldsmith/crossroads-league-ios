@@ -1673,6 +1673,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="PzO-K5-1Qd" firstAttribute="trailing" secondItem="eLH-XE-7uI" secondAttribute="trailing" id="E23-BE-uPW"/>
                             <constraint firstItem="UOx-r7-3i0" firstAttribute="top" secondItem="GZg-Mh-nzE" secondAttribute="topMargin" id="G9N-Df-9Wg"/>
                             <constraint firstItem="PzO-K5-1Qd" firstAttribute="leading" secondItem="eLH-XE-7uI" secondAttribute="leading" id="H2R-DX-GGg"/>
+                            <constraint firstItem="1Xi-Yn-RpD" firstAttribute="top" secondItem="s6E-96-PgV" secondAttribute="bottom" constant="1" id="JuD-38-dgf"/>
                             <constraint firstItem="rmD-SK-IaE" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="KDR-nh-1fC"/>
                             <constraint firstItem="l9i-0X-CEf" firstAttribute="centerX" secondItem="GZg-Mh-nzE" secondAttribute="centerX" id="LQP-zK-nnQ"/>
                             <constraint firstAttribute="trailing" secondItem="uF0-O5-NFY" secondAttribute="trailing" id="LW2-XP-9Bx"/>
@@ -1699,8 +1700,13 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="eLH-XE-7uI" firstAttribute="trailing" secondItem="GZg-Mh-nzE" secondAttribute="trailingMargin" id="x28-RL-kcG"/>
                             <constraint firstItem="MdW-uk-ic1" firstAttribute="top" secondItem="GZg-Mh-nzE" secondAttribute="top" id="ykP-8D-qNV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PII-3C-T8r"/>
+                            </mask>
+                        </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="j31-Ft-7wo" appends="YES" id="EJV-gC-6Tt"/>
+                            <outletCollection property="gestureRecognizers" destination="j31-Ft-7wo" appends="YES" id="gCl-tN-49z"/>
                         </connections>
                     </view>
                     <connections>
@@ -1714,6 +1720,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         <outlet property="oldPasswordView" destination="eLH-XE-7uI" id="roD-ct-3kj"/>
                         <outlet property="passwordUpdatedLabel" destination="uEy-2B-kvx" id="z9j-4g-WzB"/>
                         <outlet property="saveButton" destination="uF0-O5-NFY" id="pmF-fl-G79"/>
+                        <outlet property="sendButtonBottonConst" destination="umG-l5-1S7" id="JOB-9F-B6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dz-Y0-zmC" userLabel="First Responder" sceneMemberID="firstResponder"/>

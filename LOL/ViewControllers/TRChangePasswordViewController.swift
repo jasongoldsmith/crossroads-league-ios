@@ -21,7 +21,8 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     @IBOutlet weak var newEmailView: UIView!
     @IBOutlet weak var oldEmail: UITextField!
     @IBOutlet weak var newEmail: UITextField!
-
+    @IBOutlet weak var sendButtonBottonConst: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,10 +86,21 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if keyboardSize.height == offset.height {
-            if self.view.frame.origin.y == 0 && (self.oldEmail.isFirstResponder() == true || self.newEmail.isFirstResponder() == true) {
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.view.frame.origin.y -= keyboardSize.height
-                })
+            
+            if self.oldPassword.isFirstResponder() == true || self.newPassword.isFirstResponder() == true {
+                if self.sendButtonBottonConst?.constant == 0 {
+                    UIView.animateWithDuration(0.4, animations: { () -> Void in
+                        self.sendButtonBottonConst?.constant -= keyboardSize.height
+                        self.view.frame.origin.y = 0
+                    })
+                }
+            } else {
+                self.sendButtonBottonConst?.constant = 0.0
+                if self.view.frame.origin.y == 0 {
+                    UIView.animateWithDuration(0.4, animations: { () -> Void in
+                        self.view.frame.origin.y -= keyboardSize.height
+                    })
+                }
             }
         } else {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
@@ -104,18 +116,18 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
             self.view.frame.origin.y += keyboardSize.height
         }
-        else
-        {
+        else {
+            self.sendButtonBottonConst?.constant = 0
             self.view.frame.origin.y = 0
         }
     }
     
     @IBAction func saveButtonPressed () {
-        if self.oldPassword.text?.isEmpty == true {
+        if self.oldPassword.text?.isEmpty == true && self.oldPassword.text?.isEmpty == false {
             TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter old password.")
             
             return
-        } else if self.newPassword.text?.isEmpty == true {
+        } else if self.newPassword.text?.isEmpty == true && self.oldPassword.text?.isEmpty == false {
             TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter new password.")
             
             return
@@ -145,8 +157,12 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     @IBAction func dismissKeyboard(recognizer : UITapGestureRecognizer) {
         if self.newPassword?.isFirstResponder() == true {
             self.newPassword?.resignFirstResponder()
-        } else {
+        } else if self.oldPassword?.isFirstResponder() == true{
             self.oldPassword?.resignFirstResponder()
+        } else if self.oldEmail?.isFirstResponder() == true{
+            self.oldEmail?.resignFirstResponder()
+        } else {
+            self.newEmail?.resignFirstResponder()
         }
     }
     
