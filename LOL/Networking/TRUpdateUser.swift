@@ -12,7 +12,7 @@ class TRUpdateUser: TRRequest {
     
     func updateUserPassword(newPassword: String?, oldPassword: String?, completion: TRValueCallBack) {
         
-        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_UPDATE_PASSWORD
+        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_CHANGE_PASSWORD
         var params = [String: AnyObject]()
         params["id"] = TRUserInfo.getUserID()
         
@@ -39,4 +39,32 @@ class TRUpdateUser: TRRequest {
         }
     }
     
+    func updateUserEmail(newEmail: String?, oldEmail: String?, completion: TRValueCallBack) {
+        
+        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_CHANGE_EMAIL
+        var params = [String: AnyObject]()
+        params["id"] = TRUserInfo.getUserID()
+        
+        if let _ = newEmail {
+            params["newEmail"] = newEmail
+        }
+        if let _ = oldEmail {
+            params["oldEmail"] = oldEmail
+        }
+        
+        let request = TRRequest()
+        request.params = params
+        request.requestURL = updateUserUrl
+        request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
+            
+            if let _ = error {
+                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("response error")
+                completion(didSucceed: false)
+                
+                return
+            }
+            
+            completion(didSucceed: true )
+        }
+    }
 }

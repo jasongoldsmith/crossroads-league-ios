@@ -23,6 +23,8 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     @IBOutlet weak var newEmail: UITextField!
     @IBOutlet weak var sendButtonBottonConst: NSLayoutConstraint!
     
+    @IBOutlet weak var changeEmailTextLabel: UILabel!
+    @IBOutlet weak var changepasswordTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,9 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         return true
     }
     
+    @IBAction func textFieldDidBecomeActive (sender: UITextField) {
+        
+    }
     
     @IBAction func textFieldDidDidUpdate (textField: UITextField) {
         if textField.text?.characters.count >= 4 {
@@ -123,32 +128,77 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     }
     
     @IBAction func saveButtonPressed () {
-        if self.oldPassword.text?.isEmpty == true && self.oldPassword.text?.isEmpty == false {
+        
+        let oldPasswordEmpty = self.oldPassword.text?.isEmpty
+        let newPasswordEmpty = self.newPassword.text?.isEmpty
+        let oldEmailEmpty = self.oldEmail.text?.isEmpty
+        let newEmailEmpty = self.newEmail.text?.isEmpty
+        
+        if newPasswordEmpty == false && oldPasswordEmpty == true {
             TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter old password.")
             
             return
-        } else if self.newPassword.text?.isEmpty == true && self.oldPassword.text?.isEmpty == false {
+        } else if newPasswordEmpty == true && oldPasswordEmpty == false {
             TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter new password.")
             
             return
-        }
-    
-        let _ = TRUpdateUser().updateUserPassword(self.newPassword?.text, oldPassword: self.oldPassword?.text) { (didSucceed) in
+        }else if newEmailEmpty == false && oldEmailEmpty == true {
+            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter old email address.")
             
-            if didSucceed == true {
+            return
+        }else if newEmailEmpty == true && oldEmailEmpty == false {
+            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter new email address.")
+            
+            return
+        }
+
+        if self.oldPassword.text?.isEmpty == false && self.newPassword.text?.isEmpty == false {
+            // Change Password
+            let _ = TRUpdateUser().updateUserPassword(self.newPassword?.text, oldPassword: self.oldPassword?.text) { (didSucceed) in
                 
-                let defaults = NSUserDefaults.standardUserDefaults()
-                defaults.setValue(self.newPassword?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
-                defaults.synchronize()
+                if didSucceed == true {
+                    
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setValue(self.newPassword?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                    defaults.synchronize()
+                    
+                    self.oldEmailView?.hidden = true
+                    self.newEmailView?.hidden = true
+                    self.oldPasswordView?.hidden = true
+                    self.newPasswordView?.hidden = true
+                    self.changeEmailTextLabel?.hidden = true
+                    self.changepasswordTextLabel?.hidden = true
+                    self.saveButton.enabled = false
+                    self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
+                    self.passwordUpdatedLabel?.hidden = false
+                    
+                    self.resignKeyBoard()
+                }
+            }
+        } else {
+            //Change email id
+            let _ = TRUpdateUser().updateUserEmail(self.newEmail?.text, oldEmail: self.oldEmail?.text) { (didSucceed) in
+                
+                if didSucceed == true {
+                    
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setValue(self.newPassword?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                    defaults.synchronize()
+                    
+                    self.oldEmailView?.hidden = true
+                    self.newEmailView?.hidden = true
+                    self.oldPasswordView?.hidden = true
+                    self.newPasswordView?.hidden = true
+                    self.changeEmailTextLabel?.hidden = true
+                    self.changepasswordTextLabel?.hidden = true
+                    self.saveButton.enabled = false
+                    self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
+                    
+                    self.passwordUpdatedLabel?.hidden = false
+                    self.passwordUpdatedLabel?.text = "Email Updated."
 
-                self.oldPasswordView?.hidden = true
-                self.newPasswordView?.hidden = true
-                self.passwordUpdatedLabel?.hidden = false
-                self.saveButton.enabled = false
-                self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
-
-                if self.newPassword?.isFirstResponder() == true {
-                    self.newPassword?.resignFirstResponder()
+                    //Close KeyBoard
+                    self.resignKeyBoard()
                 }
             }
         }
@@ -164,6 +214,10 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     }
     
     @IBAction func dismissKeyboard(recognizer : UITapGestureRecognizer) {
+        self.resignKeyBoard()
+    }
+    
+    func resignKeyBoard () {
         if self.newPassword?.isFirstResponder() == true {
             self.newPassword?.resignFirstResponder()
         } else if self.oldPassword?.isFirstResponder() == true{

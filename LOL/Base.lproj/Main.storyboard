@@ -121,7 +121,7 @@
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.22745098039215686" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogoBadge" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-l3-C1j">
-                                <rect key="frame" x="267" y="30" width="67" height="73"/>
+                                <rect key="frame" x="266.5" y="30" width="67" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="gUi-0Y-ZuB"/>
                                 </constraints>
@@ -177,7 +177,7 @@
                                         <state key="selected" image="iconNotificationsOff"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-Ts-zs5">
-                                        <rect key="frame" x="76" y="44" width="59" height="14"/>
+                                        <rect key="frame" x="76" y="44" width="58.5" height="14"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1476,7 +1476,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                         <connections>
                                             <action selector="textFieldDidDidUpdate:" destination="waR-kb-Ldy" eventType="editingChanged" id="hoL-mN-uQt"/>
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="JHy-Cq-eBr"/>
@@ -1519,7 +1519,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                         <connections>
                                             <action selector="textFieldDidDidUpdate:" destination="waR-kb-Ldy" eventType="editingChanged" id="UX0-Ik-tch"/>
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="dyh-ir-muY"/>
@@ -1609,6 +1609,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                         <connections>
+                                            <action selector="textFieldDidBecomeActive:" destination="waR-kb-Ldy" eventType="touchDown" id="Ehr-2a-Ogv"/>
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="8FN-Js-aDP"/>
                                         </connections>
                                     </textField>
@@ -1635,6 +1636,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <connections>
+                                            <action selector="textFieldDidBecomeActive:" destination="waR-kb-Ldy" eventType="touchDown" id="fS0-pj-8q2"/>
                                             <action selector="textFieldDidDidUpdate:" destination="waR-kb-Ldy" eventType="editingChanged" id="1Sk-js-IgM"/>
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="TEi-lW-2yJ"/>
                                         </connections>
@@ -1717,6 +1719,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="changeEmailTextLabel" destination="rmD-SK-IaE" id="ejW-1s-6kR"/>
+                        <outlet property="changepasswordTextLabel" destination="l9i-0X-CEf" id="cO0-yz-Ji7"/>
                         <outlet property="newEmail" destination="koW-fc-8YW" id="uXv-UE-v8X"/>
                         <outlet property="newEmailView" destination="wTn-zL-p7S" id="l1M-gr-xXx"/>
                         <outlet property="newPassword" destination="j0E-q1-ACh" id="H0c-cB-CKZ"/>
@@ -1780,7 +1784,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogoBadge" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-ms-SXi">
-                                <rect key="frame" x="267" y="79" width="67" height="73"/>
+                                <rect key="frame" x="266.5" y="79" width="67" height="73"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-Ml-hnp">
                                 <rect key="frame" x="10" y="180" width="580" height="66"/>
