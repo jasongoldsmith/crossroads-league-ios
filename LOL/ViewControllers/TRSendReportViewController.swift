@@ -35,14 +35,14 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
         self.emailView?.layer.cornerRadius = 2.0
         self.reportTextView?.layer.cornerRadius = 2.0
         self.emailView?.clipsToBounds = true
-        
-        self.emailTextView?.attributedPlaceholder = NSAttributedString(string:"Your Email (required)", attributes: [NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        let textColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
+        self.emailTextView?.attributedPlaceholder = NSAttributedString(string:"Your Email (required)", attributes: [NSForegroundColorAttributeName: textColor])
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSendReportViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSendReportViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
         
         self.reportTextView?.text = placeHolderString
-        self.reportTextView?.textColor = UIColor.lightGrayColor()
+        self.reportTextView?.textColor = textColor
         
         if isModallyPresented == true {
             self.cancelButton?.hidden = false
