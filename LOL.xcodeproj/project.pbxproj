@@ -692,6 +692,7 @@
 				C7B47B681E26FD2A00D441BC /* Resources */,
 				0DD7884756A2EA79419679A9 /* [CP] Embed Pods Frameworks */,
 				4607AE516E024D917B6786E7 /* [CP] Copy Pods Resources */,
+				33B68FA11E382A3B003FAABF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -801,6 +802,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOL/Pods-LOL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		33B68FA11E382A3B003FAABF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 11f888057a583a50a91f1434bf728d87358f6d8e b75de9b93c05aa55e21b28cc77f5e482147189f52e937ca190c06df0f8bba4c3";
 		};
 		4607AE516E024D917B6786E7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

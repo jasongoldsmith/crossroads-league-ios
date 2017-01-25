@@ -1628,9 +1628,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconShowpassword" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-Ii-0pA">
-                                        <rect key="frame" x="506" y="8" width="50" height="50"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-q1-ACh">
                                         <rect key="frame" x="58" y="18" width="408" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1642,14 +1639,24 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="TEi-lW-2yJ"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-27-Arj">
+                                        <rect key="frame" x="510" y="8" width="50" height="50"/>
+                                        <state key="normal" image="iconShowpassword"/>
+                                        <connections>
+                                            <action selector="showPasswordClicked" destination="waR-kb-Ldy" eventType="touchUpInside" id="rv8-zi-2er"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="c5Z-IS-i3m" secondAttribute="bottom" id="1Ca-As-fRv"/>
+                                    <constraint firstAttribute="bottom" secondItem="eIw-27-Arj" secondAttribute="bottom" constant="8" id="A0j-ze-lWu"/>
+                                    <constraint firstItem="eIw-27-Arj" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="top" constant="8" id="H4Y-UQ-AG3"/>
                                     <constraint firstItem="c5Z-IS-i3m" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="top" id="Hws-xx-98R"/>
                                     <constraint firstItem="c5Z-IS-i3m" firstAttribute="leading" secondItem="PzO-K5-1Qd" secondAttribute="leading" id="Nyx-0C-zCG"/>
                                     <constraint firstAttribute="height" constant="66" id="fUJ-dV-eHw"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="wi8-Zf-ZzG"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIw-27-Arj" secondAttribute="trailing" id="x2u-UU-Yfm"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">

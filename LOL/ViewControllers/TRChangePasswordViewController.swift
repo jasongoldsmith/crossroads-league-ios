@@ -72,7 +72,7 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     @IBAction func textFieldDidDidUpdate (textField: UITextField) {
         if textField.text?.characters.count >= 4 {
             self.saveButton.enabled = true
-            self.saveButton.backgroundColor = UIColor(red: 0/255, green: 134/255, blue: 208/255, alpha: 1)
+            self.saveButton.backgroundColor = UIColor(red: 148/255, green: 123/255, blue: 67/255, alpha: 1)
         } else {
             self.saveButton.enabled = false
             self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
@@ -151,6 +151,15 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
                     self.newPassword?.resignFirstResponder()
                 }
             }
+        }
+    }
+    
+    @IBAction func showPasswordClicked () {
+        if let _ = self.newPassword.text where self.newPassword.text?.isEmpty != true {
+            let tmpString = self.newPassword?.text
+            self.newPassword.secureTextEntry = !self.newPassword.secureTextEntry
+            self.newPassword?.text = ""
+            self.newPassword?.text = tmpString
         }
     }
     
