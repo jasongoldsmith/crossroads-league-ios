@@ -16,74 +16,77 @@
             <rect key="frame" x="0.0" y="0.0" width="376" height="86"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-9a-eR6">
-                    <rect key="frame" x="59" y="12" width="235" height="23"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSI-TN-Heb">
+                    <rect key="frame" x="8" y="8" width="360" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-9a-eR6" customClass="TRInsertLabel" customModule="Crossroads_for_LoL" customModuleProvider="target">
+                            <rect key="frame" x="55" y="9.5" width="235" height="14.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="235" id="93B-bM-Ku0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="51N-eg-el7" customClass="TRInsertLabel" customModule="Crossroads_for_LoL" customModuleProvider="target">
+                            <rect key="frame" x="55" y="23" width="297" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="3Jq-xa-amB"/>
+                                <constraint firstAttribute="width" constant="297" id="n5J-1a-A4E"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-uw-Hc9">
+                            <rect key="frame" x="346" y="0.0" width="14" height="22"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="1wh-Oc-LUV"/>
+                                <constraint firstAttribute="width" constant="14" id="9C7-ei-ELr"/>
+                            </constraints>
+                            <state key="normal" image="iconCloseSm"/>
+                            <connections>
+                                <action selector="closeErrorView:" destination="iN0-l3-epB" eventType="touchUpInside" id="rZ3-9x-AP5"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-fo-wzO">
+                            <rect key="frame" x="12" y="12" width="24" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="2dS-Pj-dR7"/>
+                                <constraint firstAttribute="height" constant="23" id="bnb-8m-OWP"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.82352941180000006" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="235" id="93B-bM-Ku0"/>
-                        <constraint firstAttribute="height" constant="23" id="DFf-lM-00S"/>
+                        <constraint firstItem="t7E-fo-wzO" firstAttribute="leading" secondItem="pSI-TN-Heb" secondAttribute="leading" constant="12" id="N63-KD-1nD"/>
+                        <constraint firstItem="51N-eg-el7" firstAttribute="top" secondItem="LtI-9a-eR6" secondAttribute="bottom" constant="-1" id="VPl-rw-W2U"/>
+                        <constraint firstItem="51N-eg-el7" firstAttribute="leading" secondItem="LtI-9a-eR6" secondAttribute="leading" id="dWY-M8-AKz"/>
+                        <constraint firstAttribute="bottom" secondItem="51N-eg-el7" secondAttribute="bottom" id="fGQ-dE-L0R"/>
+                        <constraint firstItem="hCf-uw-Hc9" firstAttribute="top" secondItem="pSI-TN-Heb" secondAttribute="top" id="nKW-01-Tb4"/>
+                        <constraint firstAttribute="trailing" secondItem="hCf-uw-Hc9" secondAttribute="trailing" id="rxX-4y-ar3"/>
+                        <constraint firstItem="t7E-fo-wzO" firstAttribute="top" secondItem="pSI-TN-Heb" secondAttribute="top" constant="12" id="wXf-J4-S4R"/>
+                        <constraint firstItem="LtI-9a-eR6" firstAttribute="leading" secondItem="t7E-fo-wzO" secondAttribute="trailing" constant="19" id="z0W-TE-afF"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <size key="shadowOffset" width="0.0" height="0.0"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="51N-eg-el7">
-                    <rect key="frame" x="59" y="24" width="304" height="54"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="3Jq-xa-amB"/>
-                        <constraint firstAttribute="width" constant="304" id="n5J-1a-A4E"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <size key="shadowOffset" width="0.0" height="0.0"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-uw-Hc9">
-                    <rect key="frame" x="353" y="9" width="14" height="22"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="22" id="1wh-Oc-LUV"/>
-                        <constraint firstAttribute="width" constant="14" id="9C7-ei-ELr"/>
-                    </constraints>
-                    <state key="normal" image="iconCloseSm"/>
-                    <connections>
-                        <action selector="closeErrorView:" destination="iN0-l3-epB" eventType="touchUpInside" id="rZ3-9x-AP5"/>
-                    </connections>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-fo-wzO">
-                    <rect key="frame" x="22" y="18" width="24" height="23"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="24" id="2dS-Pj-dR7"/>
-                        <constraint firstAttribute="height" constant="23" id="bnb-8m-OWP"/>
-                    </constraints>
-                </imageView>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.82352941176470584" green="0.56862745098039214" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="t7E-fo-wzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="FuD-zU-IO0"/>
-                <constraint firstItem="hCf-uw-Hc9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="Jb3-nh-raa"/>
-                <constraint firstItem="t7E-fo-wzO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="M4h-xa-MCY"/>
-                <constraint firstAttribute="bottom" secondItem="t7E-fo-wzO" secondAttribute="bottom" constant="13" id="S6C-py-Cs4"/>
-                <constraint firstItem="51N-eg-el7" firstAttribute="leading" secondItem="t7E-fo-wzO" secondAttribute="trailing" constant="13" id="VwL-ek-ap1"/>
-                <constraint firstItem="LtI-9a-eR6" firstAttribute="leading" secondItem="t7E-fo-wzO" secondAttribute="trailing" constant="13" id="WFd-df-qFO"/>
-                <constraint firstAttribute="trailing" secondItem="hCf-uw-Hc9" secondAttribute="trailing" constant="9" id="cff-4F-CbO"/>
-                <constraint firstItem="LtI-9a-eR6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="hyh-l1-MlW"/>
-                <constraint firstItem="51N-eg-el7" firstAttribute="top" secondItem="LtI-9a-eR6" secondAttribute="bottom" constant="-11" id="qfB-Pd-yJk"/>
-                <constraint firstAttribute="trailing" secondItem="51N-eg-el7" secondAttribute="trailing" constant="13" id="yGu-TF-Uap"/>
+                <constraint firstAttribute="trailing" secondItem="pSI-TN-Heb" secondAttribute="trailing" constant="8" id="16d-re-ZjF"/>
+                <constraint firstAttribute="bottom" secondItem="pSI-TN-Heb" secondAttribute="bottom" constant="8" id="9a6-Oa-Agk"/>
+                <constraint firstItem="pSI-TN-Heb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="NkS-rt-xTh"/>
+                <constraint firstItem="pSI-TN-Heb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="cbJ-9A-i4t"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="S6C-py-Cs4"/>
-                    <exclude reference="VwL-ek-ap1"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="errorMessage" destination="51N-eg-el7" id="gEE-xz-k44"/>
             </connections>
-            <point key="canvasLocation" x="-349" y="105"/>
+            <point key="canvasLocation" x="-605" y="251"/>
         </view>
     </objects>
     <resources>

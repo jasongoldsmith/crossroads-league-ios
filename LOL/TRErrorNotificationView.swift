@@ -14,7 +14,7 @@ import pop
 class TRErrorNotificationView: UIView {
     
     var errorSting: String? = nil
-    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var errorMessage: TRInsertLabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
