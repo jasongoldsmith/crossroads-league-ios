@@ -38,7 +38,7 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
     @IBOutlet var eventTableTopConstraint: NSLayoutConstraint?
     @IBOutlet weak var leftSectionUnderLineRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightSectionUnderLineLeftConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var regionNotificationIcon: EventButton!
     
     //Events Information
     var eventsInfo: [TREventInfo] = []
@@ -119,12 +119,6 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
         if TRUserInfo.isUserVerified()! != ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue {
             TRApplicationManager.sharedInstance.addUnVerifiedUserPromptWithDelegate(self)
         }
-    }
-
-    // Close Verification Prompt and Show Groups
-    func showGroups () {
-        TRApplicationManager.sharedInstance.fetchBungieGroups(true, completion: { (didSucceed) in
-        })
     }
     
     func showLegalAlert () {
@@ -221,38 +215,34 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
     }
     
     func updateGroupImage () {
-        
-        self.playerGroupsIcon?.layer.borderColor = UIColor.whiteColor().CGColor
-        self.playerGroupsIcon?.layer.borderWidth     = 1.0
-        self.playerGroupsIcon?.layer.borderColor     = UIColor.whiteColor().CGColor
-        self.playerGroupsIcon?.layer.masksToBounds   = true
-
-        if let currentGroupID = TRUserInfo.getUserClanID() {
-            if let hasCurrentGroup = TRApplicationManager.sharedInstance.getCurrentGroup(currentGroupID) {
-                if let imageUrl = hasCurrentGroup.avatarPath {
-                    let imageUrl = NSURL(string: imageUrl)
-                    self.playerGroupsIcon?.sd_setImageWithURL(imageUrl)
-                }
-            }
-        }
-        
-        if self.playerGroupsIcon?.image == nil {
-            self.playerGroupsIcon?.image = UIImage(named: "iconGroupCrossroadsFreelance")
-        }
-        
-        //Remove Observer running on previous clan and add it again on current clan
-        TRApplicationManager.sharedInstance.fireBaseManager?.removeEventListObserver()
-        TRApplicationManager.sharedInstance.fireBaseManager?.addEventsObserversWithParentView(self)
+//
+//        self.playerGroupsIcon?.layer.borderColor = UIColor.whiteColor().CGColor
+//        self.playerGroupsIcon?.layer.borderWidth     = 1.0
+//        self.playerGroupsIcon?.layer.borderColor     = UIColor.whiteColor().CGColor
+//        self.playerGroupsIcon?.layer.masksToBounds   = true
+//
+//        if let currentGroupID = TRUserInfo.getUserClanID() {
+//            if let hasCurrentGroup = TRApplicationManager.sharedInstance.getCurrentGroup(currentGroupID) {
+//                if let imageUrl = hasCurrentGroup.avatarPath {
+//                    let imageUrl = NSURL(string: imageUrl)
+//                    self.playerGroupsIcon?.sd_setImageWithURL(imageUrl)
+//                }
+//            }
+//        }
+//        
+//        if self.playerGroupsIcon?.image == nil {
+//            self.playerGroupsIcon?.image = UIImage(named: "iconGroupCrossroadsFreelance")
+//        }
+//        
+//        //Remove Observer running on previous clan and add it again on current clan
+//        TRApplicationManager.sharedInstance.fireBaseManager?.removeEventListObserver()
+//        TRApplicationManager.sharedInstance.fireBaseManager?.addEventsObserversWithParentView(self)
     }
     
     func addLogOutEventToAvatorImageView () {
         let openLeftGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(TREventListViewController.avatorBtnTapped(_:)))
         self.currentPlayerAvatorIcon?.userInteractionEnabled = true
         self.currentPlayerAvatorIcon?.addGestureRecognizer(openLeftGestureRecognizer)
-        
-        let openRightGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(TREventListViewController.showChangeGroupsVc(_:)))
-        self.playerGroupsIcon?.userInteractionEnabled = true
-        self.playerGroupsIcon?.addGestureRecognizer(openRightGestureRecognizer)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -671,8 +661,15 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
     }
     
     @IBAction func showChangeGroupsVc (sender: AnyObject) {
-        TRApplicationManager.sharedInstance.fetchBungieGroups(true, completion: { (didSucceed) in
-        })
+
+        self.regionNotificationIcon.selected = !self.regionNotificationIcon.selected
+        
+        //regionNotificationIcon
+//        _ = TRGroupNotificationUpdateRequest().updateUserGroupNotification("", muteNoti: false, completion: { (didSucceed) in
+//            if didSucceed == true {
+//                
+//            }
+//        })
     }
     
     func createActivityWithActivity (sender: EventButton) {
