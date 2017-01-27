@@ -15,6 +15,7 @@ class TRErrorNotificationView: UIView {
     
     var errorSting: String? = nil
     @IBOutlet weak var errorMessage: TRInsertLabel!
+    @IBOutlet weak var errorContainerView: UIView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -34,6 +35,9 @@ class TRErrorNotificationView: UIView {
         guard let _ = errorSting else {
             return
         }
+        
+        //Adding Radius 
+        self.errorContainerView.layer.cornerRadius = 3.0
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let window = appDelegate.window
