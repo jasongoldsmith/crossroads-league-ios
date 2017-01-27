@@ -32,11 +32,6 @@ class TRRootViewController: TRBaseViewController {
 
         _ = TRGetConfigRequest().getConfiguration({ (didSucceed) in
             self.appLoading()
-            
-            //Add Observer to check if the user has been verified
-            TRApplicationManager.sharedInstance.fireBaseManager?.addUserObserverWithCompletion({ (didCompelete) in
-                
-            })
         })
     }
 

@@ -660,16 +660,15 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
         TRApplicationManager.sharedInstance.slideMenuController.openLeft()
     }
     
-    @IBAction func showChangeGroupsVc (sender: AnyObject) {
+    @IBAction func showChangeGroupsVc (sender: EventButton) {
 
-        self.regionNotificationIcon.selected = !self.regionNotificationIcon.selected
-        
-        //regionNotificationIcon
-//        _ = TRGroupNotificationUpdateRequest().updateUserGroupNotification("", muteNoti: false, completion: { (didSucceed) in
-//            if didSucceed == true {
-//                
-//            }
-//        })
+        if let hasRegion = TRConsoles.getConsoleRegion() {
+            _ = TRGroupNotificationUpdateRequest().updateUserGroupNotification(hasRegion, muteNoti: self.regionNotificationIcon.selected, completion: { (didSucceed) in
+                if didSucceed == true {
+                    self.regionNotificationIcon.selected = !self.regionNotificationIcon.selected
+                }
+            })
+        }
     }
     
     func createActivityWithActivity (sender: EventButton) {

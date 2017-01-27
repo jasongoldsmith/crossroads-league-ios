@@ -138,6 +138,7 @@ class TRUserInfo: NSObject {
         userDefaults.setValue(consoleObj.consoleId, forKey: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_ID)
         userDefaults.setValue(consoleObj.consoleType  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_TYPE)
         userDefaults.setValue(consoleObj.verifyStatus  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_CONSOLE_VERIFIED)
+        userDefaults.setValue(consoleObj.region  , forKeyPath: K.UserDefaultKey.UserAccountInfo.TR_USER_CONSOLE_REGION)
     }
     
     class func saveUserData (userData:TRUserInfo?) {
