@@ -82,6 +82,6 @@ func weekDayDateFormat () -> String {
 //MARK- STRING
 
 func componentsSeparatedByString(charact: String) -> Array<String>? {
-    return charact.componentsSeparatedByString(",")
+    return charact.componentsSeparatedByString(", ")
 }
 

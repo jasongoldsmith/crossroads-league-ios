@@ -52,7 +52,17 @@ class TRBaseEventTableCell: UITableViewCell {
 
         //Adding Radius to
         self.addRadiusToPlayerIconsForPlayersArray(eventInfo)
-        self.eventTitle?.text = eventInfo.eventActivity?.activitySubType
+        
+        
+        //Activity Name
+        if let activityType = eventInfo.eventActivity?.activityType {
+            let activityNameArray = componentsSeparatedByString(activityType)
+            if let _ = activityNameArray where activityNameArray?.count > 1 {
+                self.eventTitle?.text = activityNameArray![1]
+            } else {
+                self.eventTitle?.text = activityType
+            }
+        }
         
         //Event Tag
         if let hasTag = eventInfo.eventActivity?.activityTag where hasTag != "" {
@@ -172,9 +182,9 @@ class TRBaseEventTableCell: UITableViewCell {
             }
         }
         
-        if eventInfo.eventActivity?.activityCheckPoint != "" &&  eventInfo.eventActivity?.activityCheckPoint != nil{
+        if eventInfo.eventActivity?.activitySubType != "" &&  eventInfo.eventActivity?.activitySubType != nil{
             self.activityCheckPointLabel?.hidden = false
-            self.activityCheckPointLabel?.text = eventInfo.eventActivity?.activityCheckPoint
+            self.activityCheckPointLabel?.text = eventInfo.eventActivity?.activitySubType
         }
     }
     
