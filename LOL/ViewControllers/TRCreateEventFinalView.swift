@@ -182,19 +182,10 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
             })
         }
         
-        if let aType = activityInfo.activityType {
-            var nameString = aType
-            
-            if let aSubType =  activityInfo.activitySubType where aSubType != "" {
-                nameString = "\(nameString) - \(aSubType)"
-            }
-            if let aDifficulty = activityInfo.activityDificulty where aDifficulty != "" {
-                nameString = "\(nameString) - \(aDifficulty)"
-            }
-            
-            self.activityNameButton.setTitle(nameString, forState: .Normal)
+        if let aSubType =  activityInfo.activitySubType where aSubType != "" {
+            self.activityNameButton.setTitle(aSubType, forState: .Normal)
         }
-        
+            
         if let aCheckPoint = activityInfo.activityCheckPoint where aCheckPoint != "" {
             self.activityCheckPointButton.setTitle(aCheckPoint, forState: .Normal)
             self.activityCheckPointHeightConst.constant = 50
