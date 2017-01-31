@@ -74,6 +74,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="pSI-TN-Heb" secondAttribute="trailing" constant="8" id="16d-re-ZjF"/>
                 <constraint firstAttribute="bottom" secondItem="pSI-TN-Heb" secondAttribute="bottom" constant="8" id="9a6-Oa-Agk"/>
@@ -86,9 +87,16 @@
             <connections>
                 <outlet property="errorContainerView" destination="pSI-TN-Heb" id="mFs-BQ-pbP"/>
                 <outlet property="errorMessage" destination="51N-eg-el7" id="gEE-xz-k44"/>
+                <outletCollection property="gestureRecognizers" destination="KmD-v8-YIl" appends="YES" id="qv0-sK-G7I"/>
             </connections>
             <point key="canvasLocation" x="-605" y="251"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="KmD-v8-YIl">
+            <connections>
+                <action selector="beginDragging:" destination="iN0-l3-epB" id="Vkf-el-P7T"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="n5M-W7-xpB"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="iconCloseSm" width="14" height="14"/>
