@@ -15,7 +15,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     private let xAxis: CGFloat = 0.0
     private let yAxisWithOpenKeyBoard: CGFloat = 235.0
     private let yAxisWithClosedKeyBoard: CGFloat = 20.0
-    private var leftTapGesture: UITapGestureRecognizer?
     
     @IBOutlet weak var legalLabel: TTTAttributedLabel!
     @IBOutlet weak var userNameTxtField: UITextField!
@@ -23,6 +22,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     @IBOutlet weak var viewInfoLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var sendButtonBottomConst: NSLayoutConstraint!
+    @IBOutlet weak var forgotLoginButton: UIButton!
     
     
     var errorView: TRErrorNotificationView?
@@ -32,11 +32,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if self.leftTapGesture == nil {
-            self.leftTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.forgotPasswordTapped))
-            self.leftTapGesture!.delegate = self
-        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSignInViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
@@ -50,6 +45,8 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         
         if self.isUserRegistering == true {
             self.sendButton.setTitle("NEXT", forState: .Normal)
+            self.viewInfoLabel?.text = "SIGN UP FOR CROSSROADS"
+            self.forgotLoginButton?.hidden = true
         }
     }
     
@@ -183,7 +180,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         
         if isUserRegistering == false {
             createRequest.loginTRUserWith(console, password: userPwdTxtField.text, invitationDict: invitationDict as? Dictionary<String, AnyObject>) { (error, responseObject) in
-                if let errorString = error {
+                if let _ = error {
                     //Delete the saved Password if sign-in was not successful
                     defaults.setValue(nil, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
                     defaults.synchronize()
@@ -224,6 +221,13 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         }
     }
     
+    @IBAction func forgotLogin (sender: AnyObject) {
+        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let vc : TRForgotPasswordViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_FORGOT_PASSWORD) as! TRForgotPasswordViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func registerSuccess() {
         
         let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
@@ -232,12 +236,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func forgotPasswordTapped (sender: UITapGestureRecognizer) {
-        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-        let vc : TRForgotPasswordViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_FORGOT_PASSWORD) as! TRForgotPasswordViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     
     @IBAction func dismissKeyboard(recognizer : UITapGestureRecognizer) {
         
