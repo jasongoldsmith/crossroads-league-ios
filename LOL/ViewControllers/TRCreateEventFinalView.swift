@@ -139,7 +139,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         }
         
         if let level = activityInfo.activityLevel where level != "0" {
-            let activityLavelString: String = "LEVEL \(level) "
+            let activityLavelString: String = "\(level) "
             let stringFontAttribute = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 12)!]
             let levelAttributedStr = NSAttributedString(string: activityLavelString, attributes: stringFontAttribute)
             let finalString: NSMutableAttributedString = levelAttributedStr.mutableCopy() as! NSMutableAttributedString
