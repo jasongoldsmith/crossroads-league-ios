@@ -191,7 +191,7 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
             if self.currentPlayerAvatorIcon?.image == nil {
                 if let imageUrl = TRUserInfo.getUserImageString() {
                     let imageUrl = NSURL(string: imageUrl)
-                    self.currentPlayerAvatorIcon?.sd_setImageWithURL(imageUrl)
+                    self.currentPlayerAvatorIcon?.sd_setImageWithURL(imageUrl, placeholderImage: UIImage(named:"default_helmet"))
                 }
             }
         }
