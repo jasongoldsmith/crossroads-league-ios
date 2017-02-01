@@ -19,7 +19,7 @@ class TRDeepLinkObject: NSObject {
         
         super.init()
         
-        let finalString = link.stringByReplacingOccurrencesOfString("dlcsrd://", withString: "")
+        let finalString = link.stringByReplacingOccurrencesOfString("dllol://", withString: "")
         let trimmedString = finalString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let parsedKeys = trimmedString.componentsSeparatedByString("/")
         

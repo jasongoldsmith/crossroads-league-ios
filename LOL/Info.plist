@@ -33,7 +33,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>dlcsrd</string>
+				<string>dllol</string>
 			</array>
 		</dict>
 		<dict>
@@ -100,6 +100,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>branch_key</key>
-	<string>key_live_ilh33QPvqAgDqnVVRh8iXcnnBBaLIp97</string>
+	<string>key_live_levm5M6N3DG3rlTERjgFrpcptyjsb7Ew</string>
 </dict>
 </plist>
