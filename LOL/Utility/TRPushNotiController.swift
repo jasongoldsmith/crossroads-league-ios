@@ -129,6 +129,11 @@ class TRPushNotiController: NSObject, NotificationViewProtocol {
             return
         }
         
+        guard let _ = topNotificationview?.pushInfo else {
+            return
+        }
+        
+
         var pushNotificationView = TRPushNotificationView()
         pushNotificationView = NSBundle.mainBundle().loadNibNamed("TRPushNotificationView", owner: self, options: nil)[0] as! TRPushNotificationView
         pushNotificationView.addNotificationViewWithMessages((topNotificationview?.pushInfo)!, parentView:(topNotificationview?.parentView)!)
