@@ -119,11 +119,13 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         }
         
         //Activity Name Label
-        if var eventSubType = self.eventInfo?.eventActivity?.activitySubType {
-            if let hasDifficulty = self.eventInfo?.eventActivity?.activityDificulty where hasDifficulty != "" {
-                eventSubType = "\(eventSubType) - \(hasDifficulty)"
+        if let eventSubType = self.eventInfo?.eventActivity?.activityType {
+            let activityNameArray = componentsSeparatedByString(eventSubType)
+            if let _ = activityNameArray where activityNameArray?.count > 1 {
+                self.eventName.text = activityNameArray![1]
+            } else {
+                self.eventName.text = eventSubType
             }
-            self.eventName.text = eventSubType
         }
         
         
@@ -135,7 +137,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         self.eventTable?.setNeedsLayout()
         self.eventTable?.layoutIfNeeded()
         
-        if let hasCheckPoint = self.eventInfo?.eventActivity?.activityCheckPoint where hasCheckPoint != "" {
+        if let hasCheckPoint = self.eventInfo?.eventActivity?.activitySubType where hasCheckPoint != "" {
             self.hasCheckPoint = true
             let checkPoint = hasCheckPoint
             let stringColorAttribute = [NSForegroundColorAttributeName: UIColor.whiteColor()];
