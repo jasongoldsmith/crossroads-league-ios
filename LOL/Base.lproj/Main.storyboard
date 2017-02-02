@@ -3106,7 +3106,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="signInBtnTapped:" destination="7TH-yK-9j1" eventType="touchUpInside" id="69E-MM-aGt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing in, I have read and agree to the Crossroads Terms of Service and Privacy Policy. © Catalyst Foundry 2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-Ow-G7A" customClass="TTTAttributedLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing in, I have read and agree to the Crossroads Terms of Service and Privacy Policy. © Catalyst Foundry 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-Ow-G7A" customClass="TTTAttributedLabel">
                                 <rect key="frame" x="20" y="505" width="560" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -3696,7 +3696,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="iconCrossroadsLogin" width="20" height="24"/>
         <image name="iconCustom" width="24" height="24"/>
         <image name="iconDetails" width="14" height="15"/>
-        <image name="iconGhostDefault" width="40" height="40"/>
+        <image name="iconGhostDefault" width="30" height="34"/>
         <image name="iconNotificationsOff" width="44" height="44"/>
         <image name="iconNotificationsOn" width="44" height="44"/>
         <image name="iconPeopleNeeded" width="22" height="14"/>
