@@ -745,11 +745,11 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         
         if TRApplicationManager.sharedInstance.currentUser?.userID != self.eventInfo?.eventCreator?.playerID {
             if let creatorTag = self.eventInfo?.eventPlayersArray.first?.playerPsnID {
-                self.fullViewsDescriptionLabel?.text = "Send \(creatorTag) a friend request or message for a party invite."
+                self.fullViewsDescriptionLabel?.text = "Send \(creatorTag) a friend request or message for a an invite."
                 self.eventFullViewHeightConstraint?.constant = 80
             }
         } else {
-            self.fullViewsDescriptionLabel?.text = "Expect friend requests or messages from your Fireteam. You can start a party and invite everyone."
+            self.fullViewsDescriptionLabel?.text = "Expect friend requests or messages from your team. You can start inviting everyone."
             self.eventFullViewHeightConstraint?.constant = 98
         }
 

@@ -800,7 +800,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expect friend requests or messages from your Fireteam. You can start a party and invite everyone." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-RE-6e9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expect friend requests or messages from your team. You can start inviting everyone." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-RE-6e9">
                                         <rect key="frame" x="70" y="37" width="522" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3712,7 +3712,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="imgBGVNightfallStrikeDefault" width="375" height="326"/>
         <image name="imgBGVaultOfGlass" width="375" height="326"/>
         <image name="imgDogEar" width="16" height="16"/>
-        <image name="imgGlobeIcon" width="60" height="60"/>
+        <image name="imgGlobeIcon" width="46" height="47"/>
         <image name="imgIconEmail" width="22" height="18"/>
         <image name="imgLoginBtnTapped" width="90" height="90"/>
         <image name="imgLogoBadge" width="67" height="73"/>
