@@ -557,7 +557,8 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                         if self.isCurrentPlayerInvited() == true {
                             cell?.playerInviteButton.hidden = true
                         } else {
-                            cell?.playerInviteButton.hidden = false
+                            //cell?.playerInviteButton.hidden = false
+                            cell?.playerInviteButton.hidden = true
                             cell?.playerInviteButton.addTarget(self, action: #selector(inviteUser(_:)), forControlEvents: .TouchUpInside)
                         }
                     } else {
