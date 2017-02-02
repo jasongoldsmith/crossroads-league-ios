@@ -91,7 +91,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     }
     
     func addLegalStatmentText () {
-        let legalString = "By signing in, I have read and agree to the Crossroads Terms of Service and Privacy Policy. © Catalyst Foundry 2016"
+        let legalString = "By signing in, I have read and agree to the Crossroads Terms of Service and Privacy Policy."
         
         let customerAgreement = "Terms of Service"
         let privacyPolicy = "Privacy Policy"
