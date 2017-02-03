@@ -33,10 +33,12 @@ class TRUserInfo: NSObject {
         self.userImageURL   = responseObject["value"]["imageUrl"].stringValue
         self.userClanID     = responseObject["value"]["clanId"].stringValue
         self.bungieMemberShipID = responseObject["value"]["bungieMemberShipId"].stringValue
-        self.userVerified     = responseObject["value"]["verifyStatus"].stringValue
         self.commentsReported = responseObject["value"]["commentsReported"].intValue
         self.hasReachedMaxReportedComments = responseObject["value"]["hasReachedMaxReportedComments"].boolValue
         self.isInvited    = responseObject["value"]["isInvited"].boolValue
+        
+        self.userVerified    = responseObject["value"]["verifyStatus"].stringValue
+        self.userVerified    = ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue
         
         // Legal Info
         if let legalDict = responseObject["value"]["legal"].dictionary {
@@ -74,10 +76,12 @@ class TRUserInfo: NSObject {
         self.userImageURL   = responseObject["imageUrl"].stringValue
         self.userClanID     = responseObject["clanId"].stringValue
         self.bungieMemberShipID = responseObject["bungieMemberShipId"].stringValue
-        self.userVerified     = responseObject["verifyStatus"].stringValue
         self.commentsReported = responseObject["commentsReported"].intValue
         self.hasReachedMaxReportedComments = responseObject["value"]["hasReachedMaxReportedComments"].boolValue
         self.isInvited    = responseObject["isInvited"].boolValue
+        
+        self.userVerified     = responseObject["verifyStatus"].stringValue
+        self.userVerified    = ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue
         
         // Legal Info
         if let legalDict = responseObject["legal"].dictionary {

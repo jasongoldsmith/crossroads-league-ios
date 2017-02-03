@@ -78,6 +78,7 @@ class TREventInfo: NSObject {
             creatorInfo.playerDate      = creator["date"]?.stringValue
             creatorInfo.playerUdate     = creator["uDate"]?.stringValue
             creatorInfo.userVerified    = creator["verifyStatus"]?.stringValue
+            creatorInfo.userVerified    = ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue
             
             for consoles in creator["consoles"]!.arrayValue {
                 let creatorConsole = TRConsoles()
@@ -112,13 +113,14 @@ class TREventInfo: NSObject {
             playerInfo.playerDate       = playerInfoObject["date"].stringValue
             playerInfo.playerUdate      = playerInfoObject["uDate"].stringValue
             playerInfo.playerImageUrl   = playerInfoObject["imageUrl"].stringValue
-            playerInfo.userVerified     = playerInfoObject["verifyStatus"].stringValue
             playerInfo.commentsReported = playerInfoObject["commentsReported"].intValue
             playerInfo.invitedBy        = playerInfoObject["invitedBy"].stringValue
             playerInfo.isPlayerActive   = playerInfoObject["isActive"].boolValue
             playerInfo.verifyStatus     = playerInfoObject["verifyStatus"].stringValue
             playerInfo.isInvited     = playerInfoObject["isInvited"].boolValue
             playerInfo.hasReachedMaxReportedComments = playerInfoObject["hasReachedMaxReportedComments"].boolValue
+            playerInfo.userVerified     = playerInfoObject["verifyStatus"].stringValue
+            playerInfo.userVerified    = ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue
 
             
             for consoles in playerInfoObject["consoles"].arrayValue {
