@@ -18,6 +18,7 @@ class TRHelmetUpdateRequest: TRRequest {
         
         let request = TRRequest()
         request.requestURL = helmetURL
+        request.URLMethod = .GET
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             
             if let _ = error {

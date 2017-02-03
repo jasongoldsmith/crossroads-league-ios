@@ -3,9 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.developer.associated-domains</key>
-	<array>
-		<string>applinks:csrdlol.app.link</string>
-		<string>applinks:csrdlol.test-app.link</string>
-	</array>
+	<array/>
 </dict>
 </plist>

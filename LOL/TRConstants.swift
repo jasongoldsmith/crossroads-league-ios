@@ -99,7 +99,7 @@ struct K {
         static let TR_BUNGIE_USER_AUTH   =   "/api/v1/auth/checkBungieAccount"
         static let TR_GROUP_NOTI_VALUE   =   "/api/v1/a/account/group/mute"
         static let TR_GET_EVENT          =   "/api/v1/a/event/listById"
-        static let TR_HELMET_UPDATE      =   "/api/v1/a/account/updateHelmet"
+        static let TR_HELMET_UPDATE      =   "/api/v1/a/user/refreshHelmet"
         static let TR_GET_USER           =   "/api/v1/a/user/listById"
         static let TR_ADD_CONSOLE        =   "/api/v1/a/user/addConsole"
         static let TR_CHANGE_CONSOLE     =   "/api/v1/a/user/changePrimaryConsole"
