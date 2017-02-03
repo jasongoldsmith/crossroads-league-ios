@@ -14,7 +14,6 @@
 		33C837C61E2EE35F0057540F /* TRValidateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */; };
 		33C837C81E2F0BF60057540F /* TRRegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C71E2F0BF60057540F /* TRRegionCell.swift */; };
 		33C837CB1E2F0C300057540F /* TRRegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C837CA1E2F0C300057540F /* TRRegionCell.xib */; };
-		33CD73951E2D5A7A009E63F2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD73941E2D5A7A009E63F2 /* GameKit.framework */; };
 		C7B47B6E1E26FD2A00D441BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */; };
 		C7B47B731E26FD2A00D441BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B711E26FD2A00D441BC /* Main.storyboard */; };
 		C7B47B751E26FD2A00D441BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B741E26FD2A00D441BC /* Assets.xcassets */; };
@@ -168,6 +167,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3328F94E1E450681009D59F9 /* Crossroads for LoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Crossroads for LoL.entitlements"; sourceTree = "<group>"; };
 		3389D2E41E31888600EE226F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
 		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -175,8 +175,6 @@
 		33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRValidateUserRequest.swift; sourceTree = "<group>"; };
 		33C837C71E2F0BF60057540F /* TRRegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRRegionCell.swift; sourceTree = "<group>"; };
 		33C837CA1E2F0C300057540F /* TRRegionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRegionCell.xib; sourceTree = "<group>"; };
-		33CD73941E2D5A7A009E63F2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		33CD73961E2D5A7F009E63F2 /* LOL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LOL.entitlements; sourceTree = "<group>"; };
 		5149D55C3707CF1765466ACF /* Pods-LOL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFFF5067A65688FEED9E298 /* Pods-LOL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL.release.xcconfig"; path = "Pods/Target Support Files/Pods-LOL/Pods-LOL.release.xcconfig"; sourceTree = "<group>"; };
 		C7B47B6A1E26FD2A00D441BC /* Crossroads for LoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crossroads for LoL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,7 +340,6 @@
 				C7B47B831E270D2E00D441BC /* SpriteKit.framework in Frameworks */,
 				C7B47B811E270D2600D441BC /* AdSupport.framework in Frameworks */,
 				EE4071AD5E5AA80F606038FE /* Pods_LOL.framework in Frameworks */,
-				33CD73951E2D5A7A009E63F2 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +349,6 @@
 		2FA59BF59E9DB02C3AF12EF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33CD73941E2D5A7A009E63F2 /* GameKit.framework */,
 				C7B47B821E270D2E00D441BC /* SpriteKit.framework */,
 				C7B47B801E270D2600D441BC /* AdSupport.framework */,
 				ECFB8ECFE7E4C259604253D3 /* Pods_LOL.framework */,
@@ -392,7 +388,7 @@
 		C7B47B6C1E26FD2A00D441BC /* LOL */ = {
 			isa = PBXGroup;
 			children = (
-				33CD73961E2D5A7F009E63F2 /* LOL.entitlements */,
+				3328F94E1E450681009D59F9 /* Crossroads for LoL.entitlements */,
 				C7B47BA11E28082E00D441BC /* KSToken */,
 				C7B47BA21E28086A00D441BC /* Utility */,
 				C7B47C1C1E2809FC00D441BC /* Models */,
@@ -718,7 +714,7 @@
 						DevelopmentTeam = V289XNH63H;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 0;
@@ -1091,7 +1087,7 @@
 			baseConfigurationReference = 5149D55C3707CF1765466ACF /* Pods-LOL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LOL/LOL.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "LOL/Crossroads for LoL.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -1112,7 +1108,7 @@
 			baseConfigurationReference = 9EFFF5067A65688FEED9E298 /* Pods-LOL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LOL/LOL.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "LOL/Crossroads for LoL.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;

@@ -91,7 +91,6 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
-		<string>gamekit</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -100,6 +99,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>branch_key</key>
-	<string>key_live_levm5M6N3DG3rlTERjgFrpcptyjsb7Ew</string>
+	<string>key_live_aewf85hEEfgHtJtKby8xRhpoAClJir2W</string>
 </dict>
 </plist>

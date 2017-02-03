@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         
         
-        // App Install Request
+        // App Install Reque
         if isInstallInfoSent == false {
             var myInstallDict = [String: AnyObject]()
             myInstallDict["ads"] = K.SharingPlatformType.Platform_Organic

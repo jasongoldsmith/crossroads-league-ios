@@ -23,12 +23,12 @@ class TRBranchManager {
     let feature = "Sharing Feature"
     let channel = "Distribution Channel"
     let desktop_url = "http://branch.io"
-    let ios_url = "https://csrdlol.app.link/dChAh0OdqA"
+    let ios_url = "https://lpqx.app.link/dChAh0OdqA"
     let shareText = "Super amazing thing I want to share"
     let user_id1 = "abe@emailaddress.io"
     let user_id2 = "ben@emailaddress.io"
-    let live_key = "key_live_levm5M6N3DG3rlTERjgFrpcptyjsb7Ew"
-    let test_key = "key_test_flDcWIXK9BK8rcHzGkjOtjmdAFbsgWAJ"
+    let live_key = "key_live_aewf85hEEfgHtJtKby8xRhpoAClJir2W"
+    let test_key = "key_test_boEa60lxzlpPqICMmw4yFjpnArdQkr9K"
     
     func createLinkWithBranch (eventInfo: TREventInfo, deepLinkType: String, callback: callbackWithUrl) {
         
