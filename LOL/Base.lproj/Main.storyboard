@@ -807,7 +807,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.56862745098039214" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.74901960784313726" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ion-kd-2Hr" firstAttribute="leading" secondItem="Efu-iV-fD3" secondAttribute="leading" constant="18" id="6W4-In-50c"/>
                                     <constraint firstItem="4wg-RE-6e9" firstAttribute="leading" secondItem="w5t-53-LMG" secondAttribute="leading" id="8Ct-Qx-NGc"/>
