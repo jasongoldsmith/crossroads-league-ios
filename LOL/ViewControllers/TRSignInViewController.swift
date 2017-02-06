@@ -47,6 +47,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             self.sendButton.setTitle("NEXT", forState: .Normal)
             self.viewInfoLabel?.text = "SIGN UP FOR CROSSROADS"
             self.forgotLoginButton?.hidden = true
+            self.legalLabel?.hidden = false
         }
     }
     
