@@ -4,8 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:lpqx.app.link</string>
-		<string>applinks:lpqx.test-app.link</string>
+		<string>applinks:crdlol.app.link</string>
+		<string>applinks:crdlol.test-app.link</string>
 	</array>
 </dict>
 </plist>
