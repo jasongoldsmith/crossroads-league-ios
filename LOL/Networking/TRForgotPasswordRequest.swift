@@ -9,12 +9,11 @@
 
 class TRForgotPasswordRequest: TRRequest {
 
-    func resetUserPassword(userName: String, consoleType: String, completion: TRValueCallBack) {
+    func resetUserPassword(userName: String, completion: TRValueCallBack) {
         
         let resetPassword = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_FORGOT_PASSWORD
         var params = [String: AnyObject]()
-        params["consoleId"] = userName
-        params["consoleType"] = consoleType
+        params["userName"] = userName
         
         let request = TRRequest()
         request.params = params
@@ -26,14 +25,6 @@ class TRForgotPasswordRequest: TRRequest {
                 completion(didSucceed: false)
                 
                 return
-            }
-            
-            if let _ = swiftyJsonVar["_id"].string {
-                let existingEvent = TRApplicationManager.sharedInstance.getEventById(swiftyJsonVar["_id"].string!)
-                
-                if let _ = existingEvent {
-                    existingEvent?.parseCreateEventInfoObject(swiftyJsonVar)
-                }
             }
             
             completion(didSucceed: true )

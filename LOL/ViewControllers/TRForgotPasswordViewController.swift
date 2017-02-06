@@ -113,7 +113,6 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
     @IBAction func forgotPassword () {
         
         let userName = self.userNameTxtField?.text
-        let consoleType = self.selectedConsole
         
         if self.userNameTxtField?.text?.isEmpty == true {
            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter email address")
@@ -121,7 +120,7 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
             return
         }
         
-        _ = TRForgotPasswordRequest().resetUserPassword(userName!, consoleType: consoleType!, completion: { (didSucceed) in
+        _ = TRForgotPasswordRequest().resetUserPassword(userName!, completion: { (didSucceed) in
             if (didSucceed == true) {
                 
                 self.userNameView.hidden = true
