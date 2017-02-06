@@ -87,43 +87,38 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if keyboardSize.height == offset.height {
             
             if self.oldPassword.isFirstResponder() == true || self.newPassword.isFirstResponder() == true {
                 if self.sendButtonBottonConst?.constant == 0 {
+                    self.sendButtonBottonConst?.constant -= keyboardSize.height
+                    self.view.frame.origin.y = 0
                     UIView.animateWithDuration(0.4, animations: { () -> Void in
-                        self.sendButtonBottonConst?.constant -= keyboardSize.height
-                        self.view.frame.origin.y = 0
+                        self.view.layoutIfNeeded()
                     })
                 }
             } else {
                 self.sendButtonBottonConst?.constant = 0.0
                 if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
                     UIView.animateWithDuration(0.4, animations: { () -> Void in
-                        self.view.frame.origin.y -= keyboardSize.height
+                        self.view.layoutIfNeeded()
                     })
                 }
             }
-        } else {
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                self.view.frame.origin.y += keyboardSize.height - offset.height
-            })
         }
     }
     
     func keyboardWillHide(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
             self.view.frame.origin.y += keyboardSize.height
-        }
-        else {
-            self.sendButtonBottonConst?.constant = 0
-            self.view.frame.origin.y = 0
+            self.view.layoutIfNeeded()
         }
     }
     

@@ -66,7 +66,7 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
         
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if keyboardSize.height == offset.height {
@@ -88,7 +88,7 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
     
     func keyboardWillHide(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
             self.view.frame.origin.y += keyboardSize.height

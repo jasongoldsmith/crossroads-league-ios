@@ -896,7 +896,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         self.keyBoardHeight = keyboardSize.height
         
@@ -919,7 +919,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
     
     func keyboardWillHide(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
         if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
