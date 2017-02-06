@@ -69,10 +69,7 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        delay(0.5) {
-            self.userNameTxtField?.becomeFirstResponder()
-        }
+        self.userNameTxtField?.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
