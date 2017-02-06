@@ -3721,7 +3721,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="imgNogroups" width="96" height="96"/>
         <image name="imgRegionBG" width="344" height="667"/>
         <image name="img_title_graphic" width="77" height="80"/>
-        <image name="profileBgImage" width="342" height="667"/>
+        <image name="profileBgImage" width="338" height="668"/>
         <image name="segmentControlBG" width="375" height="55"/>
     </resources>
 </document>
