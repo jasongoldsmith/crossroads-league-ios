@@ -102,6 +102,10 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     
     @IBAction func popViewController () {
         
+        if self.userNameTextView?.isFirstResponder() == true {
+            self.userNameTextView?.resignFirstResponder()
+        }
+        
         if self.navigationController?.viewControllers.count > 1 {
             self.navigationController?.popViewControllerAnimated(true)
         } else {
@@ -157,35 +161,23 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
     
     //MARK:- KEYBOARD
     func keyboardWillShow(sender: NSNotification) {
-        
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        
-        if keyboardSize.height == offset.height {
-            if self.view.frame.origin.y == 0 {
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.sendButtonBottomConst?.constant += keyboardSize.height
-                })
-            }
-        } else {
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                self.view.frame.origin.y += keyboardSize.height - offset.height
-            })
-        }
+        let keyBoardHeight = keyboardSize.height
+        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]!.doubleValue
+        self.sendButtonBottomConst?.constant = keyBoardHeight
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
     }
     
     func keyboardWillHide(sender: NSNotification) {
-        let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        
-        if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
-            self.view.frame.origin.y += keyboardSize.height
-        }
-        else {
-            self.sendButtonBottomConst?.constant = 0
-        }
+        let userInfo: [String : AnyObject] = sender.userInfo! as! [String : AnyObject]
+        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]!.doubleValue
+        self.sendButtonBottomConst?.constant = 0.0
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
     }
-
 }
+
