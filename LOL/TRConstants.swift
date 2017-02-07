@@ -6,7 +6,7 @@ struct K {
         #if RELEASE
         static let Mix_Panle_Token  =   "36578d79d8accf79418b0b42b410aa17"
         #else
-        static let Mix_Panle_Token  =   "0181296a3a01e24e61b79b82f936f77f"
+        static let Mix_Panle_Token  =   "6f234a30aa0f9577f5e436380a32737e"
         #endif
     }
     
