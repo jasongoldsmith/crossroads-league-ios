@@ -68,7 +68,7 @@ struct K {
 
         
         #if RELEASE
-            static let TR_BaseUrl            =   "https://lol-development.herokuapp.com"
+            static let TR_BaseUrl            =   "https://lollive.crossroadsapp.co"
         #elseif ADHOC
             static let TR_BaseUrl            =   "https://lol-development.herokuapp.com"
         #else
