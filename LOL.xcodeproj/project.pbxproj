@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332F10041E4BCE1B0098D617 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332F10021E4BCDF30098D617 /* GoogleService-Info.plist */; };
 		3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D2E41E31888600EE226F /* DictionaryExtension.swift */; };
 		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
 		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
@@ -20,7 +21,6 @@
 		C7B47B781E26FD2A00D441BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B761E26FD2A00D441BC /* LaunchScreen.storyboard */; };
 		C7B47B811E270D2600D441BC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B47B801E270D2600D441BC /* AdSupport.framework */; };
 		C7B47B831E270D2E00D441BC /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B47B821E270D2E00D441BC /* SpriteKit.framework */; };
-		C7B47B861E2805F100D441BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B851E2805F100D441BC /* GoogleService-Info.plist */; };
 		C7B47B9D1E2807F800D441BC /* KSToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B991E2807F800D441BC /* KSToken.swift */; };
 		C7B47B9E1E2807F800D441BC /* KSTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B9A1E2807F800D441BC /* KSTokenField.swift */; };
 		C7B47B9F1E2807F800D441BC /* KSTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B9B1E2807F800D441BC /* KSTokenView.swift */; };
@@ -168,6 +168,7 @@
 
 /* Begin PBXFileReference section */
 		3328F94E1E450681009D59F9 /* Crossroads for LoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Crossroads for LoL.entitlements"; sourceTree = "<group>"; };
+		332F10021E4BCDF30098D617 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3389D2E41E31888600EE226F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
 		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +389,7 @@
 		C7B47B6C1E26FD2A00D441BC /* LOL */ = {
 			isa = PBXGroup;
 			children = (
+				332F10021E4BCDF30098D617 /* GoogleService-Info.plist */,
 				3328F94E1E450681009D59F9 /* Crossroads for LoL.entitlements */,
 				C7B47BA11E28082E00D441BC /* KSToken */,
 				C7B47BA21E28086A00D441BC /* Utility */,
@@ -753,11 +755,11 @@
 				C7B47BBB1E28086A00D441BC /* ConsoleButtons.xib in Resources */,
 				C7B47C791E280EFA00D441BC /* TREventCurrentNoCheckPointCell.xib in Resources */,
 				C7B47C9F1E2816F200D441BC /* TRCustomErrorUserAction.xib in Resources */,
+				332F10041E4BCE1B0098D617 /* GoogleService-Info.plist in Resources */,
 				C7B47C641E280E7100D441BC /* TRPushNotificationView.xib in Resources */,
 				C7B47C821E280F5100D441BC /* TREventUpcomingNoCheckPointCell.xib in Resources */,
 				C7B47B781E26FD2A00D441BC /* LaunchScreen.storyboard in Resources */,
 				C7B47C5E1E280E7100D441BC /* TRErrorNotificationView.xib in Resources */,
-				C7B47B861E2805F100D441BC /* GoogleService-Info.plist in Resources */,
 				C7B47C721E280EC500D441BC /* TREventActivityCardCell.xib in Resources */,
 				C7B47C5A1E280E7100D441BC /* TRBungieGroupCell.xib in Resources */,
 				C7B47C561E280E7100D441BC /* TRActivityIndicatorView.xib in Resources */,

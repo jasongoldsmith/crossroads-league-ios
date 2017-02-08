@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>758764725568-dl1g8vum63prknh8js65f6ikq36k5c42.apps.googleusercontent.com</string>
+	<string>678992187547-4238uqvhd1cen9lnu2i2s0al4nqqk5oe.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.758764725568-dl1g8vum63prknh8js65f6ikq36k5c42</string>
+	<string>com.googleusercontent.apps.678992187547-4238uqvhd1cen9lnu2i2s0al4nqqk5oe</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCl4nSdIt_F27D9fpj19ojq2nqMgB7ZgVo</string>
+	<string>AIzaSyCIpnPVj6V4gWRNmoa_xslqIvlepcb9_D0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>758764725568</string>
+	<string>678992187547</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>co.crossroadsapp.leagueoflegends</string>
 	<key>PROJECT_ID</key>
-	<string>lolapp-live</string>
+	<string>lolapp-dev</string>
 	<key>STORAGE_BUCKET</key>
-	<string>lolapp-live.appspot.com</string>
+	<string>lolapp-dev.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:758764725568:ios:4b253a99e131fe65</string>
+	<string>1:678992187547:ios:4b253a99e131fe65</string>
 	<key>DATABASE_URL</key>
-	<string>https://lolapp-live.firebaseio.com</string>
+	<string>https://lolapp-dev.firebaseio.com</string>
 </dict>
 </plist>
