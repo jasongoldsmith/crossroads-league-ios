@@ -14,6 +14,13 @@ class TRCreateEventRequest: TRRequest {
     
     func createAnEventWithActivity (activity: TRActivityInfo, selectedTime: NSDate?, completion: TREventObjCallBack) {
         
+        guard let activityID = activity.activityID,
+            let activityMinPlayers = activity.activityMinPlayers,
+            let activityMaxPlayers = activity.activityMaxPlayers else {
+                completion(event: nil)
+                return
+        }
+        
         let createEventUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_EventCreationUrl
         
         // Current Player
@@ -21,9 +28,9 @@ class TRCreateEventRequest: TRRequest {
         
         //Add Parameters
         var params = [String: AnyObject]()
-        params["eType"] = activity.activityID!
-        params["minPlayers"] = activity.activityMinPlayers!
-        params["maxPlayers"] = activity.activityMaxPlayers!
+        params["eType"] = activityID
+        params["minPlayers"] = activityMinPlayers
+        params["maxPlayers"] = activityMaxPlayers
         params["creator"] = TRUserInfo.getUserID()
         params["players"] = ["\(player!)"]
         
