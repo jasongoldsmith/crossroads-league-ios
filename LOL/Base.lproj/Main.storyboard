@@ -1914,13 +1914,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="100" id="db4-nL-jVG"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="segmentControlBG" translatesAutoresizingMaskIntoConstraints="NO" id="2xU-P6-pHh">
-                                <rect key="frame" x="0.0" y="45" width="600" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Apw-9a-64s"/>
-                                    <constraint firstAttribute="width" constant="600" id="G9J-CU-L9H"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z2g-Bm-q4G">
                                 <rect key="frame" x="22" y="97" width="150" height="3"/>
                                 <color key="backgroundColor" red="0.58039215690000001" green="0.4823529412" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -1999,13 +1992,12 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstAttribute="trailing" secondItem="JnN-R6-y3k" secondAttribute="trailing" constant="1" id="8Bd-7C-9ew"/>
                             <constraint firstItem="HnB-tK-Gh9" firstAttribute="top" secondItem="VH7-Fj-a7t" secondAttribute="bottom" constant="11" id="90n-dx-hjF"/>
                             <constraint firstItem="c5f-7R-NrH" firstAttribute="top" secondItem="GC0-EZ-x8P" secondAttribute="top" constant="29" id="B9f-pn-BhQ"/>
-                            <constraint firstItem="z2g-Bm-q4G" firstAttribute="bottom" secondItem="2xU-P6-pHh" secondAttribute="bottom" id="Bhd-tR-qQ6"/>
                             <constraint firstItem="z2g-Bm-q4G" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leadingMargin" constant="2" id="Blp-dT-mR6"/>
-                            <constraint firstItem="VH7-Fj-a7t" firstAttribute="bottom" secondItem="2xU-P6-pHh" secondAttribute="bottom" id="BvK-5e-KXY"/>
                             <constraint firstItem="z2g-Bm-q4G" firstAttribute="top" secondItem="GC0-EZ-x8P" secondAttribute="bottom" constant="-3" id="E1h-r5-EBn"/>
                             <constraint firstItem="ros-Bk-ZVy" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leadingMargin" constant="-20" id="EDe-fv-290"/>
                             <constraint firstItem="bhE-zA-4t7" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leading" id="FXr-aW-zBg"/>
                             <constraint firstItem="huA-O1-54n" firstAttribute="top" secondItem="ros-Bk-ZVy" secondAttribute="bottom" constant="15" id="Fjb-Qk-Hxt"/>
+                            <constraint firstItem="ros-Bk-ZVy" firstAttribute="top" secondItem="c5f-7R-NrH" secondAttribute="bottom" constant="2" id="GGM-bs-GMM"/>
                             <constraint firstItem="JnN-R6-y3k" firstAttribute="centerY" secondItem="c5f-7R-NrH" secondAttribute="centerY" id="JD7-dl-PVI"/>
                             <constraint firstItem="huA-O1-54n" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leading" constant="10" id="Oys-Nr-5Sh"/>
                             <constraint firstItem="GC0-EZ-x8P" firstAttribute="trailing" secondItem="Mwi-1s-bC4" secondAttribute="trailing" id="R0O-kc-qeI"/>
@@ -2019,16 +2011,14 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="huA-O1-54n" firstAttribute="top" secondItem="z2g-Bm-q4G" secondAttribute="bottom" constant="11" id="aYD-tk-7eb"/>
                             <constraint firstAttribute="trailing" secondItem="bhE-zA-4t7" secondAttribute="trailing" id="fdR-Sa-4Fn"/>
                             <constraint firstItem="hh2-ts-4BA" firstAttribute="top" secondItem="bhE-zA-4t7" secondAttribute="bottom" id="fgZ-1S-f2s"/>
+                            <constraint firstItem="VH7-Fj-a7t" firstAttribute="top" secondItem="z2g-Bm-q4G" secondAttribute="top" id="kUr-Ju-NYp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VH7-Fj-a7t" secondAttribute="trailing" id="lZO-TY-WEQ"/>
+                            <constraint firstItem="huA-O1-54n" firstAttribute="top" secondItem="ros-Bk-ZVy" secondAttribute="bottom" constant="15" id="mfU-mT-Ju4"/>
                             <constraint firstItem="c5f-7R-NrH" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leading" constant="16" id="naC-jX-HXe"/>
-                            <constraint firstItem="huA-O1-54n" firstAttribute="top" secondItem="2xU-P6-pHh" secondAttribute="bottom" constant="11" id="o54-D6-a8c"/>
                             <constraint firstItem="huA-O1-54n" firstAttribute="top" secondItem="VH7-Fj-a7t" secondAttribute="bottom" constant="11" id="ocw-r0-k8V"/>
-                            <constraint firstItem="ros-Bk-ZVy" firstAttribute="bottom" secondItem="2xU-P6-pHh" secondAttribute="bottom" constant="-4" id="qFW-AM-VBz"/>
                             <constraint firstItem="GC0-EZ-x8P" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leading" id="sCu-TU-OCv"/>
-                            <constraint firstItem="2xU-P6-pHh" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leadingMargin" constant="-20" id="t8F-Fh-BgJ"/>
                             <constraint firstItem="ros-Bk-ZVy" firstAttribute="trailing" secondItem="Mwi-1s-bC4" secondAttribute="trailingMargin" constant="20" id="tE9-iy-gsM"/>
                             <constraint firstItem="mLx-w0-FaU" firstAttribute="top" secondItem="huA-O1-54n" secondAttribute="bottom" id="tnJ-7a-JCo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2xU-P6-pHh" secondAttribute="trailing" constant="-20" id="wGN-ek-WpO"/>
                             <constraint firstItem="HnB-tK-Gh9" firstAttribute="leading" secondItem="Mwi-1s-bC4" secondAttribute="leadingMargin" constant="-10" id="x2C-Gn-zKf"/>
                         </constraints>
                         <variation key="default">
@@ -2046,7 +2036,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                     <connections>
                         <outlet property="currentPlayerAvatorIcon" destination="c5f-7R-NrH" id="hkn-SI-1v4"/>
                         <outlet property="emptyTableBackGround" destination="HnB-tK-Gh9" id="fNz-zZ-I4k"/>
-                        <outlet property="eventTableTopConstraint" destination="o54-D6-a8c" id="MrD-nk-ZZj"/>
                         <outlet property="eventsTableView" destination="huA-O1-54n" id="gEr-ib-MKo"/>
                         <outlet property="leftSectionUnderLineRightConstraint" destination="Blp-dT-mR6" id="JC2-2j-1MP"/>
                         <outlet property="regionNotificationIcon" destination="JnN-R6-y3k" id="qvp-3w-nps"/>
@@ -3722,6 +3711,5 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="imgRegionBG" width="344" height="667"/>
         <image name="img_title_graphic" width="77" height="80"/>
         <image name="profileBgImage" width="338" height="668"/>
-        <image name="segmentControlBG" width="375" height="55"/>
     </resources>
 </document>
