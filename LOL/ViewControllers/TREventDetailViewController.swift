@@ -459,14 +459,19 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if self.segmentControl?.selectedSegmentIndex == 0 {
-            if let _ = self.eventInfo {
-                return (self.eventInfo?.eventActivity?.activityMaxPlayers?.integerValue)!
+            if let activityMaxPlayers = self.eventInfo?.eventActivity?.activityMaxPlayers {
+                return activityMaxPlayers.integerValue
             }
-            
-            return (self.eventInfo?.eventPlayersArray.count)!
+            if let count = self.eventInfo?.eventPlayersArray.count {
+                return count
+            }
         } else {
-            return (self.eventInfo?.eventComments.count)!
+            if let count = self.eventInfo?.eventComments.count {
+                return count
+            }
         }
+        
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
