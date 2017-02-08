@@ -16,6 +16,8 @@ class TRPushNotiController: NSObject, NotificationViewProtocol {
     
     lazy var eventDetailPushViews: [TRPushNotificationView] = []
     
+    let PUSH_VIEW_Y_OFFSET: CGFloat = 107
+    
     override init () {
     }
     
@@ -67,7 +69,7 @@ class TRPushNotiController: NSObject, NotificationViewProtocol {
     
     func addActiveNotificationViewWithParentView (pushInfo: TRActiveStatePushInfo, parentViewController: TRBaseViewController, isExistingPushView: Bool) -> TRPushNotificationView {
         
-        let yOffSet = parentViewController.isKindOfClass(TREventListViewController) ? CGFloat(107) : CGFloat(190)
+        let yOffSet = parentViewController.isKindOfClass(TREventListViewController) ? CGFloat(PUSH_VIEW_Y_OFFSET) : CGFloat(190)
         
         if TRApplicationManager.sharedInstance.pushNotificationViewArray.count < 1 {
             let notificationview = self.createNotificationViewWithMessages(pushInfo, parentViewController: parentViewController, isExistingPushView: isExistingPushView)
@@ -190,7 +192,7 @@ class TRPushNotiController: NSObject, NotificationViewProtocol {
         for pushViews in TRApplicationManager.sharedInstance.pushNotificationViewArray {
             eventListView?.view.addSubview(pushViews)
             
-            pushViews.frame = CGRectMake(pushViews.frame.origin.x, 107, pushViews.frame.size.width, pushViews.frame.size.height)
+            pushViews.frame = CGRectMake(pushViews.frame.origin.x, PUSH_VIEW_Y_OFFSET, pushViews.frame.size.width, pushViews.frame.size.height)
             self.showActiveNotificationView(pushViews.pushInfo!, isExistingPushView: true)
         }
         

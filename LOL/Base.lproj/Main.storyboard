@@ -2036,6 +2036,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                     <connections>
                         <outlet property="currentPlayerAvatorIcon" destination="c5f-7R-NrH" id="hkn-SI-1v4"/>
                         <outlet property="emptyTableBackGround" destination="HnB-tK-Gh9" id="fNz-zZ-I4k"/>
+                        <outlet property="eventTableTopConstraint" destination="mfU-mT-Ju4" id="3ad-aR-BPL"/>
                         <outlet property="eventsTableView" destination="huA-O1-54n" id="gEr-ib-MKo"/>
                         <outlet property="leftSectionUnderLineRightConstraint" destination="Blp-dT-mR6" id="JC2-2j-1MP"/>
                         <outlet property="regionNotificationIcon" destination="JnN-R6-y3k" id="qvp-3w-nps"/>
