@@ -101,8 +101,8 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         
         let rangeCustomerAgreement = nsString.rangeOfString(customerAgreement)
         let rangePrivacyPolicy = nsString.rangeOfString(privacyPolicy)
-        let urlCustomerAgreement = NSURL(string: "https://www.crossroadsapp.co/terms")!
-        let urlPrivacyPolicy = NSURL(string: "https://www.crossroadsapp.co/privacy")!
+        let urlCustomerAgreement = NSURL(string: "http://w3.crossroadsapp.co/lol_conditions.html")!
+        let urlPrivacyPolicy = NSURL(string: "http://w3.crossroadsapp.co/lol_policy.html")!
         
         let subscriptionNoticeLinkAttributes = [
             NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1),
