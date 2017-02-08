@@ -541,16 +541,13 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                     }
                 }
                 
-                //Add Do	gTag to the event creator
-                if self.eventInfo?.eventFull() == true {
-                    if self.eventInfo?.eventPlayersArray[indexPath.section].playerID == self.eventInfo?.eventCreator?.playerID {
-                        cell!.creatorDogTag?.hidden = false
-                    } else {
-                        cell!.creatorDogTag?.hidden = true
-                    }
+                //Add DogTag to the event creator
+                if self.eventInfo?.eventPlayersArray[indexPath.section].playerID == self.eventInfo?.eventCreator?.playerID {
+                    cell!.creatorDogTag?.hidden = false
                 } else {
                     cell!.creatorDogTag?.hidden = true
                 }
+                
 
                 return cell!
             } else {
@@ -646,12 +643,8 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
             }
             
             //Add DogTag to the event creator
-            if self.eventInfo?.eventFull() == true {
-                if self.eventInfo?.eventComments[indexPath.section].commentUserInfo?.userID == self.eventInfo?.eventCreator?.playerID {
-                    commentCell.creatorDogTag?.hidden = false
-                } else {
-                    commentCell.creatorDogTag?.hidden = true
-                }
+            if self.eventInfo?.eventComments[indexPath.section].commentUserInfo?.userID == self.eventInfo?.eventCreator?.playerID {
+                commentCell.creatorDogTag?.hidden = false
             } else {
                 commentCell.creatorDogTag?.hidden = true
             }
