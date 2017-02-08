@@ -3281,7 +3281,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="50" id="L3k-yw-NB5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="JOIN CROSSROAD">
+                                <state key="normal" title="JOIN CROSSROADS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
