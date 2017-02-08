@@ -77,7 +77,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        self.addModifiersView()
+        //self.addModifiersView()
     }
     
     override func viewDidLoad() {
@@ -211,7 +211,7 @@ class TRCreateEventFinalView: TRBaseViewController, TRDatePickerProtocol, UITabl
         }
         
         //ModifierView
-        self.addModifiersView()
+        //self.addModifiersView()
         self.view.bringSubviewToFront(self.dropDownTableView)
         
         //Show hide CheckPoint dropdown triangle
