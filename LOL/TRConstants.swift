@@ -70,7 +70,7 @@ struct K {
         #if RELEASE
             static let TR_BaseUrl            =   "https://lollive.crossroadsapp.co"
         #elseif ADHOC
-            static let TR_BaseUrl            =   "https://lol-development.herokuapp.com"
+            static let TR_BaseUrl            =   "https://lollive.crossroadsapp.co"
         #else
             static let TR_BaseUrl            =   "https://lol-development.herokuapp.com"
         #endif
@@ -114,8 +114,8 @@ struct K {
         static let TR_ACCEPT_INVITATION   =  "/api/v1/a/event/invite/accept"
         static let TR_CANCEL_INVITATION   =  "/api/v1/a/event/invite/cancel"
         static let TR_KICK_PLAYER         =  "/api/v1/a/event/kick"
-        static let TR_CHANGE_PASSWORD     =  "/api/v1/a/user/changePassword"
         static let TR_CHANGE_EMAIL        =  "/api/v1/a/user/changeEmail"
+        static let TR_UPDATE_CREDENTIALS  =  "/api/v1/a/user/changeUserCredentials"
     }
     
     struct StoryBoard {

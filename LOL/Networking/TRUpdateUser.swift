@@ -10,47 +10,14 @@ import UIKit
 
 class TRUpdateUser: TRRequest {
     
-    func updateUserPassword(newPassword: String?, oldPassword: String?, completion: TRValueCallBack) {
+    func updateUserCredentials(newPassword: String?, oldPassword: String?, newEmail: String?, oldEmail: String?, completion: TRValueCallBack) {
         
-        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_CHANGE_PASSWORD
+        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_UPDATE_CREDENTIALS
         var params = [String: AnyObject]()
-        params["id"] = TRUserInfo.getUserID()
-        
-        if let _ = newPassword {
-            params["newPassWord"] = newPassword
-        }
-        if let _ = oldPassword {
-            params["oldPassWord"] = oldPassword
-        }
-        
-        let request = TRRequest()
-        request.params = params
-        request.requestURL = updateUserUrl
-        request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
-            
-            if let _ = error {
-                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("response error")
-                completion(didSucceed: false)
-                
-                return
-            }
-            
-            completion(didSucceed: true )
-        }
-    }
-    
-    func updateUserEmail(newEmail: String?, oldEmail: String?, completion: TRValueCallBack) {
-        
-        let updateUserUrl = K.TRUrls.TR_BaseUrl + K.TRUrls.TR_CHANGE_EMAIL
-        var params = [String: AnyObject]()
-        params["id"] = TRUserInfo.getUserID()
-        
-        if let _ = newEmail {
-            params["newEmail"] = newEmail
-        }
-        if let _ = oldEmail {
-            params["oldEmail"] = oldEmail
-        }
+        params["newPassWord"] = newPassword
+        params["oldPassWord"] = oldPassword
+        params["newEmail"] = newEmail
+        params["oldEmail"] = oldEmail
         
         let request = TRRequest()
         request.params = params

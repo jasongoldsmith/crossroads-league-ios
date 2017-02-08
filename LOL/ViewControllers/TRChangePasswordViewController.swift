@@ -85,71 +85,83 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     }
 
     
+//    func keyboardWillShow(sender: NSNotification) {
+//        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+//        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+//        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+//        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]!.doubleValue
+//        
+//        if keyboardSize.height == offset.height {
+//            
+//            if self.oldPassword.isFirstResponder() == true || self.newPassword.isFirstResponder() == true {
+//                if self.sendButtonBottonConst?.constant == 0 {
+//                    self.sendButtonBottonConst?.constant = -keyboardSize.height
+//                    self.view.frame.origin.y = 0
+//                    UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+//                        self.view.layoutIfNeeded()
+//                    })
+//                }
+//            } else {
+//                if self.view.frame.origin.y == 0 {
+//                    self.sendButtonBottonConst?.constant = 0.0
+//                    self.view.frame.origin.y = -keyboardSize.height
+//                    UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+//                        self.view.layoutIfNeeded()
+//                    })
+//                }
+//            }
+//        }
+//    }
+    
+    
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+        let keyBoardHeight = keyboardSize.height
+        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]!.doubleValue
+       
+        if self.oldPassword.isFirstResponder() == true || self.newPassword.isFirstResponder() == true {
+            self.sendButtonBottonConst?.constant = -keyBoardHeight
+            self.view.frame.origin.y = 0
+        } else {
+            self.sendButtonBottonConst?.constant = 0.0
+            self.view.frame.origin.y = -keyBoardHeight
+        }
         
-        if keyboardSize.height == offset.height {
-            
-            if self.oldPassword.isFirstResponder() == true || self.newPassword.isFirstResponder() == true {
-                if self.sendButtonBottonConst?.constant == 0 {
-                    self.sendButtonBottonConst?.constant -= keyboardSize.height
-                    self.view.frame.origin.y = 0
-                    UIView.animateWithDuration(0.4, animations: { () -> Void in
-                        self.view.layoutIfNeeded()
-                    })
-                }
-            } else {
-                self.sendButtonBottonConst?.constant = 0.0
-                if self.view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height
-                    UIView.animateWithDuration(0.4, animations: { () -> Void in
-                        self.view.layoutIfNeeded()
-                    })
-                }
-            }
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let userInfo: [String : AnyObject] = sender.userInfo! as! [String : AnyObject]
+        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]!.doubleValue
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+        let keyBoardHeight = keyboardSize.height
+
+        self.sendButtonBottonConst?.constant = 0.0
+        
+        if self.view.frame.origin.y == self.view.frame.origin.y - keyBoardHeight {
+            self.view.frame.origin.y = keyBoardHeight
+            UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            self.view.frame.origin.y = 0
+            UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
-    func keyboardWillHide(sender: NSNotification) {
-        let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        
-        if self.view.frame.origin.y == self.view.frame.origin.y - keyboardSize.height {
-            self.view.frame.origin.y += keyboardSize.height
-            self.view.layoutIfNeeded()
-        }
-    }
     
     @IBAction func saveButtonPressed () {
         
-        let oldPasswordEmpty = self.oldPassword.text?.isEmpty
-        let newPasswordEmpty = self.newPassword.text?.isEmpty
-        let oldEmailEmpty = self.oldEmail.text?.isEmpty
-        let newEmailEmpty = self.newEmail.text?.isEmpty
-        
-        if newPasswordEmpty == false && oldPasswordEmpty == true {
-            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter old password.")
-            
-            return
-        } else if newPasswordEmpty == true && oldPasswordEmpty == false {
-            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter new password.")
-            
-            return
-        }else if newEmailEmpty == false && oldEmailEmpty == true {
-            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter old email address.")
-            
-            return
-        }else if newEmailEmpty == true && oldEmailEmpty == false {
-            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter new email address.")
-            
-            return
-        }
-
         if self.oldPassword.text?.isEmpty == false && self.newPassword.text?.isEmpty == false {
             // Change Password
-            let _ = TRUpdateUser().updateUserPassword(self.newPassword?.text, oldPassword: self.oldPassword?.text) { (didSucceed) in
+            let _ = TRUpdateUser().updateUserCredentials(self.newPassword?.text, oldPassword: self.oldPassword?.text, newEmail: self.newEmail?.text, oldEmail: self.oldEmail?.text) { (didSucceed) in
                 
                 if didSucceed == true {
                     
@@ -167,32 +179,6 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
                     self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
                     self.passwordUpdatedLabel?.hidden = false
                     
-                    self.resignKeyBoard()
-                }
-            }
-        } else {
-            //Change email id
-            let _ = TRUpdateUser().updateUserEmail(self.newEmail?.text, oldEmail: self.oldEmail?.text) { (didSucceed) in
-                
-                if didSucceed == true {
-                    
-                    let defaults = NSUserDefaults.standardUserDefaults()
-                    defaults.setValue(self.newPassword?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
-                    defaults.synchronize()
-                    
-                    self.oldEmailView?.hidden = true
-                    self.newEmailView?.hidden = true
-                    self.oldPasswordView?.hidden = true
-                    self.newPasswordView?.hidden = true
-                    self.changeEmailTextLabel?.hidden = true
-                    self.changepasswordTextLabel?.hidden = true
-                    self.saveButton.enabled = false
-                    self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
-                    
-                    self.passwordUpdatedLabel?.hidden = false
-                    self.passwordUpdatedLabel?.text = "Email Updated."
-
-                    //Close KeyBoard
                     self.resignKeyBoard()
                 }
             }
