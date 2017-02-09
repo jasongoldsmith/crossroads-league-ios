@@ -73,7 +73,7 @@ class TRRequest {
                 
                 switch response.result {
                 case .Failure( _):
-                    TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Server request failed. Please wait a few seconds and refresh.")
+                    //TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Server request failed. Please wait a few seconds and refresh.")
                     break
                 case .Success( _):
                     
