@@ -3670,7 +3670,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                         <connections>
                                             <action selector="textFieldDidBecomeActive:" destination="Enk-vS-Kfa" eventType="touchDown" id="fMt-F9-rfH"/>
                                             <outlet property="delegate" destination="Enk-vS-Kfa" id="svd-Oy-ldN"/>
