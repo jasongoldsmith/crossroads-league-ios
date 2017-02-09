@@ -34,6 +34,8 @@ class TRChangeEmailViewController: TRBaseViewController, UIGestureRecognizerDele
         if let userName = TRUserInfo.getUserName() {
             self.currentEmailTextLabel?.text = userName
         }
+        
+        self.newEmailText?.becomeFirstResponder()
     }
     
     override func viewDidAppear(animated: Bool) {

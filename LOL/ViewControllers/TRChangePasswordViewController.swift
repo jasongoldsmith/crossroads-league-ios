@@ -32,6 +32,7 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         self.oldPassword.attributedPlaceholder = NSAttributedString(string:"Enter current password", attributes: [NSForegroundColorAttributeName: textColor])
         self.newPassword.attributedPlaceholder = NSAttributedString(string:"Enter new password", attributes: [NSForegroundColorAttributeName: textColor])
         
+        self.oldPassword?.becomeFirstResponder()
     }
 
     override func viewDidAppear(animated: Bool) {
