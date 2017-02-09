@@ -78,8 +78,8 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         let privateRange = nsString.rangeOfString(privatePolicy)
         let licenseRange = nsString.rangeOfString(licenses)
         
-        let tosUrl = NSURL(string: "http://w3.crossroadsapp.co/lol_conditions.html")!
-        let privatePolicyUrl = NSURL(string: "http://w3.crossroadsapp.co/lol_policy.html")!
+        let tosUrl = NSURL(string: "http://w3.crossroadsapp.co/lolterms")!
+        let privatePolicyUrl = NSURL(string: "http://w3.crossroadsapp.co/lolprivacy")!
         let licensesUrl = NSURL(string: "https://www.crossroadsapp.co/license")!
         
         let subscriptionNoticeLinkAttributes = [

@@ -148,14 +148,14 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
             switch complete! {
             case K.Legal.TOS:
                 let legalViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_WEB_VIEW) as! TRLegalViewController
-                legalViewController.linkToOpen = NSURL(string: "https://www.crossroadsapp.co/terms")!
+                legalViewController.linkToOpen = NSURL(string: "http://w3.crossroadsapp.co/lolterms")!
                 self.presentViewController(legalViewController, animated: true, completion: {
                 })
                 
                 break
             case K.Legal.PP:
                 let legalViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_WEB_VIEW) as! TRLegalViewController
-                legalViewController.linkToOpen = NSURL(string: "https://www.crossroadsapp.co/privacy")!
+                legalViewController.linkToOpen = NSURL(string: "http://w3.crossroadsapp.co/lolprivacy")!
                 self.presentViewController(legalViewController, animated: true, completion: {
                 })
                 break
