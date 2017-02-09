@@ -50,6 +50,10 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
             self.sendButton.setTitle("SUBMIT", forState: .Normal)
             self.viewHeaderLable?.text = "REPORT ISSUE"
         }
+        
+        if let userName = TRUserInfo.getUserName() {
+            self.emailTextView?.text = userName
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
