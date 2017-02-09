@@ -21,9 +21,9 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
     @IBOutlet weak var legalLabel: TTTAttributedLabel!
     
     @IBOutlet weak var changePasswordButton: UIButton!
+    @IBOutlet weak var changeEmailButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
-    
     
     var currentUser: TRPlayerInfo?
     
@@ -36,6 +36,7 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         
         //Add Radius to buttons
         self.changePasswordButton.layer.cornerRadius = 2.0
+        self.changeEmailButton?.layer.cornerRadius = 2.0
         self.contactUsButton.layer.cornerRadius = 2.0
         self.logOutButton.layer.cornerRadius = 2.0
 }

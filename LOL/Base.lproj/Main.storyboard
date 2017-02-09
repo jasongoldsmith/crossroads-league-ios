@@ -1329,6 +1329,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         <outlet property="avatorUserName" destination="2Ax-E1-ccC" id="7fA-AP-VWF"/>
                         <outlet property="backGroundImageView" destination="APu-zA-Kyk" id="ZtR-PJ-PhM"/>
                         <outlet property="buildNumberLabel" destination="Z9P-C3-JX9" id="gXo-n1-1FR"/>
+                        <outlet property="changeEmailButton" destination="a0m-61-flw" id="zYF-tA-S6C"/>
                         <outlet property="changePasswordButton" destination="yga-kS-xxF" id="LPF-1C-cAp"/>
                         <outlet property="contactUsButton" destination="Gnx-Nj-sRV" id="7ra-cd-LtJ"/>
                         <outlet property="legalLabel" destination="xsB-j0-IhM" id="0BP-2m-pf4"/>
