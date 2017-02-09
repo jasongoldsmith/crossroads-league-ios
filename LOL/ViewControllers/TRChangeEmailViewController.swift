@@ -1,53 +1,55 @@
 //
-//  TRChangePasswordViewController.swift
-//  Traveler
+//  TRChangeEmailViewController.swift
+//  LOL
 //
-//  Created by Ashutosh on 5/18/16.
-//  Copyright © 2016 Forcecatalyst. All rights reserved.
+//  Created by Ashutosh on 2/8/17.
+//  Copyright © 2017 Catalyst Foundry LLC. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerDelegate {
-
-    
+class TRChangeEmailViewController: TRBaseViewController, UIGestureRecognizerDelegate {
+ 
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var oldPassword: UITextField!
-    @IBOutlet weak var newPassword: UITextField!
+    @IBOutlet weak var newEmailText: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var oldPasswordView: UIView!
-    @IBOutlet weak var newPasswordView: UIView!
     @IBOutlet weak var passwordUpdatedLabel: UILabel!
     @IBOutlet weak var sendButtonBottonConst: NSLayoutConstraint!
-    @IBOutlet weak var changepasswordTextLabel: UILabel!
-
+    @IBOutlet weak var changeEmailTextLabel: UILabel!
+    @IBOutlet weak var currentEmailTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRChangePasswordViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRChangePasswordViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRChangeEmailViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRChangeEmailViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
+        
         // Placeholder Strings
         let textColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
-        self.oldPassword.attributedPlaceholder = NSAttributedString(string:"Enter current password", attributes: [NSForegroundColorAttributeName: textColor])
-        self.newPassword.attributedPlaceholder = NSAttributedString(string:"Enter new password", attributes: [NSForegroundColorAttributeName: textColor])
+        self.newEmailText.attributedPlaceholder = NSAttributedString(string:"Enter new email address", attributes: [NSForegroundColorAttributeName: textColor])
+        self.password.attributedPlaceholder = NSAttributedString(string:"Enter current password", attributes: [NSForegroundColorAttributeName: textColor])
         
+        if let userName = TRUserInfo.getUserName() {
+            self.currentEmailTextLabel?.text = userName
+        }
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func backButtonPressed(sender: UIButton) {
         
-        if self.oldPassword?.isFirstResponder() == true {
-            self.oldPassword?.resignFirstResponder()
+        if self.newEmailText?.isFirstResponder() == true {
+            self.newEmailText?.resignFirstResponder()
         } else {
-            self.newPassword?.resignFirstResponder()
+            self.password?.resignFirstResponder()
         }
         
         self.dismissViewController(true) { (didDismiss) in
@@ -56,8 +58,8 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
-        if (textField == self.oldPassword) {
-            self.newPassword.becomeFirstResponder()
+        if (textField == self.newEmailText) {
+            self.password.becomeFirstResponder()
         } else {
             self.saveButtonPressed()
         }
@@ -78,7 +80,7 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         }
     }
     
-
+    
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
@@ -98,16 +100,17 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
             self.view.layoutIfNeeded()
         })
     }
-
+    
     @IBAction func saveButtonPressed () {
         
-        if self.oldPassword.text?.isEmpty == false && self.newPassword.text?.isEmpty == false {
-            let _ = TRUpdateUser().updateUserPassoword(self.newPassword?.text, oldPassword: self.oldPassword?.text) { (didSucceed) in
+        if self.newEmailText.text?.isEmpty == false && self.password.text?.isEmpty == false {
+            // Change Password
+            let _ = TRUpdateUser().updateUserEmail(self.password?.text, newEmail: self.newEmailText?.text) { (didSucceed) in
                 
                 if didSucceed == true {
                     
                     let defaults = NSUserDefaults.standardUserDefaults()
-                    defaults.setValue(self.newPassword?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserPwd)
+                    defaults.setValue(self.newEmailText?.text, forKey: K.UserDefaultKey.UserAccountInfo.TR_UserName)
                     defaults.synchronize()
                     
                     self.saveButton.backgroundColor = UIColor(red: 54/255, green: 93/255, blue: 101/255, alpha: 1)
@@ -120,11 +123,11 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     }
     
     @IBAction func showPasswordClicked () {
-        if let _ = self.newPassword.text where self.newPassword.text?.isEmpty != true {
-            let tmpString = self.newPassword?.text
-            self.newPassword.secureTextEntry = !self.newPassword.secureTextEntry
-            self.newPassword?.text = ""
-            self.newPassword?.text = tmpString
+        if let _ = self.password.text where self.password.text?.isEmpty != true {
+            let tmpString = self.password?.text
+            self.password.secureTextEntry = !self.password.secureTextEntry
+            self.password?.text = ""
+            self.password?.text = tmpString
         }
     }
     
@@ -133,10 +136,10 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
     }
     
     func resignKeyBoard () {
-        if self.newPassword?.isFirstResponder() == true {
-            self.newPassword?.resignFirstResponder()
-        } else if self.oldPassword?.isFirstResponder() == true{
-            self.oldPassword?.resignFirstResponder()
+        if self.password?.isFirstResponder() == true {
+            self.password?.resignFirstResponder()
+        } else if self.newEmailText?.isFirstResponder() == true{
+            self.newEmailText?.resignFirstResponder()
         }
     }
     

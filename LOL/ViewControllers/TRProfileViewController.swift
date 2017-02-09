@@ -161,9 +161,17 @@ class TRProfileViewController: TRBaseViewController, UIImagePickerControllerDele
         self.presentViewController(navigationController, animated: true, completion: {
             
         })
-
     }
     
+    @IBAction func chnageEmail (sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+        let vc : TRChangeEmailViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_CHANGE_EMAIL) as! TRChangeEmailViewController
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.hidden = true
+        self.presentViewController(navigationController, animated: true, completion: {
+            
+        })
+    }
     
     @IBAction func inviteFriends () {
         

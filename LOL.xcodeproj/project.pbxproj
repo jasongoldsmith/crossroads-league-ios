@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		332F10041E4BCE1B0098D617 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332F10021E4BCDF30098D617 /* GoogleService-Info.plist */; };
+		337D72811E4BF641008551BE /* TRChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D72801E4BF641008551BE /* TRChangeEmailViewController.swift */; };
 		3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D2E41E31888600EE226F /* DictionaryExtension.swift */; };
 		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
 		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
@@ -169,6 +170,7 @@
 /* Begin PBXFileReference section */
 		3328F94E1E450681009D59F9 /* Crossroads for LoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Crossroads for LoL.entitlements"; sourceTree = "<group>"; };
 		332F10021E4BCDF30098D617 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		337D72801E4BF641008551BE /* TRChangeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRChangeEmailViewController.swift; sourceTree = "<group>"; };
 		3389D2E41E31888600EE226F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
 		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -638,11 +640,12 @@
 				C7B47CB01E281A0E00D441BC /* TRProfileViewController.swift */,
 				C7B47CB21E281A0E00D441BC /* TRSendReportViewController.swift */,
 				C7B47CAC1E281A0E00D441BC /* TRForgotPasswordViewController.swift */,
-				C7B47CA61E281A0E00D441BC /* TRChangePasswordViewController.swift */,
 				C7B47CA51E281A0E00D441BC /* TRBaseViewController.swift */,
 				C7B47CA71E281A0E00D441BC /* TRChooseGroupViewController.swift */,
 				C7B47CAD1E281A0E00D441BC /* TRLegalViewController.swift */,
 				C7B47CAF1E281A0E00D441BC /* TRMessageSentConfViewController.swift */,
+				C7B47CA61E281A0E00D441BC /* TRChangePasswordViewController.swift */,
+				337D72801E4BF641008551BE /* TRChangeEmailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				C7B47BC21E28086A00D441BC /* TRDeepLinkObject.swift in Sources */,
 				C7B47C1A1E2809DF00D441BC /* TRUpdateUser.swift in Sources */,
 				C7B47C181E2809DF00D441BC /* TRSendPushMessage.swift in Sources */,
+				337D72811E4BF641008551BE /* TRChangeEmailViewController.swift in Sources */,
 				C7B47CB71E281A0E00D441BC /* TRChangePasswordViewController.swift in Sources */,
 				C7B47BC91E28086A00D441BC /* TRPushNotiController.swift in Sources */,
 				C7B47C7A1E280EFA00D441BC /* TREventCurrentWithCheckPointCell.swift in Sources */,
