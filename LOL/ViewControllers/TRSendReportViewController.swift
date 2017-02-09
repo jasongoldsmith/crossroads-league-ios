@@ -62,7 +62,7 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.emailTextView?.becomeFirstResponder()
+        self.reportTextView?.becomeFirstResponder()
     }
     
     override func viewWillDisappear(animated: Bool) {
