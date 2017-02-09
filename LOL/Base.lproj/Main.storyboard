@@ -1425,13 +1425,23 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <outlet property="delegate" destination="waR-kb-Ldy" id="8FN-Js-aDP"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6p-7x-POk">
+                                        <rect key="frame" x="510" y="8" width="50" height="50"/>
+                                        <state key="normal" image="iconShowpassword"/>
+                                        <connections>
+                                            <action selector="showOldPasswordClicked" destination="waR-kb-Ldy" eventType="touchUpInside" id="W5m-Fj-SAd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="c53-KL-0qr" firstAttribute="leading" secondItem="eLH-XE-7uI" secondAttribute="leading" id="1lt-LD-YTx"/>
+                                    <constraint firstAttribute="bottom" secondItem="h6p-7x-POk" secondAttribute="bottom" constant="8" id="Jhe-9H-E2q"/>
                                     <constraint firstAttribute="height" constant="66" id="KvU-L5-efC"/>
                                     <constraint firstItem="c53-KL-0qr" firstAttribute="top" secondItem="eLH-XE-7uI" secondAttribute="top" id="YPt-p4-tZD"/>
                                     <constraint firstAttribute="trailing" secondItem="c53-KL-0qr" secondAttribute="trailing" id="gey-y4-v3z"/>
+                                    <constraint firstAttribute="trailing" secondItem="h6p-7x-POk" secondAttribute="trailing" id="h1n-cG-OIy"/>
+                                    <constraint firstItem="h6p-7x-POk" firstAttribute="top" secondItem="eLH-XE-7uI" secondAttribute="top" constant="8" id="wBf-6Z-uzG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-K5-1Qd">
@@ -1457,7 +1467,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="510" y="8" width="50" height="50"/>
                                         <state key="normal" image="iconShowpassword"/>
                                         <connections>
-                                            <action selector="showPasswordClicked" destination="waR-kb-Ldy" eventType="touchUpInside" id="rv8-zi-2er"/>
+                                            <action selector="showNewPasswordClicked" destination="waR-kb-Ldy" eventType="touchUpInside" id="S2M-YE-dnY"/>
                                         </connections>
                                     </button>
                                 </subviews>

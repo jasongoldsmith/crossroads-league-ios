@@ -120,7 +120,7 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
         }
     }
     
-    @IBAction func showPasswordClicked () {
+    @IBAction func showNewPasswordClicked () {
         if let _ = self.newPassword.text where self.newPassword.text?.isEmpty != true {
             let tmpString = self.newPassword?.text
             self.newPassword.secureTextEntry = !self.newPassword.secureTextEntry
@@ -128,6 +128,16 @@ class TRChangePasswordViewController: TRBaseViewController, UIGestureRecognizerD
             self.newPassword?.text = tmpString
         }
     }
+
+    @IBAction func showOldPasswordClicked () {
+        if let _ = self.oldPassword.text where self.oldPassword.text?.isEmpty != true {
+            let tmpString = self.oldPassword?.text
+            self.oldPassword.secureTextEntry = !self.oldPassword.secureTextEntry
+            self.oldPassword?.text = ""
+            self.oldPassword?.text = tmpString
+        }
+    }
+
     
     @IBAction func dismissKeyboard(recognizer : UITapGestureRecognizer) {
         self.resignKeyBoard()
