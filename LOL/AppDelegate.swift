@@ -51,7 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let token = K.Tokens.Mix_Panle_Token
         _ = Mixpanel.sharedInstanceWithToken(token)
         
-        
+        //Clear Notifications
+        application.applicationIconBadgeNumber = 1
+        application.applicationIconBadgeNumber = 0
+
         //Initialize Answers
         Fabric.with([Branch.self, Answers.self, Crashlytics.self])
         
