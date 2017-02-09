@@ -93,34 +93,6 @@ class TRBaseEventTableCell: UITableViewCell {
             }
         }
         
-        /*
-        if let _ = eventInfo.eventActivity?.activityLight?.intValue where eventInfo.eventActivity?.activityLight?.intValue > 0 {
-            
-            let fontStarIcon = "\u{02726}"
-            self.activityLight?.text = fontStarIcon + (eventInfo.eventActivity?.activityLight?.stringValue)!
-            self.activityLight?.hidden = false
-        } else {
-            
-            guard let _ = eventInfo.eventActivity?.activityLevel else {
-                self.activityLight?.hidden = false
-                return
-            }
-            
-            self.activityLight?.hidden = false
-            
-            let lvlString = "lvl "
-            let stringFontAttribute = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 15)!]
-            
-            let levelAttributedStr = NSAttributedString(string: lvlString, attributes: stringFontAttribute)
-            let activityLevelAttributedStr = NSAttributedString(string: (eventInfo.eventActivity?.activityLevel)!, attributes: nil)
-            
-            let finalString:NSMutableAttributedString = levelAttributedStr.mutableCopy() as! NSMutableAttributedString
-            finalString.appendAttributedString(activityLevelAttributedStr)
-            
-            self.activityLight?.attributedText = finalString
-        }
-        */
-        
         // Set  Event Player Names
         if (eventInfo.eventPlayersArray.count < eventInfo.eventActivity?.activityMaxPlayers?.integerValue) {
             let stringColorAttribute = [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)]

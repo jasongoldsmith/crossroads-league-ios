@@ -33,12 +33,20 @@ class TRCaroselCellView: UIView {
         }
         
         //EventName
-        self.eventName?.text = eventInfo.eventActivity?.activitySubType
+        if let activityType = eventInfo.eventActivity?.activityType {
+            let activityNameArray = componentsSeparatedByString(activityType)
+            if let _ = activityNameArray where activityNameArray?.count > 1 {
+                self.eventName?.text = activityNameArray![1]
+            } else {
+                self.eventName?.text = activityType
+            }
+        }
+        
         
         //CheckPoint
-        if eventInfo.eventActivity?.activityCheckPoint != "" &&  eventInfo.eventActivity?.activityCheckPoint != nil{
+        if eventInfo.eventActivity?.activitySubType != "" &&  eventInfo.eventActivity?.activitySubType != nil{
             self.eventCheckPoint?.hidden = false
-            self.eventCheckPoint?.text = eventInfo.eventActivity?.activityCheckPoint
+            self.eventCheckPoint?.text = eventInfo.eventActivity?.activitySubType
             self.checkPointHeightCont.constant = 14
         } else {
             self.eventCheckPoint?.hidden = true
