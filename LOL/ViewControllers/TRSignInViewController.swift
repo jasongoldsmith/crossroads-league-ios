@@ -40,15 +40,17 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
         self.userPwdTxtField.attributedPlaceholder = NSAttributedString(string:"Enter password", attributes: [NSForegroundColorAttributeName: textColor])
         self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter email address", attributes: [NSForegroundColorAttributeName: textColor])
         
-        //Legal Statement
-        self.addLegalStatmentText()
-        
         if self.isUserRegistering == true {
             self.sendButton.setTitle("NEXT", forState: .Normal)
             self.viewInfoLabel?.text = "SIGN UP FOR CROSSROADS"
             self.forgotLoginButton?.hidden = true
             self.legalLabel?.hidden = false
         }
+        
+        //self.userNameTxtField?.becomeFirstResponder()
+        
+        //Legal Statement
+        self.addLegalStatmentText()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -70,7 +72,6 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
     
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.userNameTxtField?.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {

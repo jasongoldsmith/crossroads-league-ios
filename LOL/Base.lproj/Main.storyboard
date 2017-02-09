@@ -3080,7 +3080,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u57-h9-4Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Ox-Yr-CIP" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="h0a-dA-NVO">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="h0a-dA-NVO">
                     <connections>
                         <action selector="dismissKeyboard:" destination="7TH-yK-9j1" id="eNM-ff-YSx"/>
                     </connections>
