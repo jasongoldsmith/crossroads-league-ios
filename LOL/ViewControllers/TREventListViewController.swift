@@ -263,7 +263,7 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
         
         if TRApplicationManager.sharedInstance.pushNotificationViewArray.count == 0 {
             UIView.animateWithDuration(0.3) {
-                self.eventTableTopConstraint?.constant = 11.0
+                self.eventTableTopConstraint?.constant = 15.0
                 self.view.layoutIfNeeded()
             }
         }
@@ -724,7 +724,7 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
         
         if TRApplicationManager.sharedInstance.pushNotificationViewArray.count == 0 {
             UIView.animateWithDuration(0.3) {
-                self.eventTableTopConstraint?.constant = 11.0
+                self.eventTableTopConstraint?.constant = 15.0
                 self.view.layoutIfNeeded()
             }
         }
