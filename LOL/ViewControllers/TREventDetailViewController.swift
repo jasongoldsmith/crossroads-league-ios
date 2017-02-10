@@ -531,6 +531,14 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                     }
                 }
                 
+                if let playerInfo = self.eventInfo?.eventPlayersArray[indexPath.section] {
+                    if playerInfo.isPlayerActive == false && eventInfo?.isFutureEvent == false {
+                        cell?.playerUserName?.textColor = UIColor.grayColor()
+                    } else {
+                        cell?.playerUserName?.textColor = UIColor(red: 183/255, green: 183/255, blue: 183/255, alpha: 1)
+                    }
+                }
+                
                 // User Avator if user is not VERIFIED
                 if self.eventInfo?.eventPlayersArray[indexPath.section].userVerified != ACCOUNT_VERIFICATION.USER_VERIFIED.rawValue {
                     cell?.playerIcon.image = UIImage(named: "default_helmet")
