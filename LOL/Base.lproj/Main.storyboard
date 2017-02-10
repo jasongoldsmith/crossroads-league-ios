@@ -1569,8 +1569,18 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-ms-SXi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs8-65-bYq">
+                                <rect key="frame" x="10" y="23" width="44" height="44"/>
+                                <state key="normal" image="iconBackArrow"/>
+                                <connections>
+                                    <action selector="navBackButtonPressed" destination="vH8-Nd-68e" eventType="touchUpInside" id="e1G-AD-SjM"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-jG-gxI">
-                                <rect key="frame" x="254" y="37" width="91" height="17"/>
+                                <rect key="frame" x="254" y="87" width="91" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="445" id="CEE-Sd-xql"/>
                                     <constraint firstAttribute="height" constant="69" id="cPA-24-HcT"/>
@@ -1585,32 +1595,22 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs8-65-bYq">
-                                <rect key="frame" x="10" y="23" width="44" height="44"/>
-                                <state key="normal" image="iconBackArrow"/>
-                                <connections>
-                                    <action selector="navBackButtonPressed" destination="vH8-Nd-68e" eventType="touchUpInside" id="e1G-AD-SjM"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogoBadge" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-ms-SXi">
-                                <rect key="frame" x="267" y="79" width="67" height="73"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-Ml-hnp">
-                                <rect key="frame" x="10" y="180" width="580" height="66"/>
+                                <rect key="frame" x="10" y="129" width="580" height="66"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vGe-kS-NrE">
-                                        <rect key="frame" x="0.0" y="0.0" width="580" height="66"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email (required)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-Eg-PeY">
-                                        <rect key="frame" x="23" y="18" width="545" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email (required)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-Eg-PeY">
+                                        <rect key="frame" x="23" y="23" width="545" height="21"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vGe-kS-NrE">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="66"/>
+                                        <color key="backgroundColor" red="0.18823529410000001" green="0.25098039220000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.2627450980392157" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="vGe-kS-NrE" secondAttribute="bottom" id="3TG-TB-0Ur"/>
                                     <constraint firstItem="5FC-Eg-PeY" firstAttribute="centerY" secondItem="zbZ-Ml-hnp" secondAttribute="centerY" id="Brj-nS-uTy"/>
@@ -1623,11 +1623,11 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOD-Pq-Z92">
-                                <rect key="frame" x="10" y="256" width="580" height="123"/>
+                                <rect key="frame" x="10" y="205" width="580" height="123"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mh6-Ci-No5">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="123"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SHC-Yf-EmA">
                                         <rect key="frame" x="23" y="0.0" width="534" height="123"/>
@@ -1698,31 +1698,46 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="30" id="1gY-7A-S52"/>
                             <constraint firstAttribute="trailing" secondItem="zbZ-Ml-hnp" secondAttribute="trailing" constant="10" id="20p-8B-oUF"/>
                             <constraint firstItem="64y-Ex-v7Q" firstAttribute="centerY" secondItem="fhx-jG-gxI" secondAttribute="centerY" id="3rc-QH-V6J"/>
+                            <constraint firstItem="WOD-Pq-Z92" firstAttribute="trailing" secondItem="zbZ-Ml-hnp" secondAttribute="trailing" id="5rr-uk-MGC"/>
+                            <constraint firstItem="WOD-Pq-Z92" firstAttribute="leading" secondItem="zbZ-Ml-hnp" secondAttribute="leading" id="AxP-82-VOX"/>
                             <constraint firstItem="Xs8-65-bYq" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-10" id="BH6-q2-cac"/>
                             <constraint firstItem="aYC-fX-WDX" firstAttribute="top" secondItem="TSx-8W-Hkx" secondAttribute="bottom" id="Bhh-UY-1PM"/>
+                            <constraint firstItem="zbZ-Ml-hnp" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="109" id="EPs-DG-LXh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p8f-ms-SXi" secondAttribute="trailing" constant="-20" id="ERt-fA-qOB"/>
                             <constraint firstItem="p8f-ms-SXi" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="Ecg-6n-FZJ"/>
                             <constraint firstItem="ZPG-Pm-LKH" firstAttribute="top" secondItem="aDR-mt-Www" secondAttribute="topMargin" id="Ecl-rD-RFM"/>
                             <constraint firstItem="zbZ-Ml-hnp" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leading" constant="10" id="IQg-a5-tK2"/>
                             <constraint firstAttribute="trailing" secondItem="TSx-8W-Hkx" secondAttribute="trailing" id="JRF-B0-gv9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fhx-jG-gxI" secondAttribute="trailing" constant="30" id="JhS-ye-5YL"/>
+                            <constraint firstItem="64y-Ex-v7Q" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="10" id="Kz7-3i-e3r"/>
                             <constraint firstItem="Xs8-65-bYq" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="3" id="QgZ-nI-lD3"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="VhI-Ti-HB4"/>
                             <constraint firstItem="WOD-Pq-Z92" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-10" id="YKV-6w-T0J"/>
                             <constraint firstItem="ZPG-Pm-LKH" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-20" id="Ziz-Er-GiC"/>
+                            <constraint firstItem="p8f-ms-SXi" firstAttribute="top" secondItem="aDR-mt-Www" secondAttribute="topMargin" id="c8z-Ts-hH9"/>
+                            <constraint firstItem="fhx-jG-gxI" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="67" id="cIs-Kg-Uo3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WOD-Pq-Z92" secondAttribute="trailing" constant="-10" id="con-ab-ZZZ"/>
+                            <constraint firstItem="fhx-jG-gxI" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="eTc-Lu-8ZX"/>
                             <constraint firstItem="aYC-fX-WDX" firstAttribute="top" secondItem="ZPG-Pm-LKH" secondAttribute="bottom" id="hlc-HR-19n"/>
                             <constraint firstAttribute="trailing" secondItem="64y-Ex-v7Q" secondAttribute="trailing" constant="14" id="kJl-xA-8ch"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZPG-Pm-LKH" secondAttribute="trailing" constant="-20" id="lt6-Uz-bBg"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="17" id="m4X-3x-nwK"/>
                             <constraint firstItem="TSx-8W-Hkx" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leading" id="n0C-Ya-v7m"/>
                             <constraint firstItem="zbZ-Ml-hnp" firstAttribute="top" secondItem="p8f-ms-SXi" secondAttribute="bottom" constant="28" id="og4-Cc-xB2"/>
-                            <constraint firstItem="p8f-ms-SXi" firstAttribute="top" secondItem="fhx-jG-gxI" secondAttribute="bottom" constant="25" id="tn5-gC-FQX"/>
                             <constraint firstItem="WOD-Pq-Z92" firstAttribute="top" secondItem="zbZ-Ml-hnp" secondAttribute="bottom" constant="10" id="uWQ-AT-6LU"/>
+                            <constraint firstItem="p8f-ms-SXi" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-20" id="xUX-NM-eHJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Ecg-6n-FZJ"/>
+                                <exclude reference="og4-Cc-xB2"/>
+                                <exclude reference="YKV-6w-T0J"/>
+                                <exclude reference="con-ab-ZZZ"/>
                                 <exclude reference="1gY-7A-S52"/>
                                 <exclude reference="JhS-ye-5YL"/>
+                                <exclude reference="VhI-Ti-HB4"/>
+                                <exclude reference="m4X-3x-nwK"/>
+                                <exclude reference="3rc-QH-V6J"/>
                             </mask>
                         </variation>
                         <connections>
