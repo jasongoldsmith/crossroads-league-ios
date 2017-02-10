@@ -1081,7 +1081,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
     @IBAction func leaveInvitationButton (sender: UIButton) {
         let errorView = NSBundle.mainBundle().loadNibNamed("TRCustomErrorUserAction", owner: self, options: nil)[0] as! TRCustomError
         errorView.errorMessageHeader?.text = "CAN’T MAKE IT?"
-        errorView.errorMessageDescription?.text = "If you turn down this invite, another Guardian will take your spot. Are you sure you want to leave?"
+        errorView.errorMessageDescription?.text = "If you turn down this invite, another Summoners will take your spot. Are you sure you want to leave?"
         errorView.frame = self.view.frame
         errorView.delegate = self
         errorView.selector = #selector(leaveEvent(_:))
@@ -1098,7 +1098,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         
         let errorView = NSBundle.mainBundle().loadNibNamed("TRCustomErrorUserAction", owner: self, options: nil)[0] as! TRCustomError
         errorView.errorMessageHeader?.text = "KICK FOR INACTIVITY?"
-        errorView.errorMessageDescription?.text = "Removing this Guardian will allow another to join instead."
+        errorView.errorMessageDescription?.text = "Removing this Summoners will allow another to join instead."
         errorView.frame = self.view.frame
         errorView.delegate = self
         errorView.selector = #selector(kickInActiveUser(_:))
