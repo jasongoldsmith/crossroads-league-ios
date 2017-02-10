@@ -15,6 +15,7 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
     var isModallyPresented: Bool = false
     var eventID: String?
     var commentID: String?
+    var placeHolderColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
     
     let placeHolderString = "What would you like to tell us?"
     
@@ -35,14 +36,13 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
         self.emailView?.layer.cornerRadius = 2.0
         self.reportTextView?.layer.cornerRadius = 2.0
         self.emailView?.clipsToBounds = true
-        let textColor = UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)
-        self.emailTextView?.attributedPlaceholder = NSAttributedString(string:"Your Email (required)", attributes: [NSForegroundColorAttributeName: textColor])
+        self.emailTextView?.attributedPlaceholder = NSAttributedString(string:"Your Email (required)", attributes: [NSForegroundColorAttributeName: placeHolderColor])
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSendReportViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TRSendReportViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
         
         self.reportTextView?.text = placeHolderString
-        self.reportTextView?.textColor = textColor
+        self.reportTextView?.textColor = placeHolderColor
         
         if isModallyPresented == true {
             self.cancelButton?.hidden = false
@@ -121,7 +121,7 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
     
     
     func textViewDidBeginEditing(textView: UITextView) {
-        if textView.textColor == UIColor.lightGrayColor() {
+        if textView.textColor == placeHolderColor {
             textView.text = nil
             textView.textColor = UIColor.whiteColor()
         }
@@ -130,7 +130,7 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = placeHolderString
-            textView.textColor = UIColor.lightGrayColor()
+            textView.textColor = placeHolderColor
         }
     }
     

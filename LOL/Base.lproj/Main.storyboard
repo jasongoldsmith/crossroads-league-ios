@@ -1565,7 +1565,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrLoadingimgBackgroundMap" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-Pm-LKH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TrLoadingimgBackgroundMap" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-Pm-LKH">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -1705,7 +1705,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="zbZ-Ml-hnp" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="109" id="EPs-DG-LXh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p8f-ms-SXi" secondAttribute="trailing" constant="-20" id="ERt-fA-qOB"/>
                             <constraint firstItem="p8f-ms-SXi" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="Ecg-6n-FZJ"/>
-                            <constraint firstItem="ZPG-Pm-LKH" firstAttribute="top" secondItem="aDR-mt-Www" secondAttribute="topMargin" id="Ecl-rD-RFM"/>
                             <constraint firstItem="zbZ-Ml-hnp" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leading" constant="10" id="IQg-a5-tK2"/>
                             <constraint firstAttribute="trailing" secondItem="TSx-8W-Hkx" secondAttribute="trailing" id="JRF-B0-gv9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fhx-jG-gxI" secondAttribute="trailing" constant="30" id="JhS-ye-5YL"/>
@@ -1713,14 +1712,11 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="Xs8-65-bYq" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="3" id="QgZ-nI-lD3"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="VhI-Ti-HB4"/>
                             <constraint firstItem="WOD-Pq-Z92" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-10" id="YKV-6w-T0J"/>
-                            <constraint firstItem="ZPG-Pm-LKH" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leadingMargin" constant="-20" id="Ziz-Er-GiC"/>
                             <constraint firstItem="p8f-ms-SXi" firstAttribute="top" secondItem="aDR-mt-Www" secondAttribute="topMargin" id="c8z-Ts-hH9"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="67" id="cIs-Kg-Uo3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WOD-Pq-Z92" secondAttribute="trailing" constant="-10" id="con-ab-ZZZ"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="centerX" secondItem="aDR-mt-Www" secondAttribute="centerX" id="eTc-Lu-8ZX"/>
-                            <constraint firstItem="aYC-fX-WDX" firstAttribute="top" secondItem="ZPG-Pm-LKH" secondAttribute="bottom" id="hlc-HR-19n"/>
                             <constraint firstAttribute="trailing" secondItem="64y-Ex-v7Q" secondAttribute="trailing" constant="14" id="kJl-xA-8ch"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZPG-Pm-LKH" secondAttribute="trailing" constant="-20" id="lt6-Uz-bBg"/>
                             <constraint firstItem="fhx-jG-gxI" firstAttribute="top" secondItem="lFW-Yw-m9S" secondAttribute="bottom" constant="17" id="m4X-3x-nwK"/>
                             <constraint firstItem="TSx-8W-Hkx" firstAttribute="leading" secondItem="aDR-mt-Www" secondAttribute="leading" id="n0C-Ya-v7m"/>
                             <constraint firstItem="zbZ-Ml-hnp" firstAttribute="top" secondItem="p8f-ms-SXi" secondAttribute="bottom" constant="28" id="og4-Cc-xB2"/>
