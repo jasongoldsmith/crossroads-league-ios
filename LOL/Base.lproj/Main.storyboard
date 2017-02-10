@@ -2980,8 +2980,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="66" id="xJn-x9-l31"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP FOR CROSSROADS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49A-Pg-bZt">
-                                <rect key="frame" x="189" y="128" width="222" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN TO CROSSROADS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49A-Pg-bZt">
+                                <rect key="frame" x="200" y="128" width="200" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="AFS-Z0-1en"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="DGc-WF-pGf"/>
