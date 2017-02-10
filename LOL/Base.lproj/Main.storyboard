@@ -1419,7 +1419,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="60" y="18" width="407" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="textFieldDidBecomeActive:" destination="waR-kb-Ldy" eventType="touchDown" id="Ehr-2a-Ogv"/>
@@ -1456,7 +1456,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="58" y="18" width="408" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="textFieldDidBecomeActive:" destination="waR-kb-Ldy" eventType="touchDown" id="fS0-pj-8q2"/>
@@ -1471,15 +1471,24 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <action selector="showNewPasswordClicked" destination="waR-kb-Ldy" eventType="touchUpInside" id="S2M-YE-dnY"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrImgIconPassword" translatesAutoresizingMaskIntoConstraints="NO" id="8nW-A4-Do2">
+                                        <rect key="frame" x="17" y="21" width="21" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="BDO-zp-cDF"/>
+                                            <constraint firstAttribute="width" constant="21" id="Fjs-mF-Zzg"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="c5Z-IS-i3m" secondAttribute="bottom" id="1Ca-As-fRv"/>
                                     <constraint firstAttribute="bottom" secondItem="eIw-27-Arj" secondAttribute="bottom" constant="8" id="A0j-ze-lWu"/>
+                                    <constraint firstItem="8nW-A4-Do2" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="top" constant="21" id="BrN-Jr-Ehv"/>
                                     <constraint firstItem="eIw-27-Arj" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="top" constant="8" id="H4Y-UQ-AG3"/>
                                     <constraint firstItem="c5Z-IS-i3m" firstAttribute="top" secondItem="PzO-K5-1Qd" secondAttribute="top" id="Hws-xx-98R"/>
                                     <constraint firstItem="c5Z-IS-i3m" firstAttribute="leading" secondItem="PzO-K5-1Qd" secondAttribute="leading" id="Nyx-0C-zCG"/>
                                     <constraint firstAttribute="height" constant="66" id="fUJ-dV-eHw"/>
+                                    <constraint firstItem="8nW-A4-Do2" firstAttribute="leading" secondItem="PzO-K5-1Qd" secondAttribute="leading" constant="17" id="pYq-Zl-508"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="wi8-Zf-ZzG"/>
                                     <constraint firstAttribute="trailing" secondItem="eIw-27-Arj" secondAttribute="trailing" id="x2u-UU-Yfm"/>
                                 </constraints>
@@ -3717,7 +3726,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="58" y="18" width="408" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="textFieldDidBecomeActive:" destination="Enk-vS-Kfa" eventType="touchDown" id="FBc-1J-x4u"/>
