@@ -41,13 +41,6 @@
 #import "FBSDKProfile+Internal.h"
 #endif
 
-// TODO: t13635729 Remove when Sandcastle builds witn Xcode8
-@interface UIApplication (iOS10)
-
-- (void)openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options completionHandler:(void (^)(BOOL))completion;
-
-@end
-
 NSString *const FBSDKApplicationDidBecomeActiveNotification = @"com.facebook.sdk.FBSDKApplicationDidBecomeActiveNotification";
 
 static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
@@ -193,6 +186,8 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
 {
   FBSDKAccessToken *cachedToken = [[FBSDKSettings accessTokenCache] fetchAccessToken];
   [FBSDKAccessToken setCurrentAccessToken:cachedToken];
+  // fetch app settings
+  [FBSDKServerConfigurationManager loadServerConfigurationWithCompletionBlock:NULL];
 
 #if !TARGET_OS_TV
   FBSDKProfile *cachedProfile = [FBSDKProfile fetchCachedProfile];
@@ -225,6 +220,10 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
 
 - (void)applicationDidBecomeActive:(NSNotification *)notification
 {
+  // Auto log basic events in case autoLogAppEventsEnabled is set
+  if ([[FBSDKSettings autoLogAppEventsEnabled] boolValue]) {
+    [FBSDKAppEvents activateApp];
+  }
   //  _expectingBackground can be YES if the caller started doing work (like login)
   // within the app delegate's lifecycle like openURL, in which case there
   // might have been a "didBecomeActive" event pending that we want to ignore.
@@ -246,29 +245,28 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
 
 - (void)openURL:(NSURL *)url sender:(id<FBSDKURLOpening>)sender handler:(void(^)(BOOL))handler
 {
-  _expectingBackground = YES;
-  _pendingURLOpen = sender;
-  dispatch_async(dispatch_get_main_queue(), ^{
-    // Dispatch openURL calls to prevent hangs if we're inside the current app delegate's openURL flow already
-    NSOperatingSystemVersion iOS10Version = { .majorVersion = 10, .minorVersion = 0, .patchVersion = 0 };
-    if ([FBSDKInternalUtility isOSRunTimeVersionAtLeast:iOS10Version]) {
-      [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:handler];
-    } else {
-      BOOL opened = [[UIApplication sharedApplication] openURL:url];
-
-      if ([url.scheme hasPrefix:@"http"] && !opened) {
-        NSOperatingSystemVersion iOS8Version = { .majorVersion = 8, .minorVersion = 0, .patchVersion = 0 };
-        if (![FBSDKInternalUtility isOSRunTimeVersionAtLeast:iOS8Version]) {
-          // Safari openURL calls can wrongly return NO on iOS 7 so manually overwrite that case to YES.
-          // Otherwise we would rather trust in the actual result of openURL
-          opened = YES;
+    _expectingBackground = YES;
+    _pendingURLOpen = sender;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // Dispatch openURL calls to prevent hangs if we're inside the current app delegate's openURL flow already
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:handler];
+#else
+        BOOL opened = [[UIApplication sharedApplication] openURL:url];
+        
+        if ([url.scheme hasPrefix:@"http"] && !opened) {
+            NSOperatingSystemVersion iOS8Version = { .majorVersion = 8, .minorVersion = 0, .patchVersion = 0 };
+            if (![FBSDKInternalUtility isOSRunTimeVersionAtLeast:iOS8Version]) {
+                // Safari openURL calls can wrongly return NO on iOS 7 so manually overwrite that case to YES.
+                // Otherwise we would rather trust in the actual result of openURL
+                opened = YES;
+            }
         }
-      }
-      if (handler) {
-        handler(opened);
-      }
-    }
-  });
+        if (handler) {
+            handler(opened);
+        }
+#endif
+    });
 }
 
 - (void)openBridgeAPIRequest:(FBSDKBridgeAPIRequest *)request

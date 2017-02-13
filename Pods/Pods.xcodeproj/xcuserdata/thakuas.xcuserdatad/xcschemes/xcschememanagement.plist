@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FacebookCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107ACF2FF56459D89002C66589C81C1E</key>
+		<key>173E68586DC770FA764319D4FBA2FD46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>335D5567DAB4D2423A758BCCAD621EF9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>513D5EE922B5D2E8B413D12E61659C5E</key>
+		<key>3D1C0FD0D748514D3BC13B27C5D8541C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60DF6D41C8877D6DFA8C6AD078B7F618</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>61AF977C23DFB1506EEC7FDC5AACAB7E</key>
+		<key>593A026EA6CE28E8AE5DA05E205772C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88F1461E6E22F1AFD95417E2DDDAFEE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,22 +132,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9CE3E3C2AE4DCDD706AC42E595AE0B89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA14DD63C34D66EFF70AF0D9102C4055</key>
+		<key>AC87969686B55C15D95156BC62A9D4CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D91748D2D3ECAA696E80E4CA2E75DB8B</key>
+		<key>DB8CB83631B4029238A634161894D539</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF75F664620F27730404174B9D9352ED</key>
+		<key>E16D4B7B1F2FE6B1AB31612A6FFFB30B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,12 +162,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB27DAF13AAACE6CC33604119B66444E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC6FE748081617B4331B33CC44FE358D</key>
+		<key>FA1942F3AE0D20CE3EB2AA7A1356B032</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -17,7 +17,7 @@ target 'LOL' do
     pod 'Firebase/Core'
     pod 'Branch'
     pod 'Mixpanel'
-    pod 'FBSDKCoreKit', '4.17.0'
+    pod 'FacebookCore', '0.1.1'
     pod 'Fabric'
     pod 'iCarousel'
     pod 'Crashlytics'
