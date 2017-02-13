@@ -84,6 +84,12 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
             return
         }
         
+        if self.userNameTxtField.text?.isEmpty == true || self.userNameTxtField.text?.characters.count < 3 {
+            
+            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter a Summoner Name with at least 3 characters")
+            return
+        }
+        
         _ = TRValidateUserRequest().validateUser(self.userNameTxtField.text!, region: self.selectedRegionCode!, viewWillHandleError: true, completion: { (error, responseObject) in
             
             if let _ = error {
