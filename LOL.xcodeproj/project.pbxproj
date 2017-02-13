@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		337D72811E4BF641008551BE /* TRChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D72801E4BF641008551BE /* TRChangeEmailViewController.swift */; };
 		3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D2E41E31888600EE226F /* DictionaryExtension.swift */; };
+		33A71A6B1E4E78C0009D5119 /* TRSignUpErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A71A6A1E4E78C0009D5119 /* TRSignUpErrorViewController.swift */; };
+		33C65DDE1E52410000B3F54E /* TRErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65DDD1E52410000B3F54E /* TRErrorInfo.swift */; };
 		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
 		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
 		33C837C41E2D850D0057540F /* TRSignInCheckUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */; };
@@ -172,6 +174,8 @@
 		332F10021E4BCDF30098D617 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		337D72801E4BF641008551BE /* TRChangeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRChangeEmailViewController.swift; sourceTree = "<group>"; };
 		3389D2E41E31888600EE226F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		33A71A6A1E4E78C0009D5119 /* TRSignUpErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignUpErrorViewController.swift; sourceTree = "<group>"; };
+		33C65DDD1E52410000B3F54E /* TRErrorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRErrorInfo.swift; sourceTree = "<group>"; };
 		33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInViewController.swift; sourceTree = "<group>"; };
 		33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateAccountViewController.swift; sourceTree = "<group>"; };
 		33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRSignInCheckUserViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 		C7B47BD11E2809DF00D441BC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C7B47BF01E2809DF00D441BC /* TRRequest.swift */,
 				C7B47BD21E2809DF00D441BC /* NSBundleExtension.swift */,
 				C7B47BD31E2809DF00D441BC /* TRAcceptEventInvitationRequest.swift */,
 				C7B47BD41E2809DF00D441BC /* TRAddConsole.swift */,
@@ -483,7 +488,6 @@
 				C7B47BED1E2809DF00D441BC /* TRLeaveEventRequest.swift */,
 				C7B47BEE1E2809DF00D441BC /* TRPublicFeedRequest.swift */,
 				C7B47BEF1E2809DF00D441BC /* TRReportComment.swift */,
-				C7B47BF01E2809DF00D441BC /* TRRequest.swift */,
 				C7B47BF11E2809DF00D441BC /* TRRequestUpdateLegalRequest.swift */,
 				C7B47BF21E2809DF00D441BC /* TRResendBungieVerification.swift */,
 				C7B47BF31E2809DF00D441BC /* TRSendPushMessage.swift */,
@@ -514,6 +518,7 @@
 				C7B47C2A1E2809FC00D441BC /* TRLocationInfo.swift */,
 				C7B47C2B1E2809FC00D441BC /* TRPlayerInfo.swift */,
 				C7B47C2C1E2809FC00D441BC /* TRUserInfo.swift */,
+				33C65DDD1E52410000B3F54E /* TRErrorInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */,
 				33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */,
 				C7B47CB31E281A0E00D441BC /* TRSignInErrorViewController.swift */,
+				33A71A6A1E4E78C0009D5119 /* TRSignUpErrorViewController.swift */,
 			);
 			name = OnBoarding;
 			sourceTree = "<group>";
@@ -894,6 +900,7 @@
 				C7B47CBB1E281A0E00D441BC /* TREventDetailViewController.swift in Sources */,
 				C7B47C781E280EFA00D441BC /* TREventCurrentNoCheckPointCell.swift in Sources */,
 				C7B47CB81E281A0E00D441BC /* TRChooseGroupViewController.swift in Sources */,
+				33C65DDE1E52410000B3F54E /* TRErrorInfo.swift in Sources */,
 				C7B47C0D1E2809DF00D441BC /* TRHelmetUpdateRequest.swift in Sources */,
 				C7B47C371E2809FC00D441BC /* TREventInfo.swift in Sources */,
 				C7B47C931E2813AC00D441BC /* TREventCommentCell.swift in Sources */,
@@ -978,6 +985,7 @@
 				C7B47C111E2809DF00D441BC /* TRKickInActiveUserRequest.swift in Sources */,
 				C7B47CC11E281A0E00D441BC /* TRProfileViewController.swift in Sources */,
 				C7B47CBE1E281A0E00D441BC /* TRLegalViewController.swift in Sources */,
+				33A71A6B1E4E78C0009D5119 /* TRSignUpErrorViewController.swift in Sources */,
 				C7B47BC61E28086A00D441BC /* TRKeyChainHelper.swift in Sources */,
 				C7B47C141E2809DF00D441BC /* TRReportComment.swift in Sources */,
 			);

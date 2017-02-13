@@ -16,6 +16,8 @@ typealias TREventObjCallBack = (event: TREventInfo?) -> ()
 typealias TREventObjCallBackWithError = (error: String?, event: TREventInfo?) -> ()
 typealias TRSignInCallBack = (showLoginScreen: Bool?, error: String?) -> ()
 typealias TRBungieResponseStringCallBack = (responseObject: String?, responseDict: Dictionary<String, AnyObject>?) -> ()
+typealias TRResponseErrorCallBack = (errorInfo: TRErrorInfo?, responseObject: JSON) -> ()
+
 
 enum ServerResponseError {
     case NoValidData
@@ -100,6 +102,58 @@ class TRRequest {
                 }
         }
     }
+    
+    
+    //NEEDS REFACTOR (but gotta do this today, relase tonight :/)
+    func sendRequestWithErrorDictCompletion (completion: TRResponseErrorCallBack) {
+        
+        //Start Activity Indicator
+        if self.showActivityIndicator == true {
+            TRApplicationManager.sharedInstance.activityIndicator.startActivityIndicator(self.showActivityIndicatorBgClear, activityTopConstraintValue: self.activityIndicatorTopConstraint)
+        }
+        
+        
+        TRApplicationManager.sharedInstance.alamoFireManager!.request(self.URLMethod!, self.requestURL!, parameters:self.params)
+            .responseJSON { response in
+                
+                if let headerFields = response.response?.allHeaderFields as? [String: String],
+                    URL = response.request?.URL {
+                    let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(headerFields, forURL: URL)
+                    for cookie:NSHTTPCookie in cookies as [NSHTTPCookie] {
+                        if cookie.domain == "travelerbackend.herokuapp.com" {
+                            print("\(cookie)")
+                        }
+                    }
+                }
+                
+                
+                // Stop Activity Indicator
+                if self.showActivityIndicator == true {
+                    TRApplicationManager.sharedInstance.activityIndicator.stopActivityIndicator()
+                }
+                
+                switch response.result {
+                case .Failure( _):
+                    //TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Server request failed. Please wait a few seconds and refresh.")
+                    break
+                case .Success( _):
+                    
+                    if let _ = response.result.value {
+                        let swiftyJsonVar = JSON(response.result.value!)
+                        
+                        if let errorDict = swiftyJsonVar["errorHandling"].dictionary {
+                            let errorInfo = TRErrorInfo().parseErrorResponse(JSON(errorDict))
+                            completion(errorInfo: errorInfo, responseObject: nil)
+                            
+                            return
+                        }
+                        
+                        completion(errorInfo: nil, responseObject: (swiftyJsonVar))
+                    }
+                }
+        }
+    }
+
 }
 
 

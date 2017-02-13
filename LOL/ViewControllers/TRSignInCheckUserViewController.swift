@@ -47,8 +47,8 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         
         if let _ = self.selectedRegionCode {
         } else {
-            self.selectedRegionCode = self.regionDictionary!.first?.0
-            self.selectedRegion = self.regionDictionary![self.selectedRegionCode!]?.description
+            self.selectedRegion = self.regionDictionary!.first?.0
+            self.selectedRegionCode = self.regionDictionary![self.selectedRegion!]?.description
         }
         
         guard let _ = self.selectedRegionCode else {
@@ -88,8 +88,10 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
             
             if let _ = error {
                 let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
-                let vc : TRSignInErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNIN_ERROR) as! TRSignInErrorViewController
-                vc.signInError = error
+                let vc : TRSignUpErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNUP_ERROR) as! TRSignUpErrorViewController
+                vc.descriptionString = error?.errorDescription
+                vc.errorTitleString = error?.errorTitle
+                vc.userNameString = TRUserInfo.getUserName()
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             } else {

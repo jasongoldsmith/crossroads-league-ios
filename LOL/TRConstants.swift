@@ -146,6 +146,7 @@ struct K {
         static let VIEW_CONTROLLER_VERIFY_USER             = "verifyUserView"
         static let VIEW_CONTROLLER_CHANGE_PASSWORD         = "changePassword"
         static let VIEW_CONTROLLER_CHANGE_EMAIL            = "changeEmail"
+        static let VIEW_CONTROLLER_SIGNUP_ERROR            = "signuperrorvc"
     }
     
     struct ActivityType {

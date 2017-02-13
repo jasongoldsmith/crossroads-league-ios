@@ -11,7 +11,7 @@ import Foundation
 
 class TRInsertLabel: UILabel {
     
-    let topInset = CGFloat(5.0), bottomInset = CGFloat(5.0), leftInset = CGFloat(5.0), rightInset = CGFloat(5.0)
+    var topInset = CGFloat(5.0), bottomInset = CGFloat(5.0), leftInset = CGFloat(5.0), rightInset = CGFloat(5.0)
     
     
     override func drawTextInRect(rect: CGRect) {
