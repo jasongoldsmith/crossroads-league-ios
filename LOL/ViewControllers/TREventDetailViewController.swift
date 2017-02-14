@@ -405,10 +405,13 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
         dispatch_after(time, dispatch_get_main_queue(), {
             
             let numberOfSections = self.eventTable?.numberOfSections
-            let numberOfRows = self.eventTable?.numberOfRowsInSection(numberOfSections!-1)
+            var numberOfRows = 0
+            if let _ = numberOfSections {
+                numberOfRows = (self.eventTable?.numberOfRowsInSection(numberOfSections!-1))!
+            }
             
             if numberOfRows > 0 {
-                let indexPath = NSIndexPath(forRow: numberOfRows!-1, inSection: (numberOfSections!-1))
+                let indexPath = NSIndexPath(forRow: numberOfRows-1, inSection: (numberOfSections!-1))
                 self.eventTable.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: animated)
             }
             
