@@ -26,18 +26,26 @@ class TRPushNotiController: NSObject, NotificationViewProtocol {
             var parentView: UIViewController?
             if currentView.isKindOfClass(SlideMenuController) {
                 currentView = currentView as! SlideMenuController
-                let slideVewController = currentView as! SlideMenuController
+                let slideVewController = currentView as? SlideMenuController
+                
+                guard let _ = slideVewController else {
+                    return
+                }
+                
                 if TRApplicationManager.sharedInstance.slideMenuController.isLeftOpen() || TRApplicationManager.sharedInstance.slideMenuController.isRightOpen() {
                     return
                 } else {
-                    if let eventListView = slideVewController.mainViewController! as? TREventListViewController {
-                        parentView = eventListView
+                    if let eventListView = slideVewController?.mainViewController {
+                        if eventListView.isKindOfClass(TREventListViewController) {
+                            parentView = eventListView
+                        }
                     }
                 }
             } else {
                 let slideVewController = TRApplicationManager.sharedInstance.slideMenuController
-                let eventListView = slideVewController.mainViewController! as? TREventListViewController
-                parentView = eventListView
+                if let eventListView = slideVewController.mainViewController as? TREventListViewController {
+                    parentView = eventListView
+                }
             }
             
             // If Parent View is nil, just return
