@@ -98,8 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 
-                
-                
+                //Branch Link Sharing
                 if let inviPlayer = params?["invitees"] as? String,
                 let eventID = params?["eventId"] as? String,
                 let activityName = params?["activityName"] as? String {
@@ -108,6 +107,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     invi.invitedPlayers = inviPlayer
                     
                     TRApplicationManager.sharedInstance.invitation = invi
+                    TRApplicationManager.sharedInstance.addPostActionbranchDeepLink(eventID, activityName: activityName, params: params!)
+                } else if let eventID = params?["eventId"] as? String, let activityName = params?["activityName"] as? String {
                     TRApplicationManager.sharedInstance.addPostActionbranchDeepLink(eventID, activityName: activityName, params: params!)
                 }
             }

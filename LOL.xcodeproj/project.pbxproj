@@ -11,13 +11,13 @@
 		3389D2E51E31888600EE226F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D2E41E31888600EE226F /* DictionaryExtension.swift */; };
 		33A71A6B1E4E78C0009D5119 /* TRSignUpErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A71A6A1E4E78C0009D5119 /* TRSignUpErrorViewController.swift */; };
 		33C65DDE1E52410000B3F54E /* TRErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65DDD1E52410000B3F54E /* TRErrorInfo.swift */; };
+		33C65DDF1E5271E000B3F54E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332F10021E4BCDF30098D617 /* GoogleService-Info.plist */; };
 		33C837C01E2D7D8F0057540F /* TRSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837BF1E2D7D8F0057540F /* TRSignInViewController.swift */; };
 		33C837C21E2D7F4A0057540F /* TRCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C11E2D7F4A0057540F /* TRCreateAccountViewController.swift */; };
 		33C837C41E2D850D0057540F /* TRSignInCheckUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C31E2D850D0057540F /* TRSignInCheckUserViewController.swift */; };
 		33C837C61E2EE35F0057540F /* TRValidateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C51E2EE35F0057540F /* TRValidateUserRequest.swift */; };
 		33C837C81E2F0BF60057540F /* TRRegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C837C71E2F0BF60057540F /* TRRegionCell.swift */; };
 		33C837CB1E2F0C300057540F /* TRRegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C837CA1E2F0C300057540F /* TRRegionCell.xib */; };
-		33E27C091E4C007D008A7100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B851E2805F100D441BC /* GoogleService-Info.plist */; };
 		C7B47B6E1E26FD2A00D441BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B47B6D1E26FD2A00D441BC /* AppDelegate.swift */; };
 		C7B47B731E26FD2A00D441BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B711E26FD2A00D441BC /* Main.storyboard */; };
 		C7B47B751E26FD2A00D441BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B47B741E26FD2A00D441BC /* Assets.xcassets */; };
@@ -776,7 +776,7 @@
 				C7B47C7B1E280EFA00D441BC /* TREventCurrentWithCheckPointCell.xib in Resources */,
 				C7B47C5C1E280E7100D441BC /* TRCaroselCellView.xib in Resources */,
 				C7B47C9E1E2816F200D441BC /* TRCustomError.xib in Resources */,
-				33E27C091E4C007D008A7100 /* GoogleService-Info.plist in Resources */,
+				33C65DDF1E5271E000B3F54E /* GoogleService-Info.plist in Resources */,
 				C7B47C621E280E7100D441BC /* TRInviteView.xib in Resources */,
 				C7B47B731E26FD2A00D441BC /* Main.storyboard in Resources */,
 				C7B47CA11E2816F200D441BC /* TRErrorView.xib in Resources */,

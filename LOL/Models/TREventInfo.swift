@@ -166,22 +166,21 @@ class TREventInfo: NSObject {
     
     func isEventGroupPartOfUsersGroups () throws -> Bool {
         
-        let userHasGroup = TRApplicationManager.sharedInstance.bungieGroups.filter{$0.groupId == self.eventClanID}
-        if let _ = userHasGroup.first {
+        if self.eventClanID == TRUserInfo.getUserClanID() {
             return false
         }
         
         throw Branch_Error.JOIN_BUNGIE_GROUP
     }
     
-    func isEventConsoleMatchesUserConsole() throws -> Bool {
-        
-        if self.eventConsoleType == TRApplicationManager.sharedInstance.currentUser?.getDefaultConsole()?.consoleType {
-            return false
-        }
-        
-        throw Branch_Error.NEEDS_CONSOLE
-    }
+//    func isEventConsoleMatchesUserConsole() throws -> Bool {
+//        
+//        if self.eventConsoleType == TRApplicationManager.sharedInstance.currentUser?.getDefaultConsole()?.consoleType {
+//            return false
+//        }
+//        
+//        throw Branch_Error.NEEDS_CONSOLE
+//    }
     
     func isUserPartOfEvent (userID: String) -> Bool {
      

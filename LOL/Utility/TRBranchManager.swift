@@ -63,7 +63,7 @@ class TRBranchManager {
             }
         }
         
-        if let aName = eventInfo.eventActivity?.activitySubType! {
+        if let aName = eventInfo.eventActivity?.activityType {
             activityName = aName
         }
         
@@ -106,12 +106,12 @@ class TRBranchManager {
             let imageString = "http://w3.crossroadsapp.co/bungie/share/branch/v1/\(hasActivityCard)"
             branchUniversalObject.imageUrl  = imageString
         } else {
-            branchUniversalObject.imageUrl  = "https://s3-us-west-1.amazonaws.com/w3.crossroadsapp.co/lol/lol_branch.png"
+            branchUniversalObject.imageUrl  = "http://w3.crossroadsapp.co.s3-website-us-west-1.amazonaws.com/lol/share/branch/v1/default.png"
         }
         
         branchUniversalObject.addMetadataKey("eventId", value: eventID)
         branchUniversalObject.addMetadataKey("deepLinkType", value: deepLinkType)
-        branchUniversalObject.addMetadataKey("activityName", value: (eventInfo.eventActivity?.activitySubType)!)
+        branchUniversalObject.addMetadataKey("activityName", value: (eventInfo.eventActivity?.activityType)!)
         
         // Create Link
         let linkProperties = BranchLinkProperties()

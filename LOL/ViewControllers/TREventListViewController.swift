@@ -497,12 +497,6 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
         } catch _ {
             throw Branch_Error.JOIN_BUNGIE_GROUP
         }
-        
-        do {
-            let _ = try eventInfo.isEventConsoleMatchesUserConsole()
-        } catch _ {
-            throw Branch_Error.NEEDS_CONSOLE
-        }
     }
     
     func showBranchErrorViewWithError (errorType: Branch_Error, eventInfo: TREventInfo?, activityName: String?) {
@@ -788,9 +782,19 @@ class TREventListViewController: TRBaseViewController, UITableViewDataSource, UI
     }
     
     //MARK:- Error Message View Handling actions
-    func addActivity (eventInfo: TREventInfo?) {
-        if let _ = eventInfo?.eventActivity {
-            self.createActivityFromEvent((eventInfo?.eventActivity)!)
+    func addActivity (activityName: String?) {
+        if let _ = activityName {
+            _ = TRgetActivityList().getActivityListofType(activityName!, completion: { (didSucceed) in
+                if didSucceed == true {
+                    let vc = TRApplicationManager.sharedInstance.stroryBoardManager.getViewControllerWithID(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_CREATE_EVENT_FINAL, storyBoardID: K.StoryBoard.StoryBoard_Main) as! TRCreateEventFinalView
+                    vc.activityInfo = TRApplicationManager.sharedInstance.activityList
+                    
+                    let navigationController = UINavigationController(rootViewController: vc)
+                    self.presentViewController(navigationController, animated: true, completion: {
+                        vc.backButton?.hidden = true
+                    })
+                }
+            })
         }
     }
     
