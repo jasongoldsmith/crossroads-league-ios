@@ -78,17 +78,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 })
                 
-                let userDefaults = NSUserDefaults.standardUserDefaults()
-                let isInstallInfoSent = userDefaults.boolForKey(K.UserDefaultKey.INSTALL_INFO_SENT)
-                if isInstallInfoSent.boolValue == false {
-                    
+                if let isFirstClick = params?["+is_first_session"]?.boolValue where isFirstClick ==  true {
                     // App Install Request
-                    let myInstallDict = [String: AnyObject]()
-                    mySourceDict["ads"] = K.SharingPlatformType.Platform_Branch
+                    var myInstallDict = [String: AnyObject]()
+                    myInstallDict["ads"] = K.SharingPlatformType.Platform_Branch
                     
                     self.appInstallRequestWithDict(myInstallDict) { (didSucceed) in
                         if didSucceed == true {
-                            
                         }
                     }
                 } else {
@@ -96,7 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     mySourceDict["source"] = K.SharingPlatformType.Platform_Branch
                     self.appInitializedRequest(mySourceDict)
                 }
-                
                 
                 //Branch Link Sharing
                 if let inviPlayer = params?["invitees"] as? String,
