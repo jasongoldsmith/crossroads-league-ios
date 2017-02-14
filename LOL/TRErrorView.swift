@@ -80,7 +80,7 @@ class TRErrorView: UIView {
             break
         case .JOIN_BUNGIE_GROUP:
             self.buttonOneYes.setTitle("OK", forState: .Normal)
-            self.errorDescription.text = "You'll need an account in the \(eventGroup) to join that team."
+            self.errorDescription.text = "You'll need an account in \(eventGroup) to join that team."
             break
         default:
             break
