@@ -69,7 +69,7 @@ class TRBranchManager {
         
         // Create Branch Object
         branchUniversalObject = BranchUniversalObject.init(canonicalIdentifier: canonicalIdentifier)
-        var messageString = "\(console): I need \(playerCount) more for \(activityName) in the \(groupName) group"
+        var messageString = "I need \(playerCount) more for \(activityName) in the \(groupName) region"
         
         if TRApplicationManager.sharedInstance.isCurrentPlayerInAnEvent(eventInfo) {
             branchUniversalObject.title = "Join My Team"
@@ -77,26 +77,26 @@ class TRBranchManager {
                 branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             }
             
-            messageString = "\(console): I need \(playerCount) more for \(activityName) in the \(groupName) group"
+            messageString = "I need \(playerCount) more for \(activityName) in the \(groupName) region"
         } else {
             branchUniversalObject.title = "Searching for Summoners"
             if eventInfo.eventPlayersArray.count == eventInfo.eventMaxPlayers!.integerValue {
                 branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             }
             
-            messageString = "\(console): This team needs \(extraPlayersRequiredCount) more for \(activityName) in the \(groupName) group"
+            messageString = "This team needs \(extraPlayersRequiredCount) more for \(activityName) in the \(groupName) region"
             
             if eventInfo.isFutureEvent == true {
-                messageString = "\(console): This team needs \(playerCount) more for \(activityName) on \(formatedDate) in the \(groupName) group"
+                messageString = "This team needs \(playerCount) more for \(activityName) on \(formatedDate) in the \(groupName) region"
             }
         }
         
         if extraPlayersRequiredCount == 0 {
             branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             if eventInfo.isFutureEvent == true {
-                messageString = "\(console): Check out this \(activityName) on \(formatedDate) in the \(groupName) group"
+                messageString = "Check out this \(activityName) on \(formatedDate) in the \(groupName) region"
             } else {
-                messageString = "\(console): Check out this \(activityName) in the \(groupName) group"
+                messageString = "Check out this \(activityName) in the \(groupName) region"
             }
         }
         
@@ -152,28 +152,6 @@ class TRBranchManager {
                 print(String(format: "Branch TestBed: %@", error!))
             }
         }
-    }
-    
-    
-    func getConsoleTypeFromString (consoleName: String) -> String {
-        
-        var consoleType = ""
-        switch consoleName {
-        case "PS4":
-            consoleType = "PS4"
-            break
-        case "PS3":
-            consoleType = "PS3"
-            break
-        case "XBOX360":
-            consoleType = "360"
-            break
-        default:
-            consoleType = "XB1"
-            break
-        }
-        
-        return consoleType
     }
 }
 
