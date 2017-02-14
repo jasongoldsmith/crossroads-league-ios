@@ -71,6 +71,13 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
     }
     
     @IBAction func xBoxTapped(sender: AnyObject) {
+        
+        _ = TRAppTrackingRequest().sendApplicationPushNotiTracking(nil, trackingType: APP_TRACKING_DATA_TYPE.TRACKING_SIGNUP_INIT, completion: {didSucceed in
+            if didSucceed == true {
+                
+            }
+        })
+
         let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
         let registerCrossroads = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_LOGIN) as! TRSignInViewController
         registerCrossroads.isUserRegistering = true
