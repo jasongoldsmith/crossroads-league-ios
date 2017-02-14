@@ -47,7 +47,9 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             self.legalLabel?.hidden = false
         }
         
-        //self.userNameTxtField?.becomeFirstResponder()
+        
+        //Open KeyBoard
+        self.userNameTxtField?.becomeFirstResponder()
         
         //Legal Statement
         self.addLegalStatmentText()
@@ -149,6 +151,12 @@ class TRSignInViewController: TRBaseViewController, UITextFieldDelegate, UIGestu
             
             return
         }
+        
+        if isValidEmail(userNameTxtField.text!) == false {
+            TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter a valid email address")
+            return
+        }
+        
         if userPwdTxtField.text?.isEmpty == true {
             TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Enter your password")
             

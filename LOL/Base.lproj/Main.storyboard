@@ -3166,7 +3166,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <constraint firstAttribute="height" constant="50" id="mvp-WL-qN8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="SIGN IN">
+                                <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
