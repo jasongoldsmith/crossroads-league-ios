@@ -324,17 +324,6 @@ class TRUserInfo: NSObject {
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_CLAN_ID)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_UserID)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(K.UserDefaultKey.UserAccountInfo.TR_USER_BUNGIE_MEMBERSHIP_ID)
-        
-        
-        let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-        guard let cookies = cookieStorage.cookies else {
-            //Cookie Not Found
-            return
-        }
-        
-        for cookie in cookies {
-            cookieStorage.deleteCookie(cookie)
-        }
     }
 }
 
