@@ -15,7 +15,6 @@ class TRRootViewController: TRBaseViewController {
     // Push Data
     var pushNotificationData: NSDictionary? = nil
     var branchLinkData: NSDictionary? = nil
-    var shouldLoadInitialViewDefault = true
     
     private let ACTIVITY_INDICATOR_TOP_CONSTRAINT: CGFloat = 365.0
     
@@ -29,6 +28,7 @@ class TRRootViewController: TRBaseViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         self.appLoading()
     }
 

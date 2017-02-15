@@ -17,6 +17,7 @@ class TRGetConfigRequest: TRRequest {
         let request = TRRequest()
         request.requestURL = configuration
         request.URLMethod = .GET
+        request.showActivityIndicator = false
         request.sendRequestWithCompletion { (error, swiftyJsonVar) -> () in
             
             if let _ = error {

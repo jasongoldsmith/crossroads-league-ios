@@ -53,19 +53,15 @@ class TRRequest {
             TRApplicationManager.sharedInstance.activityIndicator.startActivityIndicator(self.showActivityIndicatorBgClear, activityTopConstraintValue: self.activityIndicatorTopConstraint)
         }
 
+        print("REQUEST :::: \(self.requestURL)")
         
         TRApplicationManager.sharedInstance.alamoFireManager!.request(self.URLMethod!, self.requestURL!, parameters:self.params)
             .responseJSON { response in
+            
+                print("Response :::: \(response.request)")
                 
-                if let headerFields = response.response?.allHeaderFields as? [String: String],
-                    URL = response.request?.URL {
-                    let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(headerFields, forURL: URL)
-                    for cookie:NSHTTPCookie in cookies as [NSHTTPCookie] {
-                        if cookie.domain == "travelerbackend.herokuapp.com" {
-                            print("\(cookie)")
-                        }
-                    }
-                }
+            
+                print("Cookies: \(TRApplicationManager.sharedInstance.alamoFireManager?.session.configuration.HTTPCookieStorage?.cookies)")
 
                 
                 // Stop Activity Indicator
