@@ -29,10 +29,7 @@ class TRRootViewController: TRBaseViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        _ = TRGetConfigRequest().getConfiguration({ (didSucceed) in
-            self.appLoading()
-        })
+        self.appLoading()
     }
 
     func appLoading () {
