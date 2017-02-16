@@ -536,7 +536,7 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
                 
                 if let playerInfo = self.eventInfo?.eventPlayersArray[indexPath.section] {
                     if playerInfo.isPlayerActive == false && eventInfo?.isFutureEvent == false {
-                        cell?.playerUserName?.textColor = UIColor.grayColor()
+                        cell?.playerUserName?.textColor = UIColor(red: 189/255, green: 178/255, blue: 129/255, alpha: 1)
                     } else {
                         cell?.playerUserName?.textColor = UIColor(red: 183/255, green: 183/255, blue: 183/255, alpha: 1)
                     }
