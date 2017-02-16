@@ -3848,7 +3848,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                         <rect key="frame" x="60" y="18" width="407" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                         <connections>
                                             <action selector="textFieldDidBecomeActive:" destination="Enk-vS-Kfa" eventType="touchDown" id="fMt-F9-rfH"/>
