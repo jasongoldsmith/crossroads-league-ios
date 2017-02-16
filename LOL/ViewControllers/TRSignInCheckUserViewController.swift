@@ -31,7 +31,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
         super.viewDidLoad()
         
         self.regionTableView?.registerNib(UINib(nibName: "TRRegionCell", bundle: nil), forCellReuseIdentifier: REGION_CELL)
-        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter summoners name", attributes: [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)])
+        self.userNameTxtField.attributedPlaceholder = NSAttributedString(string:"Enter Summoner Name", attributes: [NSForegroundColorAttributeName: UIColor(red: 189/255, green: 179/255, blue: 126/255, alpha: 1)])
         self.regionButton?.layer.cornerRadius = 2.0
         self.userNameTextView?.layer.cornerRadius = 2.0
         
