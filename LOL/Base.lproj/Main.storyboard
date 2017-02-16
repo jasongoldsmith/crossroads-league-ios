@@ -1924,8 +1924,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN-1" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-ZR-9ES">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="178"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBGSIGNIN2" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-ZR-9ES">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MESSAGE SENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBI-HP-xi6">
                                 <rect key="frame" x="237" y="122" width="126" height="20"/>
@@ -1934,7 +1934,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you! Your message has been sent to support@crossroadsapp.co and we will email you if we need additional details." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-Cf-XFG">
-                                <rect key="frame" x="37" y="167" width="526" height="18"/>
+                                <rect key="frame" x="37" y="242" width="526" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1946,16 +1946,22 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="closeMessageSentConfirmation" destination="703-P7-HS9" eventType="touchUpInside" id="ax7-t1-SrK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEmailSent" translatesAutoresizingMaskIntoConstraints="NO" id="nyq-fs-gIK">
+                                <rect key="frame" x="270" y="158" width="60" height="61"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d7h-ZR-9ES" firstAttribute="top" secondItem="20s-nK-vUV" secondAttribute="top" id="6BQ-K5-Dpo"/>
                             <constraint firstAttribute="trailing" secondItem="d7h-ZR-9ES" secondAttribute="trailing" id="731-Nc-1Gl"/>
+                            <constraint firstItem="nyq-fs-gIK" firstAttribute="centerX" secondItem="20s-nK-vUV" secondAttribute="centerX" id="ARz-hD-xvo"/>
                             <constraint firstItem="8BI-Cf-XFG" firstAttribute="leading" secondItem="20s-nK-vUV" secondAttribute="leadingMargin" constant="17" id="Apk-Xn-vaT"/>
                             <constraint firstItem="kVs-Qf-sbu" firstAttribute="top" secondItem="20s-nK-vUV" secondAttribute="top" id="DCp-Q0-Kox"/>
                             <constraint firstItem="nQl-tE-UQ2" firstAttribute="leading" secondItem="20s-nK-vUV" secondAttribute="leading" constant="6" id="I4B-5r-wjm"/>
-                            <constraint firstItem="N8n-3Z-Y6W" firstAttribute="top" secondItem="d7h-ZR-9ES" secondAttribute="bottom" constant="422" id="KCM-3c-I1V"/>
+                            <constraint firstItem="8BI-Cf-XFG" firstAttribute="top" secondItem="nyq-fs-gIK" secondAttribute="bottom" constant="23" id="JBz-1m-JN3"/>
+                            <constraint firstItem="N8n-3Z-Y6W" firstAttribute="top" secondItem="d7h-ZR-9ES" secondAttribute="bottom" constant="444" id="KCM-3c-I1V"/>
                             <constraint firstAttribute="trailing" secondItem="kVs-Qf-sbu" secondAttribute="trailing" id="L3k-6S-0PG"/>
+                            <constraint firstItem="nyq-fs-gIK" firstAttribute="top" secondItem="KBI-HP-xi6" secondAttribute="bottom" constant="16" id="Qu3-BB-L14"/>
                             <constraint firstItem="KBI-HP-xi6" firstAttribute="top" secondItem="RYJ-AM-xXA" secondAttribute="bottom" constant="102" id="U1j-3k-dVK"/>
                             <constraint firstItem="nQl-tE-UQ2" firstAttribute="top" secondItem="20s-nK-vUV" secondAttribute="top" constant="22" id="Var-OS-ffS"/>
                             <constraint firstItem="N8n-3Z-Y6W" firstAttribute="top" secondItem="kVs-Qf-sbu" secondAttribute="bottom" id="car-OP-aEw"/>
@@ -1966,6 +1972,11 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="8BI-Cf-XFG" firstAttribute="centerX" secondItem="20s-nK-vUV" secondAttribute="centerX" id="nYd-g4-VSU"/>
                             <constraint firstItem="KBI-HP-xi6" firstAttribute="centerX" secondItem="20s-nK-vUV" secondAttribute="centerX" id="tIG-Ke-f39"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fFM-pK-Igo"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMi-fJ-zVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4019,6 +4030,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="iconCrossroadsLogin" width="20" height="24"/>
         <image name="iconCustom" width="24" height="24"/>
         <image name="iconDetails" width="14" height="15"/>
+        <image name="iconEmailSent" width="60" height="61"/>
         <image name="iconGhostDefault" width="30" height="34"/>
         <image name="iconNotificationsOff" width="44" height="44"/>
         <image name="iconNotificationsOn" width="44" height="44"/>
@@ -4030,7 +4042,6 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="iconSummRift" width="24" height="24"/>
         <image name="iconTwistedTreeline" width="24" height="24"/>
         <image name="imgBGChooseActivity" width="375" height="230"/>
-        <image name="imgBGSIGNIN-1" width="375" height="178"/>
         <image name="imgBGSIGNIN2" width="375" height="156"/>
         <image name="imgBGVNightfallStrikeDefault" width="375" height="326"/>
         <image name="imgBGVaultOfGlass" width="375" height="326"/>
