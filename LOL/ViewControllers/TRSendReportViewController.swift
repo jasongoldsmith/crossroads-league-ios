@@ -210,8 +210,11 @@ class TRSendReportViewController: TRBaseViewController, UITextViewDelegate, Cust
                     
                     let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
                     let vc = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_CONTACT_MESSAGE_SENT) as! TRMessageSentConfViewController
+                    vc.message = "Thank you! Your message has been sent to support@crossroadsapp.co and we will email you if we need additional details."
+                    vc.titleMessage = "MESSAGE SENT"
+                    vc.hyperLink = "support@crossroadsapp.co"
+
                     self.navigationController?.pushViewController(vc, animated: true)
-                    
                 } else {}
             })
         }

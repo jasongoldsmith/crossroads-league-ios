@@ -34,8 +34,20 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
         
         self.userNameTxtField?.becomeFirstResponder()
         
+        let textMessage = "We will send a reset password link to your email address. If you forgot the email address you signed up with, please contact us at support@crossroadsapp.co"
         
-        self.instructionLabel.text = "We will send a reset password link to your email address. If you forgot the email address you signed up with, please contact us at support@crossroadsapp.co"
+        
+        self.instructionLabel.text = textMessage
+        self.instructionLabel?.activeLinkAttributes
+        let subscriptionNoticeLinkAttributes = [
+            NSForegroundColorAttributeName: UIColor(red: 198/255, green: 127/255, blue: 6/255, alpha: 1),
+            NSUnderlineStyleAttributeName: NSNumber(bool:true),
+            ]
+        let nsString = textMessage as NSString
+        let emailID =  "support@crossroadsapp.co"
+        let emailIDRange = nsString.rangeOfString(emailID)
+        self.instructionLabel?.linkAttributes = subscriptionNoticeLinkAttributes
+        self.instructionLabel?.addLinkToURL(NSURL(string:""), withRange: emailIDRange)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -122,18 +134,28 @@ class TRForgotPasswordViewController: TRBaseViewController, TTTAttributedLabelDe
         
         _ = TRForgotPasswordRequest().resetUserPassword(userName!, completion: { (didSucceed) in
             if (didSucceed == true) {
+
+                let storyboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_CONTACT_MESSAGE_SENT) as! TRMessageSentConfViewController
+                self.navigationController?.pushViewController(vc, animated: true)
                 
-                self.userNameView.hidden = true
-                self.resetPasswordButton.hidden = true
-                self.instructionLabel.hidden = true
-                self.resetPasswordLabel?.text = "EMAIL SENT"
-                self.resignKeyBoardResponders()
-                
-                if DeviceType.IS_IPHONE_5 {
-                    self.resetPasswordLabelTop.constant = self.resetPasswordLabelTop.constant - 80
-                } else {
-                    self.resetPasswordLabelTop.constant = self.resetPasswordLabelTop.constant + 10
+                if let emailText = self.userNameTxtField?.text {
+                    vc.message = "Check your email address at:\n\(emailText)\nfor a password link."
+                    vc.titleMessage = "EMAIL SENT"
+                    vc.hyperLink = emailText
                 }
+                
+//                self.userNameView.hidden = true
+//                self.resetPasswordButton.hidden = true
+//                self.instructionLabel.hidden = true
+//                self.resetPasswordLabel?.text = "EMAIL SENT"
+//                self.resignKeyBoardResponders()
+//                
+//                if DeviceType.IS_IPHONE_5 {
+//                    self.resetPasswordLabelTop.constant = self.resetPasswordLabelTop.constant - 80
+//                } else {
+//                    self.resetPasswordLabelTop.constant = self.resetPasswordLabelTop.constant + 10
+//                }
             } else {
                 
             }
