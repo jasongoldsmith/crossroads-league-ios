@@ -3891,8 +3891,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                             <action selector="showPasswordClicked" destination="Enk-vS-Kfa" eventType="touchUpInside" id="3ct-0L-3wn"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWD-XP-NNo">
-                                        <rect key="frame" x="58" y="18" width="408" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWD-XP-NNo">
+                                        <rect key="frame" x="58" y="18" width="444" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -3913,16 +3913,21 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="OWD-XP-NNo" firstAttribute="leading" secondItem="fR3-nU-GJo" secondAttribute="trailing" constant="22" id="1so-Df-NpG"/>
                                     <constraint firstAttribute="bottom" secondItem="HPm-j8-eQi" secondAttribute="bottom" constant="8" id="5ju-SN-WHk"/>
                                     <constraint firstAttribute="height" constant="66" id="8rF-iM-IS5"/>
+                                    <constraint firstItem="OWD-XP-NNo" firstAttribute="centerX" secondItem="DYL-dQ-Fur" secondAttribute="centerX" id="IEW-Qh-kGL"/>
                                     <constraint firstItem="fR3-nU-GJo" firstAttribute="leading" secondItem="DYL-dQ-Fur" secondAttribute="leading" constant="13" id="KVi-l0-UU6"/>
+                                    <constraint firstItem="OWD-XP-NNo" firstAttribute="centerY" secondItem="HPm-j8-eQi" secondAttribute="centerY" id="WHq-7Z-P5W"/>
                                     <constraint firstItem="HPm-j8-eQi" firstAttribute="top" secondItem="DYL-dQ-Fur" secondAttribute="top" constant="8" id="ZCU-r0-ysR"/>
                                     <constraint firstItem="fR3-nU-GJo" firstAttribute="top" secondItem="DYL-dQ-Fur" secondAttribute="top" constant="20" id="ZJH-AA-ONs"/>
                                     <constraint firstItem="7gR-jv-AaZ" firstAttribute="top" secondItem="DYL-dQ-Fur" secondAttribute="top" id="aU1-S0-9iC"/>
                                     <constraint firstAttribute="bottom" secondItem="7gR-jv-AaZ" secondAttribute="bottom" id="e2A-ct-63Q"/>
                                     <constraint firstItem="7gR-jv-AaZ" firstAttribute="leading" secondItem="DYL-dQ-Fur" secondAttribute="leading" id="iAY-uG-cjL"/>
+                                    <constraint firstItem="OWD-XP-NNo" firstAttribute="top" secondItem="DYL-dQ-Fur" secondAttribute="top" constant="18" id="pRK-AP-JMs"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="u7h-AK-YgR"/>
                                     <constraint firstAttribute="trailing" secondItem="HPm-j8-eQi" secondAttribute="trailing" id="wLm-BX-7cD"/>
+                                    <constraint firstItem="HPm-j8-eQi" firstAttribute="leading" secondItem="OWD-XP-NNo" secondAttribute="trailing" constant="8" id="wYh-yL-YZF"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
