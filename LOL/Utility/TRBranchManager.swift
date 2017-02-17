@@ -103,7 +103,7 @@ class TRBranchManager {
         branchUniversalObject.contentDescription = messageString
         
         if let hasActivityCard = eventInfo.eventActivity?.activityID {
-            let imageString = "http://w3.crossroadsapp.co.s3-website-us-west-1.amazonaws.com/lol/share/share/branch/v1/\(hasActivityCard)"
+            let imageString = "http://w3.crossroadsapp.co.s3-website-us-west-1.amazonaws.com/lol/share/branch/v1/\(hasActivityCard)"
             branchUniversalObject.imageUrl  = imageString
         } else {
             branchUniversalObject.imageUrl  = "http://w3.crossroadsapp.co.s3-website-us-west-1.amazonaws.com/lol/share/branch/v1/default.png"
