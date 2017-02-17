@@ -97,7 +97,7 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
                 let vc : TRSignUpErrorViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_SIGNUP_ERROR) as! TRSignUpErrorViewController
                 vc.descriptionString = error?.errorDescription
                 vc.errorTitleString = error?.errorTitle
-                vc.userNameString = TRUserInfo.getUserName()
+                vc.userNameString = self.userNameTxtField?.text
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             } else {
