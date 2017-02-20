@@ -93,7 +93,7 @@ class TRCreateAccountViewController: TRBaseViewController, UITextFieldDelegate, 
         } else {
             let textcount = userNameTxtField.text?.characters.count
             if textcount < 3 || textcount > 50 {
-                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Your username must have at least 3 characters.")
+                TRApplicationManager.sharedInstance.addErrorSubViewWithMessage("Please enter a valid Summoner Name.")
                 
                 return
             }
