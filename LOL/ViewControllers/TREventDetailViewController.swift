@@ -372,13 +372,17 @@ class TREventDetailViewController: TRBaseViewController, UITableViewDelegate, UI
             self.segmentOneUnderLine?.hidden = false
             self.segmentTwoUnderLine?.hidden = true
             
-            TRApplicationManager.sharedInstance.fireBaseManager?.removeCommentsObserver(self.eventInfo!)
+            if let event = self.eventInfo {
+                TRApplicationManager.sharedInstance.fireBaseManager?.removeCommentsObserver(event)
+            }
             break;
         case 1:
             self.segmentOneUnderLine?.hidden = true
             self.segmentTwoUnderLine?.hidden = false
             
-            TRApplicationManager.sharedInstance.fireBaseManager?.addCommentsObserversWithParentViewForDetailView(self, withEvent: self.eventInfo!)
+            if let event = self.eventInfo {
+                TRApplicationManager.sharedInstance.fireBaseManager?.addCommentsObserversWithParentViewForDetailView(self, withEvent: event)
+            }
             break;
         default:
             break;
