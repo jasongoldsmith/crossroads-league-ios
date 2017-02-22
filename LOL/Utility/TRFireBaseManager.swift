@@ -211,7 +211,10 @@ class TRFireBaseManager {
 
         let endPointKeyReference = hasEventClan + "/" + hasEventID
         self.ref = FIRDatabase.database().reference().child("comments/").child(endPointKeyReference)
-        self.ref?.removeObserverWithHandle(self.eventDescriptionObserverHandler!)
+        
+        if let eventDesHandler = self.eventDescriptionObserverHandler {
+            self.ref?.removeObserverWithHandle(eventDesHandler)
+        }
     }
     
     func removeObservers () {
