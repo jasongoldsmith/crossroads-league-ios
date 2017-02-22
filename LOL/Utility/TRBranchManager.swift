@@ -46,8 +46,10 @@ class TRBranchManager {
         if extraPlayersRequiredCount > 0 {
             playerCount = String(extraPlayersRequiredCount)
         }
-        let console = ""
+        
         var activityName = ""
+        var groupName = ""
+        var checkPoint = ""
         
         //Formatted Date
         let formatter = NSDateFormatter()
@@ -55,48 +57,52 @@ class TRBranchManager {
         let eventDate = formatter.dateFromString(eventInfo.eventLaunchDate!)
         let formatedDate = eventDate!.toString(format: .Custom(trDateFormat()))
 
-        // Group Name
-        var groupName = ""
         if let currentGroupID = TRUserInfo.getUserClanID() {
             if let hasCurrentGroup = TRApplicationManager.sharedInstance.getCurrentGroup(currentGroupID) {
                 groupName = hasCurrentGroup.groupName!
             }
         }
         
+        //Activity Name
         if let aName = eventInfo.eventActivity?.activityType {
             activityName = aName
         }
         
+        //Checkpoint 
+        if let chPoint = eventInfo.eventActivity?.activityCheckPoint {
+            checkPoint =  ", " + chPoint
+        }
+        
         // Create Branch Object
         branchUniversalObject = BranchUniversalObject.init(canonicalIdentifier: canonicalIdentifier)
-        var messageString = "I need \(playerCount) more for \(activityName) in the \(groupName) region"
+        var messageString = "\(groupName): I need \(playerCount) more for \(activityName)\(checkPoint)"
         
-        if TRApplicationManager.sharedInstance.isCurrentPlayerInAnEvent(eventInfo) {
+        if !TRApplicationManager.sharedInstance.isCurrentPlayerInAnEvent(eventInfo) {
             branchUniversalObject.title = "Join My Team"
             if eventInfo.eventPlayersArray.count == eventInfo.eventMaxPlayers!.integerValue {
                 branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             }
             
-            messageString = "I need \(playerCount) more for \(activityName) in the \(groupName) region"
+            messageString = "\(groupName): I need \(playerCount) more for \(activityName)\(checkPoint)"
         } else {
             branchUniversalObject.title = "Searching for Summoners"
             if eventInfo.eventPlayersArray.count == eventInfo.eventMaxPlayers!.integerValue {
                 branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             }
             
-            messageString = "This team needs \(extraPlayersRequiredCount) more for \(activityName) in the \(groupName) region"
+            messageString = "\(groupName): I need \(extraPlayersRequiredCount) more for \(activityName)\(checkPoint)"
             
             if eventInfo.isFutureEvent == true {
-                messageString = "This team needs \(playerCount) more for \(activityName) on \(formatedDate) in the \(groupName) region"
+                messageString = "\(groupName): I need \(playerCount) more for \(activityName)\(checkPoint) on \(formatedDate)"
             }
         }
         
         if extraPlayersRequiredCount == 0 {
             branchUniversalObject.title = eventInfo.eventActivity?.activitySubType
             if eventInfo.isFutureEvent == true {
-                messageString = "Check out this \(activityName) on \(formatedDate) in the \(groupName) region"
+                messageString = "\(groupName): Check out this \(activityName)\(checkPoint), on \(formatedDate)"
             } else {
-                messageString = "Check out this \(activityName) in the \(groupName) region"
+                messageString = "\(groupName): Check out this \(activityName)\(checkPoint)"
             }
         }
         
