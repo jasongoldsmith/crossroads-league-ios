@@ -237,13 +237,13 @@ class TRBaseEventTableCell: UITableViewCell {
             currentPlayer = currentLoggedInUser.first
         }
         
-        if (event.eventCreator?.playerID == TRUserInfo.getUserID()) {
-            button.setImage(UIImage(named: "btnOWNER"), forState: .Normal)
-            button.userInteractionEnabled = false
-            leaveEventButton.hidden = false
-            
-            return
-        }
+//        if (event.eventCreator?.playerID == TRUserInfo.getUserID()) {
+//            button.setImage(UIImage(named: "btnOWNER"), forState: .Normal)
+//            button.userInteractionEnabled = false
+//            leaveEventButton.hidden = false
+//            
+//            return
+//        }
         
         if (event.eventStatus == EVENT_STATUS.FULL.rawValue) {
             if(TRApplicationManager.sharedInstance.isCurrentPlayerInAnEvent(event)) {
