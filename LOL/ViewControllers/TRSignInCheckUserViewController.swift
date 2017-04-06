@@ -101,9 +101,14 @@ class TRSignInCheckUserViewController: TRBaseViewController, UITableViewDelegate
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             } else {
-                self.dismissViewController(true, dismissed: { (didDismiss) in
-                    
-                })
+                if TRApplicationManager.sharedInstance.onBoardingCards.count != 0 {
+                    let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+                    let vc : OnBoardingViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_ON_BOARDING) as! OnBoardingViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    self.dismissViewController(true, dismissed: { (didDismiss) in
+                    })
+                }
             }
         })
     }

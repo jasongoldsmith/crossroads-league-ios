@@ -39,6 +39,7 @@ class TRFunnelData {
         p["$ios_device_model"]  = self.deviceModel()
         p["$ios_version"]       = UIDevice.currentDevice().systemVersion
         p["$ios_lib_version"]   = self.libVersion()
+        p["lang_code"]          = self.language() as AnyObject?
         p["x-fbooksdk"] = faceBookSDKVersion
         p["x-fbasesdk"] = fireBaseSDKVersion
         p["x-branchsdk"] = branchSDKVersion
@@ -80,6 +81,14 @@ class TRFunnelData {
     
     class func libVersion() -> String? {
         return "3.0.2"
+    }
+    
+    class func language() -> String {
+        if let langCode = NSLocale.currentLocale().accessibilityLanguage {
+            return langCode
+        } else {
+            return "en"
+        }
     }
     
 }

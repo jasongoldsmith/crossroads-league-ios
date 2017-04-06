@@ -115,6 +115,7 @@ struct K {
         static let TR_CANCEL_INVITATION   =  "/api/v1/a/event/invite/cancel"
         static let TR_KICK_PLAYER         =  "/api/v1/a/event/kick"
         static let TR_CHANGE_EMAIL        =  "/api/v1/a/user/changeEmail"
+        static let TR_ONBOARDING_COMPLETE =  "/api/v1/a/user/completeOnBoarding"
     }
     
     struct StoryBoard {
@@ -147,6 +148,7 @@ struct K {
         static let VIEW_CONTROLLER_CHANGE_PASSWORD         = "changePassword"
         static let VIEW_CONTROLLER_CHANGE_EMAIL            = "changeEmail"
         static let VIEW_CONTROLLER_SIGNUP_ERROR            = "signuperrorvc"
+        static let VIEW_CONTROLLER_ON_BOARDING             = "onBoardingVC"
     }
     
     struct ActivityType {

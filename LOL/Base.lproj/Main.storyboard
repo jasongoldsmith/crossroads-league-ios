@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
@@ -375,7 +377,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Catalyst Foundry 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S27-A4-Euw">
-                                <rect key="frame" x="236" y="516" width="149" height="16"/>
+                                <rect key="frame" x="225.5" y="516" width="149" height="16"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -437,6 +439,20 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                                     <action selector="xBoxTapped:" destination="GCe-sl-3u9" eventType="touchUpInside" id="Uap-rb-qqH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-zM-Xxc">
+                                <rect key="frame" x="225" y="471" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4v4-Q6-wvr"/>
+                                    <constraint firstAttribute="height" constant="40" id="dE5-4Z-PEb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <state key="normal" title="How crossroads works">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOnBoardingController:" destination="GCe-sl-3u9" eventType="touchUpInside" id="Ozv-HK-mkR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -451,6 +467,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstItem="Vp9-6u-dUS" firstAttribute="leading" secondItem="emr-nd-Vuk" secondAttribute="leading" id="Ong-vu-R1j"/>
                             <constraint firstAttribute="trailing" secondItem="kbe-fj-OC3" secondAttribute="trailing" id="P7e-85-nsH"/>
                             <constraint firstItem="vqs-Cy-515" firstAttribute="leading" secondItem="emr-nd-Vuk" secondAttribute="leadingMargin" id="TWA-lj-86b"/>
+                            <constraint firstItem="S27-A4-Euw" firstAttribute="top" secondItem="i7X-zM-Xxc" secondAttribute="bottom" constant="5" id="UQZ-Pu-OJ0"/>
                             <constraint firstItem="Vp9-6u-dUS" firstAttribute="top" secondItem="kbe-fj-OC3" secondAttribute="top" id="Y6q-Eb-epa"/>
                             <constraint firstItem="Q4O-b1-LyM" firstAttribute="top" secondItem="emr-nd-Vuk" secondAttribute="topMargin" id="ZHH-Mz-ubR"/>
                             <constraint firstItem="Vp9-6u-dUS" firstAttribute="height" secondItem="kbe-fj-OC3" secondAttribute="height" id="bTB-dv-aQA"/>
@@ -461,7 +478,8 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
                             <constraint firstAttribute="trailingMargin" secondItem="1VW-X0-n68" secondAttribute="trailing" constant="-20" id="pH0-Um-Cdy"/>
                             <constraint firstItem="1VW-X0-n68" firstAttribute="leading" secondItem="emr-nd-Vuk" secondAttribute="leadingMargin" constant="-20" id="ssJ-2W-qOP"/>
                             <constraint firstItem="lW4-qB-opH" firstAttribute="leading" secondItem="emr-nd-Vuk" secondAttribute="leading" id="uOw-JJ-VOq"/>
-                            <constraint firstItem="S27-A4-Euw" firstAttribute="centerX" secondItem="emr-nd-Vuk" secondAttribute="centerX" constant="10" id="v7K-0r-L0Y"/>
+                            <constraint firstItem="S27-A4-Euw" firstAttribute="centerX" secondItem="emr-nd-Vuk" secondAttribute="centerX" id="v7K-0r-L0Y"/>
+                            <constraint firstItem="i7X-zM-Xxc" firstAttribute="centerX" secondItem="emr-nd-Vuk" secondAttribute="centerX" id="wnv-JD-Wsz"/>
                             <constraint firstItem="b67-XM-c3B" firstAttribute="centerX" secondItem="emr-nd-Vuk" secondAttribute="centerX" id="xjV-Mh-v3u"/>
                             <constraint firstItem="Vp9-6u-dUS" firstAttribute="bottom" secondItem="VFK-zq-jCs" secondAttribute="top" id="znm-Eb-E1c"/>
                         </constraints>
@@ -4028,6 +4046,104 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
             </objects>
             <point key="canvasLocation" x="-2255" y="1730"/>
         </scene>
+        <!--Data Source-->
+        <scene sceneID="qWn-BX-6Xq">
+            <objects>
+                <viewController storyboardIdentifier="onBoardingVC" id="LE0-DO-HIo" customClass="OnBoardingViewController" customModule="Crossroads_for_LoL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0yu-Eu-6na"/>
+                        <viewControllerLayoutGuide type="bottom" id="mHv-HL-uj0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g0Q-XC-9zn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-AU-fG2" userLabel="Reference To Cards View">
+                                <rect key="frame" x="0.0" y="116" width="600" height="342"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o_w_onboarding_b_g" translatesAutoresizingMaskIntoConstraints="NO" id="G4d-a1-B0H">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-yo-1NX" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LE0-DO-HIo" id="NlX-36-zJA"/>
+                                    <outlet property="delegate" destination="LE0-DO-HIo" id="UmY-fj-hXM"/>
+                                </connections>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-TN-RBd">
+                                <rect key="frame" x="0.0" y="458" width="600" height="91.5"/>
+                                <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.99796789880000003" green="0.76570218800000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageControlValueChanged" destination="LE0-DO-HIo" eventType="valueChanged" id="AMC-FB-VQQ"/>
+                                </connections>
+                            </pageControl>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz7-la-uE3">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.98064106699999998" green="0.57873839140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qMo-96-e9B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="OK, LET’S ROLL!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="letsRollButtonPressed" destination="LE0-DO-HIo" eventType="touchUpInside" id="zdp-Lh-0aC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtk-CH-kmb">
+                                <rect key="frame" x="539" y="32" width="50" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GyX-nr-tCv"/>
+                                    <constraint firstAttribute="width" constant="50" id="W5C-ov-Oq9"/>
+                                </constraints>
+                                <state key="normal" image="btn_s_k_i_p"/>
+                                <connections>
+                                    <action selector="skipButtonPressed" destination="LE0-DO-HIo" eventType="touchUpInside" id="9Rt-48-Vk2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gz7-la-uE3" secondAttribute="trailing" id="0EA-oM-XI3"/>
+                            <constraint firstItem="G4d-a1-B0H" firstAttribute="top" secondItem="g0Q-XC-9zn" secondAttribute="top" id="1i7-JT-iWM"/>
+                            <constraint firstItem="cT6-AU-fG2" firstAttribute="height" secondItem="g0Q-XC-9zn" secondAttribute="height" multiplier="0.5703" id="5B0-vd-qFf"/>
+                            <constraint firstItem="Wpp-TN-RBd" firstAttribute="leading" secondItem="g0Q-XC-9zn" secondAttribute="leading" id="6cR-LV-vpV"/>
+                            <constraint firstAttribute="trailing" secondItem="G4d-a1-B0H" secondAttribute="trailing" id="7mi-Z0-MuF"/>
+                            <constraint firstItem="mHv-HL-uj0" firstAttribute="top" secondItem="6gZ-yo-1NX" secondAttribute="bottom" id="CvS-IJ-Gr9"/>
+                            <constraint firstAttribute="trailing" secondItem="qtk-CH-kmb" secondAttribute="trailing" constant="11" id="Kwx-lf-ykT"/>
+                            <constraint firstItem="mHv-HL-uj0" firstAttribute="top" secondItem="gz7-la-uE3" secondAttribute="bottom" id="LWi-7O-MXn"/>
+                            <constraint firstItem="6gZ-yo-1NX" firstAttribute="leading" secondItem="g0Q-XC-9zn" secondAttribute="leading" id="MYl-pg-IDS"/>
+                            <constraint firstItem="G4d-a1-B0H" firstAttribute="leading" secondItem="g0Q-XC-9zn" secondAttribute="leading" id="OIO-AV-gws"/>
+                            <constraint firstItem="mHv-HL-uj0" firstAttribute="top" secondItem="G4d-a1-B0H" secondAttribute="bottom" id="UM0-Ba-2Lq"/>
+                            <constraint firstItem="gz7-la-uE3" firstAttribute="leading" secondItem="g0Q-XC-9zn" secondAttribute="leading" id="V0G-BY-FQT"/>
+                            <constraint firstItem="cT6-AU-fG2" firstAttribute="leading" secondItem="g0Q-XC-9zn" secondAttribute="leading" id="VKo-rh-Nqk"/>
+                            <constraint firstAttribute="trailing" secondItem="cT6-AU-fG2" secondAttribute="trailing" id="aJI-bA-5SJ"/>
+                            <constraint firstItem="qtk-CH-kmb" firstAttribute="top" secondItem="g0Q-XC-9zn" secondAttribute="top" constant="32" id="eGs-Ik-hY2"/>
+                            <constraint firstAttribute="trailing" secondItem="6gZ-yo-1NX" secondAttribute="trailing" id="hvV-qN-7hS"/>
+                            <constraint firstItem="6gZ-yo-1NX" firstAttribute="top" secondItem="g0Q-XC-9zn" secondAttribute="top" id="kwJ-PS-cb5"/>
+                            <constraint firstItem="cT6-AU-fG2" firstAttribute="centerY" secondItem="g0Q-XC-9zn" secondAttribute="centerY" constant="-13" id="oia-Qe-hZa"/>
+                            <constraint firstItem="Wpp-TN-RBd" firstAttribute="top" secondItem="cT6-AU-fG2" secondAttribute="bottom" id="ukL-Nt-k1d"/>
+                            <constraint firstItem="gz7-la-uE3" firstAttribute="top" secondItem="Wpp-TN-RBd" secondAttribute="bottom" id="vvy-UM-gQV"/>
+                            <constraint firstAttribute="trailing" secondItem="Wpp-TN-RBd" secondAttribute="trailing" id="ye1-1D-BZT"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="letsRollButton" destination="gz7-la-uE3" id="NsT-Yo-yBJ"/>
+                        <outlet property="onBoardingCarousel" destination="6gZ-yo-1NX" id="bSD-tm-40Y"/>
+                        <outlet property="pageControl" destination="Wpp-TN-RBd" id="jw2-ge-Fqw"/>
+                        <outlet property="skipButton" destination="qtk-CH-kmb" id="mdy-uS-53v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ps-VA-Pac" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="-1017"/>
+        </scene>
     </scenes>
     <resources>
         <image name="EventHeaderBg" width="375" height="100"/>
@@ -4036,6 +4152,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="TrImgIconPassword" width="21" height="23"/>
         <image name="TrImgLoginBtn" width="90" height="90"/>
         <image name="TrLoadingimgBackgroundMap" width="375" height="667"/>
+        <image name="btn_s_k_i_p" width="50" height="27"/>
         <image name="eventsViewBG" width="375" height="667"/>
         <image name="gradientOverlayGroups" width="340" height="357"/>
         <image name="iconARAM" width="24" height="24"/>
@@ -4070,6 +4187,7 @@ Check your messages on Bungie.net for a verification link from Crossroads.</stri
         <image name="imgNogroups" width="96" height="96"/>
         <image name="imgRegionBG" width="344" height="667"/>
         <image name="img_title_graphic" width="77" height="80"/>
+        <image name="o_w_onboarding_b_g" width="375" height="667"/>
         <image name="profileBgImage" width="338" height="668"/>
     </resources>
 </document>

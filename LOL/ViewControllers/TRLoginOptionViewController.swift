@@ -92,6 +92,14 @@ class TRLoginOptionViewController: TRBaseViewController, iCarouselDataSource, iC
         
     }
     
+    @IBAction func showOnBoardingController(sender: AnyObject) {
+        if TRApplicationManager.sharedInstance.onBoardingCards.count != 0 {
+            let storyboard : UIStoryboard = UIStoryboard(name: K.StoryBoard.StoryBoard_Main, bundle: nil)
+            let vc : OnBoardingViewController = storyboard.instantiateViewControllerWithIdentifier(K.VIEWCONTROLLER_IDENTIFIERS.VIEW_CONTROLLER_ON_BOARDING) as! OnBoardingViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+
     //MARK:- carousel
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
         return items.count

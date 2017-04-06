@@ -46,4 +46,12 @@ extension UIView {
         let heightConstraint = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 0)
         self.addConstraint(heightConstraint)
     }
+
+    func createImageFromView() -> UIImage {
+        UIGraphicsBeginImageContext(self.bounds.size)
+        self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenShotimage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return screenShotimage
+    }
 }
